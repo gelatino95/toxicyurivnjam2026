@@ -1,0 +1,1 @@
+This is where all audio files for the game will go, including theme music, background music, sound effects, and sample/concept tracks. If you need a place to share instruments or other VSTs, create a directory for them.

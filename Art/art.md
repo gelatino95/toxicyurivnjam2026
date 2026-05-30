@@ -1,0 +1,1 @@
+This is where art assets go. Concept sketches, backgrounds, UI elements, character sprites, basically anything in an image format can be dropped in this folder.

@@ -1,0 +1,1 @@
+This is where the Ren'Py files and folders for the game will go. If multple game projects will be made (for testing purposes, for example), create a separate directory for each.

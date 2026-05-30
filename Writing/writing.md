@@ -1,0 +1,1 @@
+This is where all written documents concerning game planning and story development will go. This includes outlines, story scripts, character profiles, and scraps.
