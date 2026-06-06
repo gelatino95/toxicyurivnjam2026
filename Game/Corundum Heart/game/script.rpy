@@ -1,36 +1,34 @@
-﻿# The script of the game goes in this file.
+﻿## The script of the game goes in this file. Duh.
 
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
 
+
+## Define some shit in this section
+
+## CHARACTERS
 define eris = Character("Eris")
 define liftr = Character("LIFTR 03-215")
 
+## AUDIO
+define audio.demo1 = "she's got torque (demo).mp3"
 
-# The game starts here.
-
+## Label Start
 label start:
-
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-
     scene bg construction1
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file with a matching name to the images
-    # directory.
-
     show liftr neutral
-
-    # These display lines of dialogue.
 
     eris "Say \"placeholder text\" for me, if you please."
 
     liftr "Placeholder text!"
 
-    # This ends the game.
+    play music demo1
 
+    liftr "Playing Music track now."
+    liftr "..."
+    jump Ending
+
+label Ending:
     "End game."
 
+    ## This ends the game.
     return
