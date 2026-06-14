@@ -23,13 +23,20 @@ define gui.show_name = True
 
 ## The version of the game.
 
-define config.version = "0.1"
+define config.version = "0.2"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
 ## triple-quotes, and leave a blank line between paragraphs.
 
-define gui.about = _p("""
+define gui.about = _p("""Made for the Toxic Yuri VN Game Jam 2.
+
+This game was created by Gelatino Games.
+Director: Audrey Gelatino
+Programmer: Zora Morphimus
+Writers: Torch, RogueMagpie, Alice!
+Artists: Jeepers, My little Sloany, Kidotix
+Music: Marcy
 """)
 
 
