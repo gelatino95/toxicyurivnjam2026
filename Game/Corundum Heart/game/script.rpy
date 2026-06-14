@@ -2,6 +2,7 @@
 
 
 
+
 ## Define some shit in this section
 
 ## CHARACTERS
@@ -10,6 +11,14 @@ define liftr = Character("LIFTR 03-215")
 
 ## AUDIO
 define audio.demo1 = "she's got torque (demo).mp3"
+
+## IMAGES??? do I need to define these here? Maybe for animations
+
+## VARIABLES
+
+
+
+
 
 ## Label Start
 label start:
@@ -26,6 +35,16 @@ label start:
     liftr "Playing Music track now."
     liftr "..."
     jump Ending
+
+## PASTE SCRIPT STUFF IN HERE 
+## |
+## V
+
+
+
+## ^
+## |
+## PASTE SCRIPT STUFF IN HERE
 
 label Ending:
     "End game."
