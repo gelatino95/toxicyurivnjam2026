@@ -30,13 +30,12 @@ define config.version = "0.2"
 ## triple-quotes, and leave a blank line between paragraphs.
 
 define gui.about = _p("""Made for the Toxic Yuri VN Game Jam 2.
-
-This game was created by Gelatino Games.
-Director: Audrey Gelatino
-Programmer: Zora Morphimus
-Writers: Torch, RogueMagpie, Alice!
-Artists: Jeepers, My little Sloany, Kidotix
-Music: Marcy
+This game was created by Gelatino Games.\n\n
+Director: Audrey Gelatino\n
+Programmer: Zora Morphimus\n
+Writers: Torch, RogueMagpie, Alice!\n
+Artists: Jeepers, My little Sloany, Kidotix\n
+Music: Marcy\n
 """)
 
 

@@ -6,8 +6,9 @@
 ## Define some shit in this section
 
 ## CHARACTERS
-define eris = Character("Eris")
-define liftr = Character("LIFTR 03-215")
+define e = Character("Eris")
+define l = Character("LIFTR 03-215")
+define g = Character("Galatea")
 
 ## AUDIO
 define audio.demo1 = "she's got torque (demo).mp3"
@@ -26,14 +27,14 @@ label start:
 
     show liftr neutral
 
-    eris "Say \"placeholder text\" for me, if you please."
+    e "Say \"placeholder text\" for me, if you please."
 
-    liftr "Placeholder text!"
+    l "Placeholder text!"
 
     play music demo1
 
-    liftr "Playing Music track now."
-    liftr "..."
+    l "Playing Music track now."
+    l "..."
     jump Ending
 
 ## PASTE SCRIPT STUFF IN HERE 
