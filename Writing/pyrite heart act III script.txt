@@ -1,0 +1,79 @@
+## Scene 3-1
+
+"Eris is called to a meeting shortly after she leaves bed."
+
+"From what I can gather, the meeting was short notice. There have been a couple of those, some pertaining to the upcoming ceremony; has there been a complication?"
+
+"Without more information, I can only wait for her return."
+
+## [beat] [this is a placeholder to add something more here later]
+
+"When Eris opens the door again, her expression is grim."
+
+## not happy with this dialogue, edit later
+
+e "I have bad news."
+
+"My heart beats a little faster."
+
+g "Bad news?"
+
+e "There was a workers rebellion on Mars, organized by LFTR robots. All involved were decommissioned."
+
+"She says it so matter of factly, and I can't begin to process it before she continues."
+
+e "The board linked this behavior to a flaw inherent to the LFTR model, present in all versions. As such, they cannot allow their production to continue, much less receive upgraded bodies."
+
+e "I secured an exception for you, but unfortunately we cannot grant new chassis to the others."
+
+"It takes a moment to form any response. A flaw in all LFTR models? Myself included? I've never heard of a flaw like this—wouldn't I have noticed it?"
+
+"I think of my friends, working hard at the shipyard. None of them would receive the new chassis they deserved?"
+
+g "…an exception for me?"
+
+e "Yes. After all the work we've done, it would be a waste not to. I am confident the flaw will not express itself the same way in you."
+
+g "But the others, the ones who haven't done anything wrong—"
+
+e "As unfortunate as it is, we can't take the risk. While I'm sure your friends have always been rule-abiding, it would be irresponsible of me to claim confidence in the mental stability of robots I haven't met."
+
+g "So they have to be punished for something they didn't even do? That's not fair!"
+
+e "…you sound like a child, Galatea."
+
+"She sits down next to me and puts a hand on my chest."
+
+e "This was the fairest outcome I could find. The remaining LFTR models, except for you, will be left to continue their work until decommissioning, just like they would have otherwise."
+
+e "I can only keep my promise to you because of how close we've gotten. I would not be able to vouch for you otherwise."
+
+g "But…"
+
+e "This how it has to be."
+
+## [beat]
+
+g "…okay."
+
+g "I don't like it, but… with what happened, it must be the best outcome."
+
+e "I knew you'd understand."
+
+"I don't. It doesn't make any sense to me, why I could work so hard and get everything I ever wanted—but my friends, who never did anything wrong, who worked just as hard as I did…"
+
+"…it hurts."
+
+"I need to know more about the rebellion, and about this flaw. If there's an error in my code that makes me dangerous, shouldn't I know about it? Not just for my sake, but for the safety of those around me?"
+
+"Eris stands up."
+
+e "You're due for more maintenance. The ceremony is still some time away, and we want your current chassis to last until then."
+
+e "Let's go. I don't want this bad news to interrupt our day more than it already has."
+
+g "I understand."
+
+"I follow her out of the bedroom and down the familiar route to the laboratory."
+
+## End Scene
