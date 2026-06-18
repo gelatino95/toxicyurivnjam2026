@@ -1,0 +1,101 @@
+## ----------------- ##
+##   SCRIPT SYNTAX   ##
+## ----------------- ##
+
+All drafts for the game's narrative script will be written in Ren'Py script language, and saved as a plaintext file. Every line of dialogue, narration, or stage direction should start on a new line. The following format should be used.
+
+----------------
+
+NARRATION: Just use quotation marks with nothing else.
+
+Example:
+
+"This is an example of narration, where no particular character is speaking."
+
+----------------
+
+DIALOGUE: Use quotation marks with a single-letter indicator for the character speaking. This letter will determine the name displayed on screen for the current speaker. Every character (and every name used for the same character) should have a unique letter identifier.
+
+Examples:
+
+l "Hi, I'm LFTR-03-251. My name will appear in a little box above the dialogue box."
+
+g "Hi, I'm Galatea. I'm the same character as before, I'm just using a different name for this part of the story."
+
+----------------
+
+STAGE DIRECTION: Whenever you want to describe something visual happening on screen, such as changing the background, ending the scene, moving the characters, or displaying a different emotion on the characters' face, preface the line with double # symbols and do not use quotation marks. These lines will be commented out in Ren'Py code, and can be used for clarification and organizational purposes as well.
+
+Example:
+
+## This is a commented out piece of stage direction that only Zora will see. She'll do her best to make it happen using the assets we have!
+
+
+
+
+## --------------- ##
+##   STYLE GUIDE   ##
+## --------------- ##
+
+LFTR-03-251 is the viewpoint character in this story. With very few exceptions, everything in the narrative should be what 251 experiences in real time. The player should only know what she knows. Narration should be written as 251's internal monologue.
+
+
+
+
+## ------------------ ##
+##   EXAMPLE SCRIPT   ##
+## ------------------ ##
+
+## SCENE: Keres Shipyard breakroom. No character shown.
+
+## Speaker: Disgruntled Robot #1
+d "Agh, I can't believe the Space Coffee machine is broken again. That's the third time this cycle!"
+
+## Speaker: Disgruntled Robot #2
+r "Where's 251? She's real handy at fixing stuff like this."
+
+d "251! Help us!"
+
+"I hear the familiar clamor of robots in need. What can I do but respond?"
+
+## Speaker: LFTR-03-251
+l "Yeah, yeah, I'm coming."
+
+## 251 appears on screen with a calm, happy expression.
+l "Alright, let's see what the damage is..."
+
+"I scan over the Space Coffee machine. My keen X-ray eyes can spot the fault in a piece of machinery without even having to open it up."
+
+l "Ahh, yup, just as I thought. These cheap Bean Injector Manifolds are always getting misaligned."
+
+l "Just a quick twist and a squeeze, and..."
+
+## Machine starting up SFX
+"...Bam! Just like that, the Space Coffee begins to flow once more."
+
+d "Hey, thanks! You're a real lifesaver, you know that?"
+
+l "Heh, just doing what I can. You let me know if you need anything else fixed, alright?"
+
+## Neutral/surprised expression
+"Just then, I hear the distinctive warble of an anti-grav unit, and I know I'm about to get chewed out.
+
+## ADMN-04-135 appears with a stern expression.
+a "LFTR-03-251! Your break isn't scheduled for another two hours. You're supposed to be refurbishing plasma conduits, not repairing coffee machines!"
+
+l "Yeah, yeah, don't worry. I'll get right to it. Thanks for keeping me on task, boss."
+
+a "Hmph. 'Supervisor' will do just fine, thanks."
+
+## ADMN-04-135 disappears. 251 reappears with a neutral expression.
+
+"I know those plasma conduits aren't urgently needed for anything, but there's no use arguing with an ADMN robot."
+
+"It's just their job to keep us on task. If anyone falls behind on their scheduled duties, the ADMN on site gets blamed for it."
+
+"It's a little unfair, if you ask me. If I decide that helping out my coworkers is more important than the busywork I've been assigned, then I should take responsibility for that, shouldn't I?"
+
+"Oh well, there's no use dwelling on it. Back to the docks."
+
+## Fade to black.
+
