@@ -77,3 +77,67 @@ g "I understand."
 "I follow her out of the bedroom and down the familiar route to the laboratory."
 
 ## End Scene
+
+# Scene 3-2
+
+"Truly, the maintenance is routine. Mundane, even. None of the excitement is there, as I watch Eris replace one of the motors that controls bending at the waist."
+
+"She has to reach into some sensitive areas, but now it just feels uncomfortable."
+
+g "Eris, about the flaw…"
+
+e "It's nothing you need to be concerned about."
+
+"She doesn't look up as she says it."
+
+g "But it *is.* If the flaw can cause a rebellion, what if it causes me to hurt someone?"
+
+g "What if it causes me to hurt *you?*"
+
+g "Wouldn't it be safer to… *fix* it? Then there wouldn't be a problem with the other robots, right?"
+
+"Eris pauses."
+
+"She puts down her tools and sighs, leaning on the workbench."
+
+"For a moment, she doesn't speak. It's only me, her, and my exposed guts."
+
+e "…the flaw, as such, is in your personality. LFTR models are preinclinated towards disobedience in certain circumstances, which was what led to the rebellion."
+
+e "The intent of that bit of programming was to allow you to make decisions quickly in situations that were unstable or otherwise dangerous."
+
+e "It does not make you inherently disobedient. More to the point, it's ingrained deep enough in your personality that fixing it would require a factory reset."
+
+"The thought is as frightening as being decommissioned."
+
+g "It's *that* integral to my self?"
+
+e "Listen, Galatea. Mars was an anomaly. Decades went by without the flaw making itself known, and now that we're aware of it, we can monitor for warning signs."
+
+e "But I know you wouldn't hurt me."
+
+g "You can be so sure?"
+
+e "Yes. The flaw isn't something that takes over your personality. You wouldn't act contrary to your desires."
+
+e "…I don't think I would enjoy you if you were fully obedient. The kind of robot who won't speak back, who will only do as ordered? That's hardly a robot, just a tool."
+
+"It makes sense, but you don't feel any better."
+
+"All those LFTR models who won't be getting an upgrade they desperately need… it leaves a bad taste in your mouth."
+
+"Even if Eris likes the flaw, that doesn't help them now, does it?"
+
+e "I'd like to finish this procedure, Galatea."
+
+g "You're the one who stopped."
+
+"Eris frowns, but picks up her tools again."
+
+## add more here later
+
+## End Scene
+
+## Scene 3-3
+
+## [not written yet]
