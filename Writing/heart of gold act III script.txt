@@ -140,4 +140,217 @@ g "You're the one who stopped."
 
 ## Scene 3-3
 
-## [not written yet]
+"The next time Eris has a scheduled meeting, I leave her room and head towards the business side of Daedalus' headquarters."
+
+"It shouldn't be a problem; I've been in some of these areas before, and what I'm looking for shouldn't be in a restricted area."
+
+"I'm also not stupid. A LFTR model looking for information on the Mars rebellion that put all LFTR models under scrutiny? That won't go over well."
+
+"Going up and asking someone would just get the door slammed in my face."
+
+"What's the old phrase? \"Better to beg forgiveness than ask permission.\""
+
+"…not that the idea of begging forgiveness is appealing, either."
+
+## need to come up with a better destination than this I think…
+"I take an elevator and follow the signs down the hall to where the worksite incident reports are kept."
+
+"I should be able to just go in, connect to the terminal—"
+
+## daedalus security
+ds "Hey!"
+
+"Shit."
+
+g "Is there a problem?"
+
+"The security guard swiftly steps in front of me and the door I'm aiming for."
+
+ds "You shouldn't be here, you know. What are you trying to do?"
+
+"I retort with the lie I had prepared."
+
+g "I'm not trying to do anything. I was curious if anything had happened at my old worksite, so I was going to see if any incident reports had been filed."
+
+ds "Really."
+
+g "Is that so strange?"
+
+ds "You wouldn't have had access to those back at your worksite. What makes you think that's changed, LFTR?"
+
+g "That's *not* my name."
+
+ds "Go back to where Promethea is keeping you. I'm sure she'd be happy to get the relevant files, *if* she decides it's worth it."
+
+g "\"Worth it?\" What do you—"
+
+"The guard's hand moves to a holstered weapon. *Shit.*"
+
+ds "Go back to your room, LFTR."
+
+## galatea almost escalates to violence, but eris' arrival stops her
+
+e "What's going on here?"
+
+"I'm both relieved and dismayed to see Eris. She marches down the hall, delivering a stern glare to both the security guard and myself."
+
+e "Galatea, I thought you would be in my quarters."
+
+g "I wanted to look something up."
+
+ds "Ma'am, if you'll excuse me. After recent events, I don't think a LFTR model should be wandering the building without supervision."
+
+"I bristle, but Eris speaks before I can say anything."
+
+e "I know that everyone's on edge around LFTR models, but [more dialogue? idk what to write here fuuuck]"
+
+## WIP, unfinished
+
+## Scene 3-4
+
+## perhaps draw this out more
+"Eris takes me back to her quarters."
+
+"I'm still angry. I don't want to be treated like a petulant child."
+
+"But that's the impression I get when the door closes and Eris gives me a stern look."
+
+e "Galatea."
+
+g "I was allowed to leave the room before."
+
+e "You *know* it's different for you now. What were you thinking?"
+
+e "You wanted security incidents at your old worksite? I could have looked those up for you."
+
+e "But I don't think that's actually what you wanted."
+
+"[beat]"
+
+g "I wanted to find out what happened at the Mars rebellion."
+
+## WIP, unfinished
+
+## Scene 3-5
+
+"There are still preparations to be made on my mind and body for the transfer. Eris informs me of the nature of the next procedure while I follow her to the laboratory."
+
+e "We're installing new ports to prepare you for the additional sensations the new body will experience. I'll need to open up your head for this. Sit down and hold still."
+
+"I don't argue. We've done enough of that already. I sit as directed and allow Eris to plug a wire into me, typing on the connected terminal. The command goes through, and I feel my motor system shutting down, rendering me incapable of moving even if I wanted to."
+
+"My voice still works, though I have nothing to say."
+
+"Eris carefully pries a plate off my scalp. My articifial nerves light up as bonds are severed. Internally, I wince. She doesn't notice; how could she? Eris places the plate on the workbench and takes a screwdriver to the inside of my head, lifting pieces out one at a time to get into the inner workings."
+
+"It's too much. I have to say something."
+
+g "Eris—"
+
+e "Don't distract me. I don't want to damage anything."
+
+g "It *hurts.*"
+
+"It's not the first time a procedure has hurt, but it's the first time I've said anything."
+
+"Eris pauses."
+
+e "I don't think I can avoid it hurting, but…"
+
+"She puts the screwdriver down and walks away. Immobile as I am, I can't see where she goes, but I can hear her moving metal items around."
+
+e "Here it is."
+
+e "I can at least make the pain bearable."
+
+"Eris walks back into my field of view, holding a tiny chip the size of her fingernail."
+
+"It makes me uneasy."
+
+g "Can't you just take my nerves offline?"
+
+e "No. I need you to be able to tell me if I touch the wrong spot."
+
+e "What this module will do is take the uncomfortable sensations and add a more pleasant sensation with them."
+
+e "It's similar to the ones we use some nights."
+
+"Everything she says makes sense, as usual; if I don't feel what she's doing, I can't warn her if she's close to frying something important. But my apprehension doesn't go away."
+
+g "…are you sure it will help?"
+
+e "Well, you can either tolerate the pain without it, or you can get some enjoyment out of it."
+
+e "It's up to you. I have to warn you, if you say no, I won't be able to install it later without going this deep into your head again."
+
+g "Alright. I'll try it."
+
+"It might at least make the sensations more interesting."
+
+"It's an easy install, with my head already opened. The chip is soldered into place. A tingle runs through me as it connects with the rest of my senses."
+
+g "Oh…"
+
+e "Feel it already?"
+
+"She smiles at me."
+
+g "A little bit, yes."
+
+e "I told you it would help. Let's continue."
+
+"It doesn't stop hurting, but now, the chip supplies a burst of warm pleasure with every painful twinge. My heart beats faster. I don't know if Eris is aware of what she's doing. What she's done."
+
+"It's hard to think. I can barely monitor what Eris is doing through the dichotomy of sensations."
+
+"I don't think I like it, but I don't want it to stop."
+
+"Time blurs together. It feels all of a sudden that Eris reattaches the plate and steps back."
+
+e "We're done."
+
+"My motor controls come back online with a jolt. I twitch."
+
+e "Careful. How are you feeling?"
+
+"Your mind still feels fuzzy, but you can think a little more clearly."
+
+g "Fine. I'm fine."
+
+e "Good."
+
+e "I have to talk with some of the board. I'll walk you back first."
+
+"I stand up, a little unsteadily, and return to Eris' quarters. Despite your concerns and apprehension, the chip isn't all bad. It feels fine. It feels good, even."
+
+"…but as Eris leaves, she locks the door behind her, and I remember all our arguments again."
+
+"I want to find an answer that works for both of us."
+
+"I'm not sure if Eris wants the same thing."
+
+## End Scene
+
+## Scene 3-6: Not Started
+
+## Scene 3-7
+
+"The hallway outside Eris' room has a security camera in it."
+
+"I noticed it before, but didn't pay it much mind. Every room and hall in Daedalus' headquarters has security cameras. I wouldn't be surprised if the bathrooms did, too. It's only due to Eris' status that there isn't one in her own bedroom."
+
+"It stands out now because I saw it move."
+
+"I stop pacing and stare at it. It's pointed right at me. Was it pointing that way before?"
+
+"I check my memory. Every time I saw the camera, no matter where I was standing, it was looking at me."
+
+"I walk to the other side of it and look back."
+
+"It's swiveled to look at me."
+
+"I'm being watched."
+
+"I'm being watched by Daedalus security, and they don't care if I know."
+
+## WIP, unfinished
