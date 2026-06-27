@@ -13,8 +13,9 @@ define g = Character("Galatea")
 define f = Character("LFTR 1514")
 
 ## AUDIO
-define audio.demo_sgt = "she's got torque (demo).mp3"
+define audio.demo_sgt = "she's got torque quickloop.mp3"
 define audio.demo_cg = "cloud gateway (demo).mp3"
+define audio.demo_rt = "rhel's theme.mp3"
 
 ## IMAGES
 ## No need to define an image if you're not doing anything complicated with it. Just call the file name.
@@ -44,12 +45,15 @@ label soundtest:
     menu:
         "Sound Test"
 
-        "She's Got Torque (demo)":
+        "She's Got Torque (Loopable)":
             play music demo_sgt
-            np "She's got Torque (demo)"
+            np "She's got Torque (Loopable)"
         "Cloud Gateway (demo)":
             play music demo_cg
             np "Cloud Gateway (demo)"
+        "Rhel's Theme":
+            play music "<loop 11.707 to 40.976>rhel's theme.mp3"
+            np "Rhel's Theme"
         "Back to Scene Select menu":
             stop music
             jump sceneselect
