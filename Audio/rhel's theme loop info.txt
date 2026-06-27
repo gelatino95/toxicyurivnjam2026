@@ -1,2 +1,0 @@
-loopstart 00:11.707
-loopend 00:40.976

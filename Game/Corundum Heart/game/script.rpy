@@ -14,7 +14,7 @@ define f = Character("LFTR 1514")
 
 ## AUDIO
 define audio.demo_sgt = "she's got torque quickloop.mp3"
-define audio.demo_cg = "cloud gateway (demo).mp3"
+define audio.demo_cg = "cloud gateway quickloop.mp3"
 define audio.demo_rt = "rhel's theme.mp3"
 
 ## IMAGES
@@ -45,12 +45,12 @@ label soundtest:
     menu:
         "Sound Test"
 
-        "She's Got Torque (Loopable)":
+        "She's Got Torque":
             play music demo_sgt
-            np "She's got Torque (Loopable)"
-        "Cloud Gateway (demo)":
+            np "She's got Torque"
+        "Cloud Gateway":
             play music demo_cg
-            np "Cloud Gateway (demo)"
+            np "Cloud Gateway"
         "Rhel's Theme":
             play music "<loop 11.707 to 40.976>rhel's theme.mp3"
             np "Rhel's Theme"
