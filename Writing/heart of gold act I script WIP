@@ -53,7 +53,9 @@ l "Ahh the cable just got lose and fell out while I was in rest mode."
 
 ## Scene 2: Working a 0900-0500 ##
 
-## The main work area
+
+
+## The main work area (day)
 
 "Shortly I gathered all my tools and make it to the work area of the shipyard where I spend most of the day building the orbital infastructure that allows humans to survive outside of their atmostpheres."
 
@@ -61,7 +63,7 @@ l "Ahh the cable just got lose and fell out while I was in rest mode."
 
 ## o for LFTR-06-1111 speaking offscreen
 
-o "251! Thanks again for the fix last night!"
+o "Hey 251! Thanks again for the fix last night!"
 
 "I wave over with a smile and a few other of the workers greeted me."
 
@@ -101,11 +103,53 @@ a "I'll have a CLNR come by to clean this up, get back to work LFTR-03-251."
 
 "I walk away from the scene and head to my station to get started on work."
 
+## beat
+
+"It wasn't long before another voiced called out to me."
+
+## f for LFTR-08-1514
+
+f "Excuse me, 251?"
+
+## 1514 appears on screen
+
+"It was LFTR-08-1514, one of the newer models of the LFTR line who had recently started working here."
+
+"She seemed kind of distant for the most part, often staring out into space like she was waiting for something rather than seeing how beautiful the planet they orbited looked."
+
+f "Sorry to bother you, I was told you were the person to go to for this kind of thing."
+
+"This kind of thing happened from time to time so I was used to it, putting down my tools and turning to face 1514."
+
+l "No worries! What seems to be the issue?"
+
+f "I uh..."
+
+"1514 starts to move her arm but as she rotates it I can see it get caught momentarily before she adjusts it and it starts moving again."
+
+f "It's my shoulder, something isn't working."
+
+l "I see. That shouldn't be too bad, try to avoid stressing the joint and after the shift ends we can take a look at that and see if I can't fix it right up."
+
+"1514 still has a nervous expression but nods"
+
+f "If you say so..."
+
+"She returns back to work and I do the same, picking my tools back up."
+
+## 1514 leaves, beat, main work area - night
+
+
+
+
+##insert scene of 1514's arm getting fully stuck and 251 convincing ADMN to let her fix it
 
 
 
 
 ## Scene 3: LFTR Repairs ##
+
+
 
 ## 251 and 1514 are on screen at 251's workshop/room area
 
@@ -189,6 +233,57 @@ l "Now to do my own repairs..."
 
 
 
-## Scene 4: ##
+## Scene 4: Back to work and an unexpected visit ##
 
-## Scene 5: ##
+
+
+## main working area - day, 251 on screen
+
+"Everybody seems to be so excited today, I can see groups split off talking with each other with excited eyes"
+
+## ADMN appears on screen
+
+l "What's going on? Did something happen?"
+
+a "Oh right, you had left early last night with 1514 so you didn't hear."
+
+l "Hear what?"
+
+a "Daedalus Robotics' founder is arriving today to make some sort of announcement today, her transport ."
+
+"I pause for a moment, shocked."
+
+l "You mean Eris Promethia?! Like, the creator of us Eris Promethia?!"
+
+"I've looked up to Ms. Promethia for as long as I've been powered"
+
+"I mean, she created the robot workforce, without her I wouldn't exist."
+
+"And then there's my knack for fixing others, I like to think that I got it from her, but to actually get to see her?!"
+
+a "If there's another founder of Deadalus with that name then I'm unaware of them, now go clean yourself off and look presentable."
+
+## ADMN leaves the screen
+
+"I could barely hear the ADMN anymore, not that cleaning myself off would do any good" 
+
+"it was filthy at the shipyard, the only clean things were the ships leaving and the new robots coming in."
+
+## is it possible to italicize words? if so italicize the "here" in the next narration
+
+"But that wasn't what was important, Eris Promethia was going to be here!"
+
+"I could barely keep myself from vibrating, I just know some of the loser cables were holding on as much as they could but I couldn't help myself."
+
+## beat, 251 leaves screen, Eris Promethia appears on screen
+
+
+## insert scene of Eris making the announcement and picking 251
+
+
+
+## Scene 5: Meeting mommy- sorry, mommy- sorry, mommy- ##
+
+
+
+## back to 251's workshop/room, 251 and Eris on screen
