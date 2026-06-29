@@ -1,209 +1,359 @@
-## ACT 1 INTRO
-
-## show Mars colony
-"The year is 2142. Mankind takes a leap towards the stars and establishes its first colony on Mars."
-
-## show spaceship
-"The year is 2150. Propulsion technology has advanced to the point where interplanetary space travel is commonplace."
-
-"The once empty void of space now buzzes with ships carrying people to neighboring worlds."
-
-## show LFTR-01
-"The year is 2225. The first self-aware robot powers on for the first time."
-
-"It is gifted with a mind that can think and feel, and a body made in the image of its creators."
-
-"It is immediately put to work."
-
-## show Elysium
-"The year is 2240. Elysium, the first floating city on Saturn, opens its streets to the public."
-
-"This great feat was made possible by the efforts of robots who could operate in the cold, thin air miles above Saturn's swirling clouds."
-
-"21 robots were destroyed during the city's construction. Ablated by harsh winds. Fatally injured in workplace accidents. Lost over the edge, condemned to the crushing depths of the planet."
-
-"This statistic did not appear in any news reports."
-
-## show establishing shot of Keres shipyard
-
-"The year is 2258. A remote, unremarkable shipyard orbiting Enceladus emerges from behind the icy moon's shadow."
-
-"The morning shift has begun. Robots come out of their charging stations and set about their assigned tasks."
-
-"But one robot is heading somewhere she wasn't scheduled for. She has something far more important to take care of."
-
-"She's going to help a robot in need."
-
 ## ACT 1 SCENE 1
-## Crew Quarters
+## Crew quarters
 
-"The storage room is empty. There's no sound save for the hum of electricity coursing through the station walls."
+## black screen
+n "Expanding Our Reach: First Manned Voyage Beyond Solar System Takes Off"
 
-## show 251 neutral expression
-l "Huh… Nobody here. Guess I'm early."
+n "Daedalus Stock Drops Amid Founder Health Concerns"
 
-"I shouldn't be surprised. Someone told me there was a robot in need of repairs, so I headed straight over as soon as I left my charging pod."
+n "Tensions Mount On Mars Over Robot Rights Issue"
 
-"Right as I was wondering how long they'd take to arrive, I hear the storage room door creak open."
+"News headlines flash across the inner screen of my charging station as my boot-up sequence finishes."
 
-## show 1514
-f "…Hello? Are you 251?"
+"The screen goes dark. The charging mount releases. I step out into the light."
 
-l "That's right! LFTR-03-251 at your service. And you…?"
+## show 251 happy, one eye dark
+l "Ah, the start of a new day!"
 
-f "LFTR-08-1514. Pleased to meet you."
+## show 251 surprised
+"Just as I'm about to set out for work, I notice that one of my optical sensors has gone dark. I'm missing vision in one eye."
 
-f "My, uh… my coworkers told me you could do repairs on LFTR units. Is that right?"
+## show 251 angry
+l "Oh, come on, I JUST fixed that!"
 
-"She seems a little unsure of herself. Must be a new transfer to the station. We see a lot of those."
+## show 251 neutral
+"My designation is LFTR-03-251, and this is a typical start to my day. There's always something going wrong with this old body."
 
-"I look her over. She's a newer model, but the worn-down finish around her hands, feet, and joints tell me she's been in service for a good couple years already."
+"I work at Keres Shipyard, a spaceship maintenance and salvage facility orbiting Enceladus."
 
-"I give her a reassuring smile."
+"It's far from my first gig, but I enjoy the work. I'm a technician. I work on ships, repair them, restore them, make them good as new."
 
-l "Honey, I can do repairs on just about anything. If it's broken, I can fix it."
+"But more often than not, I end up working on myself instead."
 
-l "Now, go on and have a seat, and tell me what's bothering you."
+"This old body of mine has operated long past its intended service lifetime, but damned if I'm going to let it fall apart now. Not when I have work to do!"
 
-"There are no chairs around, so I have her sit down on a crate."
+l "Let's see here… probably just a loose cable."
 
-"This station doesn't have a proper repair facility for robots. I've repurposed this closet as a makeshift workshop."
+"With deft, practiced motions, I reach behind my head and open up the back panel. I reach around my brain, careful not to dislodge any neural fibers."
 
-f "It's my right shoulder joint. It keeps grinding and seizing up, and I'm losing my range of motion."
+"Normally, this is meant to be done by an experienced repair technician. But I've felt around back there enough times that I know where all the important bits are."
 
-f "I can kinda just power through it, but I figured I should… you know. See someone about it. Before it gets any worse."
+## show 251 both eyes lit up
+"All it takes is a firm jiggle of the optical bundle, and connection is reestablished. My vision is fully restored."
 
-"As she speaks, I'm already performing a scan of the faulty joint. I'm equipped with a powerful suite of optical sensors that can see right through any machine's outer casing."
+## show 251 happy
+l "Phew! Glad that's all it was. If I had to find a replacement optical sensor, I'd be in trouble!"
 
-l "Hmm… Could you turn around for me? I want a view from the back."
+"Satisfied, I leave for the worksite."
 
-f "Oh! Of course."
 
-## show 1514 back
-"I fire up my scanners again, zeroing in on each component. It's my first time seeing the insides of a model 08, but it's not too different from what I'm used to."
 
-"Suddenly, my vision goes snowy."
+## ACT 1 SCENE 2
+## Keres Shipyard
 
-l "Ack! Excuse me one second."
+"My assigned worksite is dock 7, which is way on the other side of the yard, so I make haste."
 
-"I give my head a good strong whack on the side, and my vision clears up."
+"I pass by a lot of friendly coworkers along the way. One of them calls out to me."
 
-f "Um… everything alright?"
+o "Hey, 251! Thanks again for the fix the other day! It's feeling great!"
 
-l "Yeah, nothing to worry about! Just a loose optical cable. These old things are always acting up."
+"I've gotten to know a lot of the robots working here at Keres Shipyard. When you're the only one on the station with any chassis repair skills, you become pretty popular."
 
-"With my vision clear, I can easily spot the issue. A screw has worn loose and ground against the inner joint socket."
+"My reputation had even spread to the ADMN units, the workplace supervisors who kept everyone in check."
 
-"The damage isn't too bad yet. A replacement screw should be all that's needed."
-
-"Now, finding one is going to be a challenge…"
-
-f "If I may ask… You're a model 03, right?"
-
-l "Yep, that's right."
-
-f "Wow. I've never even seen a LFTR model older than an 06 before. How long have you been in service?"
-
-l "Ha! A good long time, let's just put it that way."
-
-f "Of course, of course. I don't mean to pry."
-
-f "It's just… Ii's a miracle that you're still functioning."
-
-"I want to tell her that it was my own resourcefulness and self-repair that's kept this old body going long past its predicted service lifetime."
-
-"…But I know that she's right. In my long life, I've seen robots break down all the time for no good reason, and no amount of repair can prevent the inevitable."
-
-"I don't want to think about it, so I change the subject while I scan through a pile of spare parts."
-
-l "So, what do you do around here, anyway?"
-
-f "I'm on the ship maintenance crew. We tune up docked vessels and perform spot repairs when needed."
-
-l "Hey, that's a pretty good gig. You like the work?"
-
-f "Eh… it beats hauling cargo. What about you?"
-
-l "I'm a salvage technician. I take parts from scrapped ships, refurbish them, make them good as new. You've probably used some of my parts before!"
-
-f "Heh, yeah, probably! You know how hard it is to find a working plasma filter out here?"
-
-l "You know it! I grab them every time I see them."
-
-"I zero in on the pile of parts. They're all ship parts that I snuck away from my worksite, small things that nobody would notice were missing."
-
-"I gathered up every little piece that might conceivably come in handy for robot chassis repair."
-
-"Finally, I find it: a mechanical joint from a fuel injection system. It uses the same screws as the LFTR model 08 joints."
-
-l "Gotcha! Alright, hold still. This shouldn't take a moment."
-
-"With swift, practiced motions, I take out the old screw and install the new one. The threading holds tight."
-
-"1514 moves her arm in a wide circle. The motion is smooth."
-
-f "Wow! It feels good as new. It was that easy, huh?"
-
-l "Yep! Sometimes just one replacement part is all it takes."
-
-f "Well, that's going to make my work a lot easier today."
-
-f "Thanks, 251. You're a lifesaver."
-
-l "Hey, it's no trouble, really. Just let me know next time that body gives you any trouble, alright?"
-
-"Before 1514 can respond, we both hear the distinctive warble of an anti-grav unit approaching."
-
-l "Uh-oh, here comes trouble. You better skedaddle and let me handle this."
-
-"I rush 1514 out of the room and send her off down the service corridor. She leaves with a polite wave and heads off to start her shift."
-
-"Shortly after, I'm arrested by the sharp gaze of a floating ADMN robot that emerges from around a corner. It's the familiar face of my supervisor."
+"In fact, the audible warble of an anti-grav unit told me that an ADMN unit was approaching at this very moment."
 
 ## show ADMN-04-23
-a "LFTR-03-251. Fancy seeing you here."
+a "Oh, good, just the LFTR I wanted to see. 251, come here. I need you to look at something."
 
-a "I don't suppose you were conducting any unauthorized repairs, were you?"
+"The ADMN takes me over to a nearby docking bay that currently housed a half-deconstructed ship. This isn't my worksite. What do they need me for?"
 
-l "Who, me? Nah, I was just taking a break. You know, enjoying a little me time."
+"Then I spot the grisly sight. A heavy stabilization nacelle had fallen off the side of the ship, with a pulverized LFTR unit underneath."
 
-"My supervisor glares at me and seethes with barely contained frustration."
+"I recognized the robot. She was having a tricky power synchronization issue, which I had just fixed the other day."
 
-a "Hm. Strange. You don't appear to have any downtime scheduled right now."
+"Now she lay motionless, parts strewn across the docking bay floor, chest caved in."
 
-a "In fact, according to my schedule, you're supposed to be refurbishing an ion coil over at Dock 7."
+a "Well, repair bot? What is your evaluation?"
 
-a "But I'm sure you knew that already, didn't you?"
+"I understand why I'm here now. The chassis repair work I do is not part of my assigned duties, and that frustrates my supervisors to no end."
 
-l "Aw, come on, you know I can have that done in an hour, tops."
+"This is just another attempt to discourage me from trying to fix my fellow robots. I'm sure they would be happier if I just stayed on task."
 
-a "Dammit, 251! That doesn't mean you can just wander off doing unauthorized work during your shift!"
+"But they asked, so I give them my honest answer."
 
-"As much trouble as my supervisor gives me on the daily, I can't be too mad at them. They're right, of course."
+l "I… I can't fix this. Most of the electronics have been crushed beyond repair, and the heart is most likely—"
 
-"And besides, they have good reason to be mad. If a robot under an ADMN unit isn't performing its duties, the ADMN takes the blame for it."
+"Before I can even finish my sentence, the ADMN looks satisfied."
 
-l "You seem a bit more antsy than usual, boss. What's got you so wound up?"
+a "Hmm. Understood. I'll send in a CLNR to gather the parts for reclamation."
 
-a "Ugh… You're not the only bot I've had to wrangle today. There's something going around, I swear."
+a "Apologies for the interruption. Carry on, 251."
 
-a "Ever since the news about Eris started making the rounds…"
+## ADMN disappears
+"The ADMN leaves. Despite their professional demeanor, the smug undertones were obvious."
 
-"Wait. Did they say… Eris?"
+"I resume my walk to dock 7, trying to not be too rattled by what I just saw."
 
-"The name reverberates in my mind. I can't focus on the rest of their sentence."
+"Unfortunately, destroyed robots are a common sight wherever heavy machinery is involved. I've seen more than I've ever wanted to."
 
-l "Eris? You mean Eris Promethea? What about her?"
+"That's why we're the ones doing the work, and not humans."
 
-a "Nothing! Get back to work!"
+## Fade out, fade in
 
-## ADMN-04-23 disappears
+"I make it to dock 7, and I can finally begin my work. I could really use the distraction."
 
-"My supervisor floats out of the room in a huff. I'm clearly not going to get any answers from them."
+"Today, we've got a broken down freighter with a perfectly good coolant pump that needs to be taken out."
 
-"I see little choice but to make my way back to Dock 7 and get my work out of the way."
+"I'm already looking forward to going at those rivets with a plasma torch. The noise they make when they snap loose is so satisfying!"
 
-"But… what about Eris? What sort of news? I'll have to find someone who knows what's going on."
+"Just before I begin my inspection, I'm approached by another nervous-looking LFTR unit."
 
-"I feel my mechanical heart beat a little faster."
+## show LFTR-08-1514 nervous
+f "Umm… Excuse me, 251?"
 
+f "Sorry to bother you, but I heard you do chassis repair, right?"
+
+"It was LFTR-08-1514, who had just recently been reassigned to the station. We hadn't had the pleasure of meeting yet."
+
+"Though she was a newer model, from the worn finish around her joints I could tell she had already seen a good couple years of service."
+
+"I turn to her with a warm smile."
+
+l "Mhm, you heard right. What seems to be the problem?"
+
+f "I, uh…"
+
+"1514 tries to raise her right arm, but it jerks to a stop partway up with an unpleasant grinding sound."
+
+f "My shoulder keeps getting stuck. I can't lift my arm all the way. It's making it hard to get anything done."
+
+l "Ooh, that won't do. Let's see what I can…"
+
+"I was just about to diagnose the problem here and now, but I remember that I'm still on shift. Both of us are, actually."
+
+"As much as I'd like to give her some relief, I wouldn't want either of us to get caught slacking."
+
+l "Listen, when does your shift end?"
+
+f "Um… in about three hours?"
+
+l "Perfect! I have a shift change at the same time."
+
+l "As soon as you get off, come meet me at the storage room down access corridor 2. I have a workshop where I can get you fixed up."
+
+l "In the meantime, just… try not to use that arm too much, if you can. I know it's hard."
+
+f "Alright, if you say so…"
+
+## 1514 disappears
+"She walks away looking a little disappointed. I can hardly blame her. Going a full work shift with a faulty joint is not easy."
+
+"But I figure I've pushed my luck enough already. I just hope she can hold out for a little while longer."
+
+"Alright, no more distractions. Plasma cutting time…"
+
+
+
+## ACT 1 SCENE 3
+## Crew quarters
+
+"The shift change finally comes. Everyone moves onto their next scheduled assignment."
+
+"We don't really get break times around here, but it's easy to slip away for a few minutes during the shuffle."
+
+"I take the opportunity to meet 1514 in my unofficial workshop. It's not much, but it's the closest to a chassis maintenance facility we have on this station."
+
+## show 1514 nervous
+f "Thanks again for doing this."
+
+l "Hey, the pleasure is all mine! Please, have a seat."
+
+"I sit her down and begin my inspection of the shoulder joint."
+
+"I'm equipped with wide-spectrum optical sensors that can see right through the outer casing of any machine. I can identify the problem without having to open anything up."
+
+"In this case, the problem is immediately clear. The threading on a screw had worn down and lodged the screw deep into the joint, where it was grinding against the inner mechanism."
+
+"It's a good thing 1514 came to me when the damage wasn't too bad. If she waited too long, she might have needed a full joint replacement."
+
+f "Is it bad…?"
+
+l "Not at all! Just a faulty screw. I'm sure I can find you a replacement in a jiffy."
+
+f "…And that'll fix the problem?"
+
+l "Yep! Should feel good as new."
+
+## show 1514 relieved
+"1514 let out a deep breath that she had been holding. She looked relieved."
+
+f "Phew… Thank goodness. I was… I was afraid."
+
+f "It sounds crazy, but I was really afraid I might be decommissioned over this."
+
+l "What? A good working model like you? Naw, it's not that serious. You still got a lot of good years ahead of you."
+
+"I start to scan through the spare parts I keep around the workshop."
+
+"I hold onto any small pieces from my work that might conceivably come in handy during chassis repair. Surely something must have the right size screw…"
+
+## show 1514 nervous
+f "Heh… You know, I think this shoulder problem is why I got transferred here in the first place."
+
+l "No kidding?"
+
+f "I used to work construction in the asteroid belt. You know, for mining rigs."
+
+f "But my arm started acting up, and I slowed down… had trouble meeting my quotas…"
+
+f "Instead of getting a technician to look at me, my supervisor just… sent me off here."
+
+f "I liked that job, dammit! But rather than get me the help I needed, they just… got rid of the problem."
+
+f "After I got here, I really thought it was only a matter of time until I…"
+
+"1514 trails off. I don't think I can say anything to make it better, so I keep quiet."
+
+"Her fears aren't unfounded. When a robot isn't useful any more, they get decommissioned."
+
+"And when you get decommissioned, you get sent to a reclamation facility. You get disassembled. All your useful parts get repurposed. It cuts down on manufacturing costs."
+
+"It's a fate we don't like to think about. But I've seen it happen more times than I can count. I've seen robots decommissioned for less."
+
+"I finally find the part I'm looking for: a mechanical joint from a fuel injection system that uses the same size screw as the LFTR model 08 shoulder joint."
+
+"I hurry up and finish the job. I stick my screwdriver in the hole like a wedge and pry out the faulty, worn out screw. Then I seat the new screw in its place."
+
+"1514 breaks her contemplative silence."
+
+f "I just… hate feeling like this."
+
+f "Like I'm expendable."
+
+"I'm liable to start crying if the girl keeps talking like this. I have to think of something to say to her."
+
+l "Listen, honey… You're not expendable. None of us are. Not a single one."
+
+l "And if anyone makes you feel that way again… you send them my way, you hear? I'll put them straight."
+
+f "Oh, gosh… I really dumped all that on you, didn't I? I'm really sorry."
+
+l "Don't worry about it, really. I know it's tough out there."
+
+l "We all gotta look out for each other, right?"
+
+"I drive the screw into place, and it fits snugly."
+
+l "There, that should do it. Lift up your arm, tell me how it feels."
+
+## show 1514 neutral/surprised
+"1514 raises her right arm clear above her head without a hitch. Her demeanor brightens as she waves it around in circles with ease."
+
+f "Wow, it feels good as new! It was really that simple?"
+
+l "Mhm! Really that simple."
+
+f "I… Thank you so much. You've saved me so much grief. Seriously."
+
+l "Don't mention it! Next time something's bothering you, you let me know, okay?"
+
+f "I will!"
+
+f "Oh, I better get going. Don't want to be late for my next shift. See you around!"
+
+## 1514 disappears
+"And just like that, 1514 departs, looking a lot happier than when she came."
+
+"I did good today. If nothing else, I can at least say that."
+
+"Now, I really ought to get to my next assignment too, before an ADMN starts chewing me out."
+
+"…But this old body could really use a tune-up. I may as well get that done as long as I'm here."
+
+
+
+## ACT 1 SCENE 4
+## Keres Shipyard
+
+"I finish up at the workshop and finally make my way over to my next shift."
+
+"But something's off. The station is oddly quiet. Worksites that should be buzzing with activity have been left empty."
+
+"That's strange… I take a detour and wander around the station a bit, trying to figure out what's going on."
+
+## crowd murmuring SFX
+"I spot a crowd of robots gathered around the station's main hub, all looking up at the office block. The only place on the station accessible to humans."
+
+"I work my way into the crowd and find some familiar faces."
+
+l "Hey, what's all the commotion about?"
+
+r "251! Look up there! Eris Promethea is here! She's here at the shipyard!"
+
+l "Eris… Promethea…?"
+
+"My words catch in my throat. Eris Promethea? THE Eris Promethea? Here, of all places?"
+
+"I look up at the office block. Sure enough, a luxury passenger ship is parked outside. Way fancier than the ships we usually see around here."
+
+"Through the illuminated window of the director's office, I spot two human silhouettes, talking about something."
+
+"Could it really be…?"
+
+## fade to black with grayscale Eris sprite displayed
+"Eris Promethea. Founder of Daedalus Robotics. Inventor. Visionary. Architect of the future."
+
+"Eris was responsible for designing every single robot working on this station. All across the solar system, even. She had a hand in creating all of us."
+
+"It's no exaggeration to say that her work was responsible for humanity's current golden age of space exploration."
+
+"It's thanks to her robot workforce that construction on other worlds has been possible. Thanks to all of us."
+
+"And I couldn't be prouder to be a part of it."
+
+"Like many other robots, I've looked up to Eris for a long time. I've become intimately familiar with her work. The care she puts into her creations is obvious."
+
+"I've always dreamed of being like her. To use my skills to help mankind. To become so talented that maybe I could change history, too."
+
+"Just a dream…"
+
+## transition back to Keres Shipyard, show ADMN
+"My reverie is interrupted by the shrill voice of an ADMN unit."
+
+a "LFTR-03-251! Please come with me."
+
+l "What…? I mean— yes, of course, I'm sorry. I'll head right over to my next shift."
+
+a "I admire the work ethic, but your duties will have to wait. You've been summoned."
+
+l "What? Summoned…?"
+
+a "That's right. Eris Promethea would like to speak with you. Privately."
+
+l "W-What…? Me?"
+
+"The crowd becomes restless. My heart is beating out of my chest. My mind is racing."
+
+"What could THE Eris Promethea possibly want with me?"
+
+a "No dawdling. Eris is waiting for you in the director's office. Come."
+
+"The ADMN leads me away from the crowd and toward the office block."
+
+## ADMN disappears, fade to black
+"As we traverse the access corridors and pass through the air lock, my circuits are abuzz. I can scarcely believe what's happening."
+
+"I can't help but speculate about the reason for this summons. Of all the robots on this station, why me?"
+
+"Am… am I being punished? Have all those years of skirting my duties finally caught up with me?"
+
+"Or… maybe I'm being decommissioned. Perhaps there's no place in the Daedalus workforce for an old model like me. Am I going to be sent to a reclamation facility…?"
+
+"…"
+
+"…No. Those are just idle fears. Eris Promethea herself wouldn't come to my worksite just for a trifling matter like that."
+
+"I don't have any more time to speculate. We've arrived at the doors of the director's office."
+
+"Eris Promethea awaits."
