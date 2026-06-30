@@ -12,7 +12,7 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("Corundum Heart")
+define config.name = _("Heart of Gold")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
@@ -23,19 +23,19 @@ define gui.show_name = True
 
 ## The version of the game.
 
-define config.version = "0.2"
+define config.version = "0.3"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
 ## triple-quotes, and leave a blank line between paragraphs.
 
-define gui.about = _p("""Made for the Toxic Yuri VN Game Jam 2.
+define gui.about = _p("""Made for the Toxic Yuri VN Game Jam 2, 2026
 This game was created by Gelatino Games.\n\n
 Director: Audrey Gelatino\n
-Programmer: Zora Morphimus\n
-Writers: Torch, RogueMagpie, Alice!\n
-Artists: Jeepers, My little Sloany, Kidotix\n
-Music: Marcy\n
+Programmer: Zora Morphimus, Marcy Nabors\n
+Writers: Torch, RogueMagpie, Alice!, Audrey Gelatino\n
+Artists: JeepersSqueakers, My little Sloany, Kidotix\n
+Music: Marcy Nabors\n
 """)
 
 
@@ -43,7 +43,7 @@ Music: Marcy\n
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "CorundumHeart"
+define build.name = "HeartofGold"
 
 
 ## Sounds and music ############################################################
