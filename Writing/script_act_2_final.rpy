@@ -2,9 +2,21 @@
 ## Eris's Ship
 
 ## blank background
-"I hurriedly meet with me
+"I hurriedly meet with my fellow workers gathered at the station hub."
 
+"It takes all my willpower to keep from divulging everything I had just heard…"
 
+"But they seem to understand. I'm going to Saturn to work directly with Eris Promethea. How could this be anything but wonderful news?"
+
+"They're happy for me. I assure them that I'll come back for them. They look forward to it."
+
+"If only they could know…"
+
+"But I can't sit around any longer. Eris is waiting for me."
+
+"I say my last farewells and head back to the office block, where Eris's ship awaits."
+
+## fade into ship background
 
 "It's far from my first time boarding a spaceship. But this feels… different."
 
