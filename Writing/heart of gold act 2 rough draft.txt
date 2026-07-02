@@ -1,0 +1,433 @@
+N = Narration
+L= LIFTR
+E= Eris
+
+N:
+“Although its not my first time on a spaceship by a wide margin, this time it feels different... My sensors are firing on all cylinders as i board her quite sizeable vessel with crews of caretaker droids and all of the luxuries that someone of her caliber can afford.”
+
+N:
+“While i make this choice with my full chassis... It still feels so jarring, from meeting and taking her offer to boarding her spaceship a day later, i must be quite the obvious worrywart as Eris with an expression of concern gently takes hold of my right hand”
+
+E:
+ “I know this environment can be... Jarring, i certaintly was not ready for it when my inventions first started to become popular enough for me to experience this kind of luxury. However i want you to feel at ease, think of yourself as my guest, and as my guest you get all of the hospitality my spaces can offer.”
+
+L:
+“Understood ma’am :)”
+
+E:
+“Come, 251.”
+
+N:
+“She leads me through passageway after passageway of the inner environs of the vessel and eventually we arrive to a seated area with multiple windows offering a near 360 degree view of the surroundings of the ship, she leads me to the back area that has a panorama of the rear of the ship, a comfortable booth almost like a diner, with soft looking seats and a table”
+
+E:
+“You wouldnt miss the change to wave goodbye to your friends right? *ahem* Windows, undim from the outside”
+
+N:
+“An automated voice, androgynous and polite declares from a nearby speaker “Windows undimmed” as a diminutive yet noticeable border of light surrounds the window, indicating that the outside can see into the ship. Looking through the glass i see all my fellow workers, and even a few admin bots gathered at the drydock, waving at me with smiles on their faces“
+
+N:
+“I wave back at them with a big smile on my visor as i blurt out ‘farewell’s and ‘see you all soon’s. my non existent heart would be beating full and proud to be embarking on this journey knowing my colleagues are rooting for me.
+
+N:
+“I hear the landing gear start to shift, i see the entry ramp slowly retract as the entire ship hums, gently at first with growing intensity every passing moment. Eris sits down on the comfortable booth and fastens a seatbelt that autonomously appears forth from the seat itself
+
+E:
+“I assume your balancing systems are still working?”
+
+L:
+“They are! its one of few parts that is original”
+
+E:
+“Hah! i just won a bet”
+
+L:
+“Hm?”
+
+E:
+“A long time ago, i made the choice to make the balancing systems more durable for the LIFTR models and everyone thought it was a waste of resources, a fellow engineer working on the project made a 50 credit bet that these wouldnt last more than 15 years without being replaced like i predicted, who’s laughing now Sudo Apolldrus you old fart? *faha!*”
+
+N:
+“Oh sweet nuts and bolts... she has a wonderful laugh... Sometimes im thankful i actively choose my expressions on the visor, if i didnt id be a lot more predictable than i already am”
+
+N:
+“My attention is drawn elsewhere as from speakers a cheerful jingle plays and a calm voice announces “Dear Passengers this is your captain speaking, Liftoff in 60 seconds and counting” i wave one last time to my dear colleagues. i activate my balancing systems and brace as the ship starts to lightly shake as thrusters are engaged and liftoff commences, in a matter of moments we start to move away. My entire world inside that space station begins to steadily shrink in the distance, as i move towards the unknown”
+
+(SCENE END)
+
+
+
+
+N= "(SEVERAL HOURS PASS)"
+
+N= " The ringed gas giant steadily approaches in the distance as the vessel moves through the cosmos, within it carrying not only my body but also my hopes and expectations for the future. The now more familiar voice of the captain echoes through the many speakers in the ship "Attention all passengers, entering saturn environment in 5 minutes."
+
+N= "Eris is currently typing at a nearby communications terminal, she has been there for at least a dozen minutes. I plan my vision across the leisure and observation room we've remained in for most of the travel, calmly observing   the crew. They move things to and fro, type in commands in terminals and talk to superiors with earpieces, watching it all is oddly soothing and comforting. To all of them it's just another work day, another scheduled flight with all of the routines that by now are a day-to-day expected repetition."
+
+N = "As the entry into the higher gas clouds of Saturn approaches, more and more crew scatter into different rooms and seats with some of them already standing by buckled to their seats, Eris moves away from the communications terminal and heads towards our seats, sitting down next to me and once again fastening the belt to herself. The captain once again comes through ""arrival in Elysium in 2 minutes"
+
+E = "...Tell me something 251, is this your first time in Elysium?"
+
+L= "Very much so"
+
+E = "How exciting! I love witnessing the first time impressions of anything I've worked on."
+
+L = "I'm most excited to see Daedalus HQ in person, honestly"
+
+E = "Im proud to say our Headquarters are quite postcard locale but don't let that distract you too much, the city itself is-"
+
+N = "she hesitates for a moment, thinks on it and resumes"
+
+E = "I was going to deploy some casual poetics in how I see it, but I'll let the vista speak for itself. Pay attention now, 251... We approach!"
+
+N= "as "Arrival in 60 seconds" is announced by the captain, the ship breaks through the dense clouds of Saturn into an orb of open air with enormous proportions, sustained by several floating contraptions that somehow push away the dense makeup of Saturn's higher atmosphere, at it's center an enormous glass dome encircles Elysium: A city almost beyond description. Architectural marvels and skyscrapers light up the sightlines as flying vehicle highways move the snaking traffic in the midst of the end of day rush; Autonomous flying drones work construction on... Something I can't discern besides knowing it will be of massive scale by the scaffolding and structures already being laid down."
+
+N = "After looking at it for long enough I finally manage to understand what I am seeing on the dome itself, although mostly translucent from the outside, the glass of the dome contains color and light altering properties so powerful they simulate the warm pink, orange and yellow glow of a sunset on earth and it's effect is as if the beautiful starry night of the cosmos was merged with the edges of a sunset, the top of the dome is clear and shows off the stars and the edges shine bright and colorfully as if hugged by the most beautiful tangerine and peach colored clouds"
+
+N = "And to finish with aplomb, the center stage of it all is Daedalus HQ, its main palatial structure beholds nods to Corinthian Order Architecture, massive and imposing in its stature. Several different segments of the building are clearly separated by an internal garden that works like a crossroads to its different major locales. As the ship starts to head towards the landing area, heavily armed guard detail move towards the locale in preparation of our arrival"
+
+N = "Exiting the vessel, we are escorted all the way through the open area and even while inside the security personnel keep close and watchful"
+
+E = "don't worry, this is all standard procedure. Since I carry a lot of classified information on me, both in my mind and oft physically too, it's protocol to keep security close for a while until we are sure no one is watching or lurking."
+
+L= "I see, do I have to worry about anything relating to this?"
+
+E= "i would hope not, like I've said before you are my guest. These here guards are protecting you as well"
+
+N= "A security officer nods while walking alongside eris, almost like a wordless "affirmative" to what Eris claimed"
+
+E= "I can't give you a good tour of the HQ for these security reasons, but there is one area I can show you, my personal workshop and apartment... Interested?"
+
+L= "of course!"
+
+E = "Very well, then."
+
+(SCENE ENDS)
+
+
+N:
+As she leads me down an unassuming corridor turning to the left from the entrance to her living quarters my eyes dart to the approaching double doors that have... Door handles?
+N:
+My confused stare must have been quite obvious, as she reacts with a chuckle and says
+E:
+"Never seen these before?"
+L:
+"Actually I have! There are a few doors in the station that haven't been updated to automatic yet... I just... Never expected to see door handles on a modern place like this"
+E"
+"Well, they are there by my own design. You see, I grew up in a time before automatic sliding doors became the norm for *every single way of ingress*, and I wanted the entrance to my workshop to be... Memorable, for myself and anyone I gave the privilege to see into it"
+
+N:
+She gives me a wink after saying that last sentence and if I had skin, I'd be blushing...
+
+N:
+She opens the double doors with carefree aplomb and what I see before me is best described as...
+
+N:
+A beautifully organized mess. Everything is tidy and organized but not by any conventional means, some tools are organized by size and shape, clearly from the same set even, while others are placed next to ones that you'd never expect to see together and yet they are sorted all the same. Like the chart for a ballad played on an instrument you don't know, you recognize the basics of the musical chart but don't quite comprehend how the notes are placed and why they are where they are.
+
+(First choice narration)
+N:
+My eyes first darted to...
+(Subsequent choices narration)
+N:
+After that, I couldn't help but notice...
+
+(OPTION 1)
+N: The multiple robot parts on the table
+E:
+"Curious about those? Well, I'm not sure how oft you watch the news, we've recently had an acquisition of a company that makes worker drones for farms, and since this line of products is joining our family of worker drones i had some inactive models sent here"
+L:
+"Why so?"
+E:
+"Simple, I have a personal rule: all products we sell, I must have hands on experience. If it's a product I'm not versed in I'll have experts called to my office to explain their use and design. However as you well know, im no stranger to robots and so I took it upon myself to dismantling and analyzing their inner workings"
+L:
+"I see!"
+E:
+"You know... It is one of the most rewarding things for me."
+L:
+"What is?"
+E:
+"Studying someone's work, like pulling back the curtain of a theater performance, you get to see how everything was put in place, where their minds were when making the choices that lead to the now finished product, to see how someone poured their effort into making something exist... Very few things in life give me this window of insight"
+N:
+As she explains, her eyes seem to almost glow with how sincere her desire to peer into the designs of fellow engineers is, if I was capable of doing so, I'd have butterflies on my stomach knowing she was soon going to peer into my very body and work with those same eyes
+
+(OPTION 2)
+N: The woodworking tools?
+E: "oh yeah! These... These are for when Im working on more delicate models, wood is a surprisingly popular choice for aesthetic flourishes and details seeing as most things now are made of non organic materials"
+L:
+"That is... Fascinating! I don't see any wood here however..."
+E:
+"That is because I keep it in a locked container, that one"
+N:
+She points to a wide metal container with a digital password lock
+L:
+"Why??"
+E:
+"Let me show you"
+N:
+Catching me by surprise she holds my hand and leads me to the wide metal box, she carefully dials a few numbers on the digital keypad and with a satisfying *Click* the lid is unlocked and automatically swings open
+N:
+What I see is truly surprising, a pile of glittering pearlescent white planks of wood that shine and sparkle beautifully, the wood grain has strange curves and patterns on it
+L:
+"What is this?"
+E:
+"Wood from a recently discovered exoplanet, the whole surface of one of its continents is covered in these beautiful trees that shine even at night, since it's incredibly expensive Ive placed it in here for safe keeping"
+L:
+"That is truly remarkable! To think this kind of material is naturally occurring!"
+N:
+I wonder if she will let me use any of her special materials at some point... I hope my work with low grade materials doesn't disappoint her...
+
+(OPTION 3)
+N: The raw materials next to the autolathe
+N: I refresh my vision modules a few times trying to believe what i see, high quality titanium plates, several clear crystals of perfect purity ready to be shaped into lenses, several electronic components for whichever use imaginable... this is a tinkerer’s dream!
+E:
+“hm? whats caught your eye?’
+L:
+“these... These components are fantastic! so much variety and purity! all ready to be shaped and machined! i wish we had this kind of material depot back at the station!
+E:
+“Oh! Yes of course, if i am to make interplanetary waves with my inventions i must be stocked with the highest quality materials, a good design is nothing if its components dont live up to the expected workload”
+N:
+i wonder if its too much to ask if i can bring a few titanium sheets with me whenever i go back to the station...
+
+(OPTION 4)
+N: The Desktop Station attatched to the autolathe
+N: this part of the workshop is notably less organized and cared for in comparison to all the other work surfaces and shelves... How odd. The computer screen is clean but a bit dusty, as if its not been used as regularly as everything else, however the desk itself is clean which leads me to believe the desk itself is used more than the Personal computer therein
+L: Eris... Why is this desktop so... ignored? i would imagine for an engineer that a computer interface would be a useful and reliable friend in the workshop.
+E: If i was any other engineer you would be correct... However i am not an orthodoxical engineer by any means, i much rather design my works on something more... tactile
+
+N: She walks in the direction of the desk, pulls open a drawer and picks out from a small pile a sketchbook. she waves her hand in a beckon and i obey, standing next to her and looking over her shoulder i see her flipping through several pages worth of her ideas, shapes and lines of abstract markings of pencil lead and pen ink that coalesce into schematics that one day could be turned into material truth of steel and circuitry, a true door into her creativity and genius as an inventor
+
+(if player has chosen option that previously mentions her wanting to blush if it was possible)
+
+N: I once again get a sensation in my core that... if i had skin id be blushing...
+
+(If first pick before any option that mentions it)
+
+N: I get a warm sensation in my core that... If i had skin id be blushing...
+
+(AFTER ALL CHOICES ARE DONE)
+
+E: I think we had a pretty good walk around my lair *fahaha*. So... Are you ready for what we talked about earlier? Id love to see how your internal systems are faring after 30 years of self repairs!
+
+(SCENE END)
+
+
+
+N: “Eris grabs a small remote from a nearby table and activates it.  Suddenly, the sound of depressurization and shifting floor tiles reveals a retractible workbench with several tools hanging from hooks located in the table apron. With her gaze locked on me she gestures towards the bench with a smile”
+
+E: “Whenever you are ready, just lay down on the bed and ill start my examination.”
+
+N: “I brace myself, emotionally, for the forthcoming event.”
+
+N: “With each step my mind starts anticipating and calculating possible reactions, possible opinions, possible... no, i cannot start imagining this strongly... i dont want my anxiousness for her gaze to ruin this moment, just relax 251... its just one of the most impressive people in the world opening up your chassis and examining your very functions and personal work of decades... oh sweet nuts and bolts...”
+
+N: “I carefully lay down in the bench, This vivisection of me has been at the forefront of my mind since she introduced the idea, i preemptively start slowing down my movement modules so i can be as still as i can for her and... oh right... doing that has a very distinctive sound cue...”
+
+E: “hm! I appreciate your trust in me 251, slowing down your movement mechanisms is a sweet gesture “
+
+L: “Oh! y-yes of course..”
+
+N: “With a purposeful gait she approaches, and... Slides her hands across my still closed chassis with a soothing swish, locking eyes with mine”
+
+E: “Just say the word and ill start”
+
+L: “w-w-word...”
+
+E: “*fahaha* Very well, dear”
+
+N: “She moves her left hand to the latches that hide the screws that keep my chassis shut and with satisfying *clicks* she opens each of them, masterfully untightening each with a screwdriver in her other hand. The process is so smooth and graceful it truly reveals how experienced she is with this entire process”
+
+E: “Lets see what you’ve managed to... Oh my~”
+
+N: “Cutting herself off as she opens my latch, her face shifts into awe. My calculations preparing me for the worst and hoping for the best...”
+
+E: “This is... Exquisite work! Your braces for placement intact or recreated with scrap material... Your internals ever so slightly rearranged for proper temperature management *gasp* you... your wire managment is color coded with wire sleeves! And is that a...”
+
+L: “Internal compartment of important small pieces that are hard to find? yes! I came up with the idea after struggling to find the smallest components in my work area”
+
+E: “251... do you mind if i go on top of you? i want to see your work up close.”
+
+L: “Y-yes plea-! i mean... sure, of course”
+
+N: “Firstly sitting on up the bench, she carefully moves her legs until she is straddling me and lowering herself into my chassis... oh cog... Is this happening?? Is this real?!”
+
+E: “You have very good taste 251, even with most of  scrap materials being difficult to work with you managed to find the best amongst the rough for your replacements and fixes”
+
+L: “I actually find scrap materials very intuitive to use, my internal database of metals and their specifics certaintly helps”
+
+E: “Of course! You work in a scrapyard, its mandatory to have that kind of database in your system memory for that kind of work... fascinating.”
+
+N: “In a small spell she shifts, moving her body up and beyond my chassis. She approaches her face to mine, her breath upon my faceplate”
+
+L: “E-E-Eris ma’am?”
+
+E: “You... you are truly, truly exquisite dear, i dare say you are the most exquisite LIFTR mode i have had the pleasure of meeting”
+
+L: “T-T-Thank you ma’am... I-I could s-say the same...”
+
+E: “Oh~? How cute, im very glad to know the admiration is mutual.”
+
+N: “A small beeping starts blaring out of what sounds like Eris’s pocket”
+
+E: “Ugh... what now? “
+
+N: “She raises herself and picks up an earpiece device and attaches it to herself, faint murmurs of a voice escape from it as she listens for a moment and sighs”
+
+E: “I’ll be right there.”
+
+N: “She presses a button and presumably ends the call, she lays back down on top of me and once again locks eyes with me”
+
+E: “I would love nothing more than to continue this moment, however it seems my duty calls. Looks like i wont get the chance to give you a tour of my living quarters. Feel free to explore as you like! The executive pass i gave you should give you a full run of the place, but id prefer it if you keep your wondering to here and my quarters, that sound good?”
+
+L: “Y-yes ma’am!”
+
+E: “*Fahaha* your enthusiasm is intoxicating, 251. Been a while since i’ve smiled this much”
+
+N: “In a flash, she gets unstraddles me, closes my hatch and screws it closed. i sit up on the bench as she moves towards the exit, giving  me a wink as she goes through the double doors”
+
+E: “See you soon, dear”
+
+N: “She leaves... Holy shells... i think i blew a fuse...”
+
+
+
+
+N = "My systems detect a disturbance outside, I slowly start coming out of standby mode. My vision shows me Eris, lightly tapping my face with a finger trying with a slightly confused look"
+
+N = "As soon as my systems fully turn operational I stand up and look at her"
+
+L = "Hi! Sorry for the confusion, I was in standby mode"
+
+E = "H-Hello! Faha ... Why were you in standby mode? Why did you not explore beyond here?"
+
+L = "Well... You mentioned how you wanted to give me a proper tour and how it wasn't going to happen because you were busy, I decided to simply wander a bit more around the workshop and then preserve my energy by entering standby mode until you arrived"
+
+E = "You waited for me? How kind of you 251"
+
+N = "A quaint smile draws itself across her face, she seems relieved"
+
+L = "Something amiss?"
+
+E = " Oh nothing much, just some annoying business I had to attend to, and finding you turned off in the workshop was slightly concerning"
+
+L = "Understood"
+
+E = "So... Let's meet my living space then, shall we?"
+
+L = "yes!"
+
+N = " it seems the city outside has changed into "night time" as the outside now only shines with lights from the many skyscrapers. I follow her through the double doors of the workshop and not too far away from there to the left is a big automatic door with dark wood paneling and brass detailing, she places her right hand into a screen and looks into a small eye scanner, a single note from a violin is heard and a female automated voice says "Biometry confirmed, welcome home Eris".
+
+N = " The door slides open, Eris gestures with her hands"
+
+E= "Guests first in my home, always"
+
+L = "T-Thank you!"
+
+N = "I step in and see, a very luxuriously tasteful apartment with 2 floors. To my left are big windows that go almost all the way up to the ceiling, the headquarters garden in full view as well as a fantastic view of the Elysium city center. Right ahead a fancy dinner table with the same dark wood of the door and the same shining brass detailing. To my right a countertop with high stools leads into the expensive looking kitchen that contains top of the line appliances with all you could ever need to cook anything, beyond that I see a spiral staircase leading to the second floor, and two closed doors
+
+E = "Welcome to my humble abode, this first floor is the main living space, and just beyond that corner the door at the end of the corridor is my office. Upstairs is my suite.
+
+L= "You have a beautiful home! So much space!
+
+L = "What's the other door down that way?"
+
+E = "Guest bathroom, though I guess it's not very used as I'm not one to host that often. Well, make yourself comfortable 251, tomorrow you get to see the rest of our HQ... As for myself I'm going to my room, I need a shower after that forsaken meeting the board insisted I be a part of.
+
+L= "uh... Yes! I'll get myself... Comfortable"
+
+N = "Eris waves and heads upstairs, I hear a door opening and closing and after a beat, the sound of a shower turning on"
+
+L = "Get myself comfortable huh..."
+
+N = "I guess I never... Really thought about what that looks like for myself, my life has mostly been work... I've enjoyed it and I'm at peace when working hard... I guess the closest thing to being comfortable is when I have downtime to self repair..."
+
+N = "I take a few steps towards the windows, staring out into the night I feel myself so far away and so... Odd? Everything here is beautiful and beyond measure, but it's all foreign to me, I've never had to "relax" before, whatever that could entail for a worker robot. I feel at ease, and yet somehow so not... It's all comforting and respectful and yet something is missing, is it simply my routine being broken after so many years of mostly sticking to work schedules and the happenings of a shipyard? Is it because I'm somewhere mostly designed for the comforts and desires of humans? Or is it something else entirely? At least Eris has been lovely company, our moment earlier is one that echoes in my consciousness as I move through all of this, why does she keep appearing in my thoughts? Eris.... Eris... Eris..."
+
+N = "I need something more grounded, let's break this down like I would a task... Current directive "Get myself comfortable", am I comfortable right now? More or less... What am I doing? Looking out the window... Oh! That works!"
+
+N = "with a careful touch I open the windows, letting a warm breeze in that brushes through my metal body, the wind finding the path of least resistance against the cold alloys that make up my exterior."
+
+N = "I try to take it all in, workers moving below me through the headquarters, headed from nowhere to somewhere. The vast and awe inspiring architecture of Elysium, with it's flight vehicle highways packed with movement from the luxurious machines that populate it. And finally, the stars and cosmos beyond, different and yet so familiar to the stars outside of my station in Phobos... My station... I wonder how everyone is doing? By now everyone is probably helping out in inventory and discarding what can't be salvaged into useful materials, compacting the unwanted for collection at the end of the month... I wonder what will I be thinking by the end of it when I return home."
+
+(Scene end)
+
+
+
+E = "251! Would you kindly come up here?"
+
+N = "Startled, I lean away from the window and close it"
+
+L = "Y-Yes! On my way!"
+
+N = "I hurriedly move, winding up the spiral stairs, I slowly open a door and... Wrong door this is a guest bathroom..."
+
+N = "Turning around I then once again open it slowly peeking into her bedroom. Inside I see a spacious and comforting environment, warm lighting spills from the illumination inlaid into the crown molding. A comfortable and soft looking king size bed with black sheets hovers an inch or so off the floor, a shelf filled with books, memorabilia and decorations adorns one half of a wall.a walk in closet with a plentiful collection of clothing items, and a spacious bathroom that vents steam from a recently taken hot shower"
+
+N = "Eris is wearing black pajamas, surprisingly simple in their design, she holds a glass of wine in her left hand, idly swirling it. When I appear at the door she looks up at me"
+
+E = "So, how do you find the place?"
+
+L = "Impressive and tasteful."
+
+E = "and...?
+
+L= "and?"
+
+E = "Well, I was hoping to get into your thoughts, pick at your... Motherboard I suppose. I've seen your internal functions but I've not seen much of you 251, you've been cordial and respectful and curious but I've not seen... How you feel. What hides inside that mind of yours"
+
+L = "oh! I'm sorry if I came off distant... It's just... A lot to take in"
+
+E = "I can imagine, and that's exactly why I want to know, you have a perspective that is inherently different given what you are, I want to hear it."
+
+L = "Well... I for one find it all beautiful, I can't peer into how it must feel for humans but at least that part is one that I can place, beauty is subjective but it is something both machines with minds and living organisms can experience. I've seen a lot of beauty while here, I've also seen things that I can only scale to spaceships... These tall buildings, I've seen them in images and heard of them but to see them for myself makes all the descriptions I've received seem understated in comparison to the real thing. I've also experienced... A certain yearning for the familiar, but I think that one stems from breaking from routine I've been following for so long, it does not distress me too much in comparison to my curiosity. I will also say it is very strange to be so... Seen I guess? For most humans I'm simply a worker drone and that's that, one of many on the station"
+
+E = "that couldn't be farther from the truth, I've spoken and interacted with so many LIFTR models over the years and not one of them intrigued me as much, you have... Curiosity, it's charming."
+
+L = "Really?"
+
+E = "oh yes, very much so"
+
+E = "I have one more question for you."
+
+L = "Yes?"
+
+E = "How would you describe me? In one word."
+
+N = "A moment passes... I think about it for a few instants and then:"
+
+L = "Exceptional"
+
+N = "Eris... Blushes, her eyes widen a bit and she diverts her gaze for a moment, she swirls the wine in her glass and adjusts herself"
+
+E = "Ahem... Thank you for the answer, I'm soon going to turn in for the night, Feel at home to do what pleases you and if you wish to turn off you can choose anywhere to do so"
+
+L = "I didn't plan on doing much... But I do think I know where I want to turn off for the day"
+
+E = "where?"
+
+L = "May I do so here?
+
+E = "Oh! Uh! Yes, of course!"
+
+L = "Thank you Eris, if you don't mind I think I'll do so right now"
+
+N = "as I close the door behind me and prepare to sit down in a corner Eris interrupts me"
+
+E = "wait... If you are going to turn off here you could..."
+
+N = "she once more blushes, this time a little more"
+
+E = "do so a little closer? I don't think this bed can handle your frame but you could sit down next to me"
+
+L = "it would be an honor"
+
+N = " Eris sips the last of her wine, places her glass on the nightstand, she claps her hands twice and the lights on the bathroom turn off and the ones in the room dim to a very very slightly shine that mostly bathes the room in a warm tone, the windows also slightly dim making the lights from the outside look like stars. I sit down next to her bed, sitting cross legged and turned towards Eris herself, she is making herself comfortable"
+
+E = "Good night, 251"
+
+L = " Good night, Eris"
+
+N = "as I start turning off for the night, setting my systems to awake in some hours, my vision turns off. My movement systems turn off. My balancing turns off. And before touch and hearing turns off... I hear shifting from the bed... and feel a soft and quick sensation on my forehead... If I were to be bold... I think it felt like lips, whatever those are supposed to feel like..."
+
+(Scene end)
