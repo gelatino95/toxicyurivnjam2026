@@ -185,3 +185,232 @@ p "This is your captain speaking. We're approaching the upper atmosphere of Satu
 
 "I watch with rapt attention as we enter the planet's atmosphere."
 
+## fade to black
+
+"And then, after a long descent… I finally see it."
+
+## show Elysium outside view
+
+"Elysium. Saturn's first city, and a marvel of human engineering."
+
+"Suspended placidly over the yellow clouds, encased in a giant transparent dome like a great snowglobe."
+
+"The buildings under the dome glisten in the soft glow of the midday sun."
+
+"The view is awe-inspiring… Pictures simply don't do it justice!"
+
+"Eris looks amused by my wonder-stricken look. She allows me to take in the sights as we approach the city's gate."
+
+## show Elysium inside view
+
+"After passing through an enormous entryway and going through an airlock, we enter the city proper."
+
+"Goodness, it's even more splendid up close!"
+
+"We pass over long stretches of city blocks, all meticulously planned, all clean and inviting."
+
+"We're close enough to see people and cars making use of the bustling streets."
+
+"To think that humanity could prosper even this far from Earth! Elysium is truly at the forefront of progress."
+
+e "See that big complex in the distance? Right at the center of the city?"
+
+e "That's the new headquarters of Daedalus Robotics. That's where we're going to have our big ceremony."
+
+e "And that's where we're going to be spending a lot of time together."
+
+"I could hardly keep myself away from the window, watching the prosperous city pass below us."
+
+"Soon enough, we arrive at the great, palace-like building that was Daedalus HQ."
+
+## fade to black
+
+"The ship lands just outside the building's main entrance."
+
+"Eris escorts me off the ship and walks me all the way to the front door."
+
+"I feel very much out of my element in such a grand and luxurious place… What place does an old, broken down robot have in a modern marvel like this?"
+
+"But Eris brought me here for a reason. With her by my side, I feel no fear."
+
+"We step over the threshold of Daedalus HQ together."
+
+
+
+## ACT 2 SCENE 2
+## Daedalus HQ halls
+
+"The inside of the building is just as impressive as the outside, all vaulted ceilings and tall windows that brighten the space with golden light."
+
+## show security
+
+"Immediately after entering, we're approached by staff. They seem to have expected our arrival."
+
+s "Welcome back, Miss Promethea. We hope your flight was pleasant."
+
+s "I presume this would be the robot you spoke of?"
+
+e "That's right, this is LFTR-03-251. Please treat her as you would any honored guest of the company."
+
+s "Very well. As per company policy, she will be permitted to roam certain wings of the building, but will be barred access to restricted areas."
+
+e "That's perfectly fine. She's going to be staying with me."
+
+## hide security
+
+"The security guard gives a nod of approval and waves us along. Eris leads me further into the building."
+
+## show Eris friendly
+e "So, how are we feeling? A bit awestruck, if I had to guess?"
+
+l "Oh gosh, yes! I've been impressed since the moment we got here. I feel a bit out of place among all this… this…"
+
+e "Ritz? Glamour? Yeah, I understand perfectly. This place was built to my specifications, but sometimes even I think it's a bit much."
+
+e "Oh, and I hope the security didn't spook you too much. This place stays tightly guarded, on account of all the trade secrets."
+
+e "But you're a guest here! You have nothing to worry about."
+
+l "Thanks, Eris."
+
+e "Now, come. We have lots of work ahead of us preparing for the transfer, and we need to get started right away."
+
+e "But first, I want to show you around my wing of the building."
+
+## fade to black, then to Eris's bedroom
+
+"Eris leads me to an ornately decorated room. It almost looks like a museum, with all the things on display."
+
+"But there's also a bed…?"
+
+## show Eris friendly
+e "Welcome to my quarters!"
+
+l "Your quarters? Eris, you actually LIVE here? I had no idea!"
+
+e "A bit strange, sleeping at the same place you work, right?"
+
+"It's… actually not that strange. Not for me. But I get what she meant."
+
+e "Well, I just thought it made sense. I spend so much time in my lab, I may as well live nextdoor, right? It saves me a commute."
+
+e "But I didn't just bring you here to gawk. Have a look at this."
+
+## hide Eris, show SYNC scene
+
+"Looking over the whole room, mounted in a display against the wall, there's…"
+
+"Oh, my. How do I even describe this?"
+
+"It's a robot chassis unlike anything I've ever seen before."
+
+"Sleek. Elegant. Modern. And most strikingly, it possessed what appeared to be… muscle tissue?"
+
+"I had trouble taking my eyes away from it. There was something grotesquely beautiful about it."
+
+e "251, behold: your new chassis."
+
+l "This… this is going to be me…?"
+
+e "I call it SYNC. The synthesis of metal and living flesh."
+
+l "But that's… how did you…?"
+
+e "Oh, don't get me started, dear. This has been the culmination of years of research. I could talk your ear off about it."
+
+e "But, hmm… let's do the short version."
+
+e "I'm sure you noticed the organic tissue incorporated into the frame, yes?"
+
+e "The muscle fibers are proudly on display, but that's not all. It possesses an organic nervous system, organic brain, even a partially organic heart."
+
+e "This was meant to address the issue of the ongoing maintenance required to keep traditional robots in good working order."
+
+e "Metal does not heal when it is injured. But flesh does. It may be artificial, but it is just as capable of self-healing as any living thing."
+
+"I'm slackjawed. The technology required to create something like this was beyond anything I had ever known…"
+
+"And to think that this would soon be me… this empty body that I'm standing in front of right now."
+
+"I look into its blank eyes. I imagine that they were mine."
+
+e "Of course, the healing property is a big selling point of the chassis, but it's not why I created it."
+
+l "Why, then?"
+
+e "Think about it. Robots have always been a reflection of humans. The very first robot I created was made in our image."
+
+e "This is simply the next stage of robot evolution. One step closer to humanity."
+
+e "I couldn't have done this alone, of course. I worked with the most brilliant minds in biotechnology to make this possible."
+
+e "The techniques we pioneered will have astounding applications not just in the field of robotics, but in medicine as well."
+
+e "Life-saving cybernetic implants will become easier to develop and safer to use."
+
+e "Humans will grow closer to robots. Robots will grow closer to humans."
+
+e "Until, one day, perhaps… the difference between us will cease to matter."
+
+l "Robots and humans… one and the same? Goodness…"
+
+l "I'll admit, that still feels a long way off."
+
+l "But… this is the first time I've heard anybody wish for a future like that."
+
+e "It's not a common point of view. I'm a bit of an idealist."
+
+e "But surely you agree it's a future worth striving for, yes?"
+
+"It's hard for me to wrap my head around this future that Eris has in mind."
+
+"But one thing is for certain. She's passionate about it. And she wants me to be a part of it."
+
+"Not just me, but every robot I know. She wants a better future for us!"
+
+l "…Yes. To be closer to humanity… I would consider it an honor."
+
+l "And that work begins here. If we can secure a future for me and other robots in need…"
+
+l "Well, that would do a lot to bring us closer."
+
+e "I'm glad you agree."
+
+e "Come now, we've spend enough time chatting. I think it's about time we got to work."
+
+
+
+## ACT 2 SCENE 3
+## Eris's Lab
+
+"Eris takes me to a room just down the hall. Unlike the bedroom, this one is much more heavily protected. It requires a passcode just to open the door."
+
+"And when I step inside, I'm met with a sight that sets my mouth agape."
+
+"Machinery from floor to ceiling. Workbenches covered in wires, tools, and partially disassembled robot parts."
+
+"This is a far cry from the vast immaculate halls that make up this building. This is a cozy space, dimly lit and clearly well loved."
+
+"This is a tinkerer's dream."
+
+## show Eris friendly
+e "Welcome to the lab, 251. This is where all the magic happens. My industry rivals would kill to get a glimpse at this place."
+
+e "I know it's a little messy, but that's how I like things. I have a system. It works for me."
+
+e "So, what do you think?"
+
+l "What do I think?! Oh goodness, where do I start?"
+
+l "Is that… an autolathe? Do you machine your own parts here?"
+
+e "Of course! For prototyping purposes, it comes in real handy when you can just cut something to size. Sometimes a material printer is just overkill, you know?"
+
+l "And that! Is that a LFTR chassis? I don't think I've even seen that model before!"
+
+e "Mhm, that would be leftovers from my work on the model 10. The last LFTR model that's going to be produced."
+
+l "Ah… right. We're really entering a new era, huh?"
+
+e "That's right, and we have a lot of work to do to make that happen. Let's get started, shall we?"
+
