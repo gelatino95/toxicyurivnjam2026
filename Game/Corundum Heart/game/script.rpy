@@ -164,6 +164,7 @@ label act1_scene2:
         zoom 0.5
         xpos 250
         xzoom -1
+    show main_hud zorder 10000
     with fade
 
     "My assigned worksite is dock 7, which is way on the other side of the yard, so I make haste."
@@ -233,6 +234,7 @@ label act1_scene2:
     show black
     with fade
     hide black
+    show main_hud zorder 10000
     show 251 happy
     with fade
 
