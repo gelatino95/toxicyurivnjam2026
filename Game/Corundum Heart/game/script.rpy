@@ -41,6 +41,8 @@ label sceneselect:
 
         "Sound Test":
             jump soundtest
+        "GUI Test":
+            jump guitest
         "Act 1":
             menu:
                 "Act 1 Scene 1":
@@ -81,6 +83,15 @@ label soundtest:
     stop music
     jump soundtest
 
+label guitest:
+    show main_hud zorder 10000
+    show bg crewquarters placeholder
+    show 251 happy b:
+        zoom 0.25
+        xpos 350
+        ypos 100
+    l "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. \""
+
 label act1_scene1:
     ## ACT 1 SCENE 1
     ## Crew quarters
@@ -97,6 +108,7 @@ label act1_scene1:
 
     "The screen goes dark. The charging mount releases. I step out into the light."
 
+    show main_hud zorder 10000
     play music demo_sgt
     ## show 251 happy, one eye dark
     show bg crewquarters placeholder
