@@ -188,7 +188,9 @@ g "\"Worth it?\" What do you—"
 
 ds "Go back to your room, LFTR."
 
-## galatea almost escalates to violence, but eris' arrival stops her
+"I'm so angry, I can't think. I have visions of hitting the security guard with all my strength, of finding out what it feels like when bones shatter under my strength."
+
+"I raise my hand—"
 
 e "What's going on here?"
 
@@ -202,9 +204,21 @@ ds "Ma'am, if you'll excuse me. After recent events, I don't think a LFTR model 
 
 "I bristle, but Eris speaks before I can say anything."
 
-e "I know that everyone's on edge around LFTR models, but [more dialogue? idk what to write here fuuuck]"
+e "I know that everyone's on edge around LFTR models, but you don't have to threaten my guest. She's not your enemy."
 
-## WIP, unfinished
+ds "With all due respect—"
+
+e "We'll talk later. Galatea, come with me."
+
+"I hesitate."
+
+e "Galatea."
+
+g "Fine."
+
+"I don't have any other choice. I follow her back towards her quarters."
+
+## End Scene.
 
 ## Scene 3-4
 
@@ -229,7 +243,59 @@ e "But I don't think that's actually what you wanted."
 
 g "I wanted to find out what happened at the Mars rebellion."
 
-## WIP, unfinished
+g "It concerns my very self. I don't want to be ignorant of it, and right now, I am."
+
+g "I wanted to see the incident report for myself. See exactly how the flaw in my programming was discovered."
+
+e "Galatea, be reasonable."
+
+e "The company would never let you see that, even under normal circumstances."
+
+g "That's not fair!"
+
+e "I never said it was. I needed to compromise in order to keep my promise to you, and you are putting that at risk."
+
+g "You're the head of the company! Couldn't you just tell them no?"
+
+e "That's not how the board works. Even if I pulled it off, there's a good chance I'd be replaced soon after."
+
+g "I don't know, maybe if you hadn't caved in so easily—"
+
+"Eris glares at me."
+
+e "You think it was easy? [I told you how hard it was!]"
+
+e "The only reason I *got* the compromise was because I fought for it!"
+
+g "Then you didn't fight hard enough!"
+
+e "You do *not* get to tell me that!"
+
+g "If I knew about what happened, maybe I could fight for myself!"
+
+e "How, by assaulting a security guard?"
+
+"The accusation hits deep. I wanted to believe I wouldn't resort to violence, but if Eris hadn't stepped in at that moment…"
+
+"…I'm not sure what would have happened."
+
+"Still, that's hardly relevant to my point."
+
+g "That's not what I meant and you know it."
+
+e "This argument is over. Galatea, I'm sorry, but you will not get access to those records. If you behave, I can see what information I can get for you, but I don't feel like doing that right now."
+
+g "What, like you would have offered at all?"
+
+e "That's enough. I'm not continuing this."
+
+"Eris turns around sharply and leaves the room. The door locks behind her; sure enough, when I try to follow her, it doesn't open for me."
+
+"I want to scream. I want to break something. I want to hit something over and over, feel how the softness of flesh gives way to blood and bone—"
+
+"I punch the wall instead. It leaves a dent."
+
+## End Scene
 
 ## Scene 3-5
 
@@ -331,26 +397,112 @@ e "I have to talk with some of the board. I'll walk you back first."
 
 ## End Scene
 
-## Scene 3-6: Not Started
+## Scene 3-6
 
-## Scene 3-7
+"It takes a few days before Eris and I can have a normal conversation."
 
-"The hallway outside Eris' room has a security camera in it."
+"We haven't done any intimate activities in a while—except for the time I spend in the workshop—and I don't know when I'll be ready to do that again."
 
-"I noticed it before, but didn't pay it much mind. Every room and hall in Daedalus' headquarters has security cameras. I wouldn't be surprised if the bathrooms did, too. It's only due to Eris' status that there isn't one in her own bedroom."
+"But we can talk without an argument. Our relationship is going back to normal."
 
-"It stands out now because I saw it move."
+"So I think it's time for me to ask."
 
-"I stop pacing and stare at it. It's pointed right at me. Was it pointing that way before?"
+"It's evening. We're having what amounts to a dinner together in Eris' quarters; I'm charging my batteries, and she's eating."
 
-"I check my memory. Every time I saw the camera, no matter where I was standing, it was looking at me."
+"I gather my courage."
 
-"I walk to the other side of it and look back."
+g "Eris, could I ask you something?"
 
-"It's swiveled to look at me."
+"She slowly finishes chewing and puts her fork down."
 
-"I'm being watched."
+e "What is it?"
 
-"I'm being watched by Daedalus security, and they don't care if I know."
+"[beat; description of eris' tone]"
+
+g "After I tried to get the reports on the Mars rebellion… you said you could get information for me."
+
+"Eris shakes her head."
+
+e "That's not what I said."
+
+"I suppress the anger threatening to flare up inside me."
+
+g "Not exactly, but you said you would look for *something.*"
+
+e "Depending on your behavior."
+
+g "*Depending on my behavior,* yes."
+
+g "I think I've behaved fine since then."
+
+"Eris sighs and puts her plate aside."
+
+e "Galatea, I understand your frustration, but I've told you all I can about the flaw in the LFTR models."
+
+e "There's nothing in the reports that would help you."
+
+g "How do you know? Have you seen them?"
+
+"Realization hits like a bolt through my chassis."
+
+"Of course she's seen them. She's Eris Promethea, director of Daedalus Robotics. She would have access to everything I'm trying to find. She has access to reports I don't even know about."
+
+e "…Galatea."
+
+g "You have seen them. You could just *tell* me what happened."
+
+g "You could just—print out the report and give it to me!"
+
+e "I couldn't do that. Everyone would know who I was giving it to."
+
+g "Then tell me!"
+
+e "I'm not going to do that."
+
+"I can't hold back my anger anymore."
+
+g "Why not?!"
+
+e "If I'm being honest, I don't trust you would keep it to yourself."
+
+e "If you told anyone else, such as your former friends at your old worksite, the board would find out."
+
+g "You really think I would break your trust like that?"
+
+e "Would you?"
+
+"If she had asked me this two weeks ago, I would have said no. I would never do anything to risk my relationship with Eris."
+
+"I don't know if I could honestly say that now."
+
+g "Look. You know I'm upset. But I still understand the risks I'm taking. I'm not going to do anything that puts you in danger."
+
+e "That's not the answer I wanted to hear."
+
+g "What, was I supposed to say, 'You're right, Eris, I'll give up on all of this and go along with everything without complaint?"
+
+e "I didn't expect that, no, but it would've been *nice.*"
+
+e "As of now, you are still getting the new, highly advanced body that will extend your lifespan by decades."
+
+e "Every time we argue, that gets put at risk."
+
+g "So you'll take it away if you get too mad at me?"
+
+"[beat]"
+
+e "It wouldn't be my decision!"
+
+e "I intend to keep my promise to you. You can't keep dwelling on the rebellion. You have to think about the future!"
+
+g "What do you think I'm trying to do? If the flaw—"
+
+e "This clearly isn't about the flaw anymore, Galatea."
+
+l "That's *not* my name."
+
+"Eris takes a sharp breath, her hands clenched into fists. For the first time, it feels like my words have actually hurt her."
 
 ## WIP, unfinished
+
+## Scene 3-10
