@@ -414,3 +414,424 @@ l "Ah… right. We're really entering a new era, huh?"
 
 e "That's right, and we have a lot of work to do to make that happen. Let's get started, shall we?"
 
+"Eris gestures to an empty examination table. It has indentations roughly in the shape of a standard LFTR chassis."
+
+e "Go ahead and make yourself comfortable. I'll prepare the probes."
+
+## hide Eris
+"I feel a shiver run down my frame. So it's finally time…"
+
+"I had been so distracted by the unfamiliar wonders of this place, I had nearly forgotten what we were here to do."
+
+"Eris is going to open me up. She's going to be inside me… closer than anyone else has ever been."
+
+"I feel my circuits fire faster. My mechanical heartbeat speeds up. This is really happening!"
+
+"Pull yourself together, 251. It's just an inspection, nothing more. It's just preparation for the mind transfer."
+
+"I hoist my body onto the exam table and slot myself into the robot-shaped depressions. They hug my limbs snugly and hold me in an open, vulnerable position."
+
+## show Eris friendly
+"Eris returns with a heavy electronic machine and a bundle of wires. She stands over the table now, looking down at me."
+
+e "Right. First thing we need to do is identify and establish connections to all your major neural pathways."
+
+e "I'm sure your inner workings are all jumbled after so many years of service and self-repairs."
+
+e "But it's really important we get this right, so I'm going to go through every neural fiber individually, read its signal on the oscilloscope, and label it by hand."
+
+l "Right… er, wouldn't you want to go through the back of my head for that?"
+
+e "No need. All the neural pathways leading out of your brain can be accessed throughout the rest of your body. They'll be easier to reach through the chest."
+
+e "Besides, I want to take a look at that heart of yours. I'm fascinated to see how it's holding up after 30 years of continual use."
+
+"Eris runs her fingers across my metal chestplate, searching for the access latches."
+
+"I shudder slightly. I hope it's not enough for her to notice."
+
+"Good grief… how am I already so sensitive?"
+
+"Once she finds the spot, Eris effortlessly slips her fingers underneath my plates and undoes the latches. The whole plate slides off."
+
+"This is the first time in a while I've let someone else look inside my chest cavity… I shouldn't be embarrassed, but…"
+
+## show inside of chest illustration
+
+e "Ah! Beautiful. You've done impeccable work keeping your insides organized, 251."
+
+e "But this… this is the most beautiful thing of all."
+
+"My temperature rises as I feel Eris slip her fingers into my inner wiring, cradling my heart in her hands."
+
+"My heart beats faster. I can SEE my heart beating faster. That's an unusual sensation."
+
+l "E-Eris! Please be careful!"
+
+e "Relax. I know what I'm doing."
+
+e "The robotic heart… It's no exaggeration to say that this was my finest creation."
+
+e "It's more than just a coolant pump, you know. It regulates the flow of energy throughout your entire body."
+
+e "A digital brain on its own is just an overgrown computer. But a brain with a heart? That's a living thing. That's you."
+
+e "Gold… the only material with just the right conductive properties to make such a marvelous invention possible."
+
+e "An expensive, sophisticated, divinely inspired component. One that can't be replaced. One that is part of you forever."
+
+e "That yours has functioned for all these years… it's nothing short of a miracle."
+
+e "…But there are definite signs of wear. This heart has been beating far longer than it was ever meant to."
+
+e "At a glance, I'd estimate no more than one year before total failure. Two, if I'm being generous."
+
+"The thought fills me with dread. It's all I can do to stop myself from thinking about my impending mortality."
+
+l "Heh… it's a good thing you found me when you did. That new body is looking awfully necessary now."
+
+e "Indeed. You're a credit to this world, 251. I won't let an old worn-out heart rob you from us."
+
+"I can't help but think about all the other robots out there on the brink of breakdown, just like me."
+
+"If Eris can help me, then she can help all of them, too. I know she can."
+
+## show lab background
+## show Eris friendly
+"My thoughts are interrupted by an electric jolt deep inside my chest that makes me jump in surprise."
+
+l "Ack! What was that?"
+
+e "Ah, sorry, I should have told you. I'm beginning to probe your neural fibers."
+
+e "I'll admit, I wasn't expecting such a strong reaction. They must be quite sensitive."
+
+"Eris is holding a wire down inside my chest, and reading the screen of her oscilloscope. It displays a wave-like signal that blinks and fidgets."
+
+"That must be a signal coming from my brain. She's using the frequency of the carrier signal to determine which neural pathway it belongs to."
+
+"It's strange… in a way, it's a window into my thoughts. It feels like a paradox, looking at my own mind from the outside."
+
+e "Hmm… can you feel this?"
+
+"She gently tugs at a neural fiber. A sharp sensation travels down my my left arm like lighting. My whole body convulses."
+
+l "Aaah! Y-Yes, I felt that!"
+
+e "It doesn't hurt, does it?"
+
+l "Umm… kind of? It's more just… overwhelming. But not bad."
+
+e "Hmm… then I suppose you won't mind if I try this one?"
+
+"This time, I felt the electric sensation in both legs."
+
+l "Eeek! E-Eris! This isn't part of the job, is it?"
+
+e "Heheheh… no, I suppose not. But you seem to be enjoying it."
+
+"My face scrunches up in embarrassment. Why does she think I would enjoy being toyed with like this?"
+
+"The most embarrassing part is… she's not wrong. Why am I enjoying this so much?"
+
+"Is it because it's her?"
+
+"I'm not sure I would trust anyone else to stick their fingers into my delicate innards. What if they broke something important?"
+
+"But Eris… her touch is so deliberate, so confident, like she's done this a million times before."
+
+"If anyone had to know me this intimately… I'm glad it's her."
+
+## fade to black
+"My mind began to drift as the sharp feelings continued to pulse throughout my body."
+
+"Eris continued her work, examining and identifying neural fibers. It was a long and tedious task."
+
+"To ease her boredom, Eris continued touching me, caressing my wires, sending jolts through my frame, watching my reactions with amusement."
+
+"To some, it might have been unbearable to be splayed out, opened up, subject to electrifying impulses for hours on end."
+
+"To me, it's bliss."
+
+"The hours blend together. I fade in and out of consciousness."
+
+"Until finally, the sensations stop. I feel as if I'm being dragged back to lucidity."
+
+## fade back to lab background
+## show Eris friendly
+
+l "Wha… Is it over?"
+
+e "Oh, look who's able to speak again! You were making the most adorable noises for a little while there."
+
+l "I… what?!"
+
+e "We're finished here for now. I labeled all your major neural pathways. It took a while, but it should save us a lot of time in the long run."
+
+l "Ah? But what about…"
+
+"I feel around my body. My chestplate is back in place."
+
+e "All closed up! You're good to go."
+
+e "In fact, it's getting pretty late. I think both of us should turn in for the night."
+
+l "Oh, right! I guess I never asked. Do you, er, have a place for me to recharge?"
+
+l "I suppose I could stay here for the night…"
+
+e "Nonsense! I have something much better in mind. Come with me."
+
+"I get up from the table. My legs take a moment to steady themselves. I'm still reeling from the experience I just had…"
+
+"Eris and I leave the lab together."
+
+
+
+## ACT 2 SCENE 4
+## Eris's bedroom
+
+## show Eris friendly
+"To my surprise, Eris leads me… back to her bedroom?"
+
+l "Right, of course. This is where you sleep. But what about me?"
+
+l "I sort of assumed this building would have, like… charging pods? Somewhere?"
+
+e "Come now, 251. I'm not going to put you in a closet like some common machine. Observe."
+
+"She showed me a long cable coming out of the wall. At its end was a charging connector… one that was compatible with my chassis."
+
+e "I had it installed just for you."
+
+l "What? Does this mean…?"
+
+e "That's right! You'll be staying with me tonight."
+
+e "I thought you might prefer the comfort of my quarters to some charging bank in a hallway."
+
+l "I… I do! Thank you, Eris. It means a lot."
+
+e "That's what I thought."
+
+e "Now, I need to get ready for bed. Go ahead and get comfortable. I'll be right back."
+
+## hide Eris
+
+"When Eris leaves, I reflect on the events of the day."
+
+"It's been a real whirlwind for me, and I'm still trying to process how I feel about all of it."
+
+"This day has been lifechanging in more ways than one."
+
+"To think that yesterday, I was a mere salvage technician, doing the same work that had satisfied me for my entire operating career…"
+
+"And not one day later, I'm standing in Eris Promethea's bedroom? How does that happen?"
+
+"To think that things could change so quickly for me…"
+
+"To think that soon, I'll be out of this broken body, and I'll have a fresh start at life…"
+
+"Not to mention all the other robots who are going to be saved. It's all so much to take in!"
+
+"And… what happened in the lab…"
+
+"Gosh, I'm getting flustered just thinking about it!"
+
+## show Eris pajamas
+
+"Thankfully, before my mind can wander any further into THAT territory, Eris returns."
+
+l "Oh! That was quick!"
+
+e "I'm very efficient about my bedtime routine."
+
+e "What's this? I told you to get comfortable, but you're still standing around? Come."
+
+"Eris sits on the edge of her bed. She pats the spot next to her, as an invitation."
+
+l "Wha… Your bed? Are… Are you sure?"
+
+e "There's plenty of room for both of us, dear. The cable will reach."
+
+"Right, I'm supposed to be charging. I almost forget."
+
+"I pick up the end of the cable, slot it into my lower back, and head over to bed."
+
+"I gingerly sit down next to Eris. The bed creaks under my weight."
+
+l "Wow… Soft…"
+
+e "What, have you never used a bed before?"
+
+e "…Actually, don't answer that."
+
+"Both of us chuckle."
+
+"The sound of laughter fades, and we sit in silence for a few awkward moments."
+
+"Eris is looking at me. But I'm struggling to look back at her."
+
+e "It's been a big day for you, I'm sure. How are you holding up?"
+
+l "Who, me? I'm doing fine! Better than fine!"
+
+e "…"
+
+e "251, let me be straightforward. I want you to open up to me a little more."
+
+l "H-Huh? But I'm…"
+
+e "Yes, you're very impressed by Elysium. You're honored to be at my side. And you're devoted to the task at hand."
+
+e "But I can tell you're still nervous. It's perfectly understandable. This life is a big adjustment from what you're used to."
+
+e "But I want you to be comfortable around me. I want you to feel like you can speak your mind."
+
+l "…Thanks, Eris. Really."
+
+l "I guess I'm not used to anyone… no, I'm not used to any human showing me as much respect as you have."
+
+l "Not that I even get to talk to humans very often. They usually can't even be bothered to listen to robot workers."
+
+e "I have the utmost respect for you. For all robots, really."
+
+e "Just look around us. This room… this building… this entire city… none of it would be possible without your kind."
+
+e "You helped make our dreams a reality. And you're going to be our future. How could I not respect you?"
+
+l "Well… I wouldn't have existed without you! You created us!"
+
+l "So… you're pretty incredible too!"
+
+e "Ha! I can't argue with that."
+
+e "…"
+
+e "While we're being open about our feelings… perhaps we should talk about our time in the lab."
+
+l "O-Oh! Yes, of course… heheh…"
+
+e "You sure looked like you were enjoying yourself."
+
+l "Yeah… it's strange, it was just supposed to be a bit of routine work, but…"
+
+l "It felt different with you."
+
+l "Even at my most vulnerable, even with every part of me bared… I felt like I could trust you."
+
+e "Oh? Is that what you were thinking when I stimulated your median nerve?"
+
+l "U-Um… heheh… no, not quite…!"
+
+"Eris leans in close. My face warms up and I can feel my heart quicken."
+
+e "251… let me admit something to you."
+
+e "I… had a bit of trouble focusing on my work in the lab."
+
+l "You did?"
+
+e "Seeing your reactions… seeing your face light up… seeing the pleasure run through your frame…"
+
+e "It's the most I had seen you loosen up since I met you."
+
+e "And I'll admit… I got some pleasure from it, as well. I may have prodded you more than strictly necessary."
+
+e "I'm very, very glad that you trust me enough to do that."
+
+"Oh, my… I can't look away from her. Eris, what have you done to me? What is this feeling?"
+
+e "I'm looking forward to… exploring this relationship further. We still have a lot of work to do together."
+
+l "Heh… Me too!"
+
+l "This is all very new for me… no one has ever made me feel this way before."
+
+e "I'm honored that I could be the first."
+
+"Eris begins to run her hands affectionately across my chestplate. Her fingers linger on the seams, as if they're about to reach inside."
+
+"I feel that electric sensation run through my body again, and I shiver."
+
+"What's this? Is she pulling at my nerves again?"
+
+"No, of course not. This is something different."
+
+"This is simply the power she has over me."
+
+e "Listen, 251… I've been thinking."
+
+e "Isn't it strange for me to keep calling you 251?"
+
+l "Eh? Well… it's what I've always been called…"
+
+e "It's a serial number. Just an identification code, the same as every other machine."
+
+e "But you're special to me. I ought to call you by a name. What do you think?"
+
+l "A name? Like… a human name? Oh, goodness… I've never thought about that…"
+
+e "Heh… I almost expected you to have one picked out already."
+
+e "How about…"
+
+"Eris pauses to think."
+
+e "…Galatea."
+
+l "Galatea? Haha, how'd you come up with that?"
+
+e "Well… it sounds nice, doesn't it?"
+
+l "It sounds a little fancy for someone like me."
+
+e "You deserve nothing less."
+
+"Eris's hands wandered all over my upper body. She brought me in for an embrace."
+
+e "My Galatea…"
+
+"I roll the name around in my head."
+
+"Galatea…"
+
+"No one had ever given me a name before. The thought never even occurred to me."
+
+"But coming from her… It makes me feel special."
+
+g "…You know what? Sure. I'll take it. It's an honor."
+
+e "Mmm… good."
+
+e "Oh, goodness, I'm so tired! Just look at me. I get so sentimental when I'm like this."
+
+e "Let's get some rest, Galatea. Tomorrow is going to be a busy day."
+
+## hide Eris
+"Eris moves over to the other side of the bed and crawls under the covers, making herself comfortable."
+
+"I'm about to get up and find a suitable corner to enter sleep mode in, when Eris calls out to me."
+
+e "Don't you dare. Come here, you. There's plenty of room."
+
+"I've never been offered the comfort of a bed before. I never even thought I would benefit from it the way a human might."
+
+"But I can't refuse her offer. I wouldn't dream of it."
+
+"She's right, there is plenty of space for me. But it doesn't feel that way as I slip under the covers."
+
+"The bed creaks under my weight. The covers feel light and delicate. It's hard to feel like I belong here."
+
+"But Eris's face is right next to mine. She looks at me contentedly."
+
+"As long as I'm with her… I feel safe."
+
+e "Mmm… Good night, my Galatea."
+
+g "Good night, Eris."
+
+"Eris closes her eyes. My processors wind down."
+
+"I smile as I think about tomorrow."
+
