@@ -23,19 +23,20 @@ define gui.show_name = True
 
 ## The version of the game.
 
-define config.version = "0.3"
+define config.version = "0.4"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
 ## triple-quotes, and leave a blank line between paragraphs.
 
-define gui.about = _p("""Made for the Toxic Yuri VN Game Jam 2, 2026
+define gui.about = _p("""Made for the Toxic Yuri VN Game Jam 2, 2026\n
 This game was created by Gelatino Games.\n\n
 Director: Audrey Gelatino\n
 Programmers: Zora Morphimus, Marcy Nabors\n
 Writers: Torch, RogueMagpie, Alice (SilentWitch) Souza Pereira, Audrey Gelatino\n
-Artists: JeepersSqueakers, My little Sloany, Kidotix\n
+Artists: JeepersSqueakers, My little Sloany\n
 Music: Marcy Nabors\n
+Special Thanks: Kidotix, Starbl0t\n
 """)
 
 
@@ -126,7 +127,7 @@ define config.window_hide_transition = Dissolve(.2)
 ## Controls the default text speed. The default, 0, is infinite, while any other
 ## number is the number of characters per second to type out.
 
-default preferences.text_cps = 0
+default preferences.text_cps = 100
 
 
 ## The default auto-forward delay. Larger numbers lead to longer waits, with 0
@@ -149,7 +150,7 @@ default preferences.afm_time = 15
 ## This generally should not be changed, and if it is, should always be a
 ## literal string, not an expression.
 
-define config.save_directory = "CorundumHeart-1780689795"
+define config.save_directory = "HeartofGold"
 
 
 ## Icon ########################################################################

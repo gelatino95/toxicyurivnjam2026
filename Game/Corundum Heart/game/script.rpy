@@ -15,6 +15,7 @@ define n = Character("NEWS UPDATE", color="#FFFFFF")
 define a = Character("ADMN 04-23", color="#b5bfcf")
 define o = Character("LIFTR Co-worker", color="#FFFFFF")
 define r = Character("Someone in the crowd", color="#FFFFFF")
+define p = Character("Pilot", color="#FFFFFF")
 
 ## AUDIO
 define audio.demo_sgt = "she's got torque quickloop.mp3"
@@ -71,7 +72,6 @@ label sceneselect:
                 "Act 1 Scene 3 Alternate take":
                     jump act1_scene3_alternate
     jump sceneselect
-                
 
 label soundtest:
     menu:
@@ -94,11 +94,13 @@ label soundtest:
 
 label guitest:
     show main_hud zorder 10000
-    show bg crewquarters placeholder
+    show bg crewquarters:
+        ypos 48
+        xpos 336
     show 251 happy b:
         zoom 0.25
         xpos 350
-        ypos 100
+        ypos 75
     l "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. \""
     jump sceneselect
 
@@ -121,10 +123,13 @@ label act1_scene1:
     show main_hud zorder 10000
     play music demo_sgt
     ## show 251 happy, one eye dark
-    show bg crewquarters placeholder
+    show bg crewquarters:
+        ypos 48
+        xpos 336
     show 251 happy b:
-        zoom 0.5
-        xpos 250
+        zoom 0.25
+        xpos 350
+        ypos 75
     with fade
     l "Ah, the start of a new day!"
 
@@ -164,18 +169,22 @@ label act1_scene1:
 
     "Satisfied, I leave for the worksite."
     scene black
+    show main_hud zorder 10000
     with fade
 
 label act1_scene2:
     ## ACT 1 SCENE 2
     ## Keres Shipyard
-    scene bg shipyard placeholder
+    scene bg shipyard:
+        ypos 48
+        xpos 336
     show 251 happy a:
-        zoom 0.5
-        xpos 250
+        zoom 0.25
+        xpos 350
+        ypos 75
         xzoom -1
     show main_hud zorder 10000
-    with fade
+    with dissolve
 
     "My assigned worksite is dock 7, which is way on the other side of the yard, so I make haste."
 
@@ -192,13 +201,15 @@ label act1_scene2:
 
     ## show ADMN-04-23
     show admn spr1:
-        zoom 0.30
-        xpos 2000
+        zoom 0.15
+        xpos 1000
+        ypos 75
     with None
     show 251:
-        xpos -2000
+        zoom 0.25
+        xpos -500
     show admn:
-        xpos 750
+        xpos 550
     with move
     a "Oh, good, just the LFTR I wanted to see. 251, come here. I need you to look at something."
 
@@ -228,11 +239,11 @@ label act1_scene2:
 
     ## ADMN disappears
     show admn:
-        xpos 2000
+        xpos 1000
     with move
     "The ADMN leaves. Despite their professional demeanor, the smug undertones were obvious."
     show 251 angry a:
-        xpos 250
+        xpos 350
     with move
     "I resume my walk to dock 7, trying to not be too rattled by what I just saw."
 
@@ -242,11 +253,12 @@ label act1_scene2:
 
     ## Fade out, fade in
     show black
-    with fade
+    show main_hud zorder 10000
+    with dissolve
     hide black
     show main_hud zorder 10000
     show 251 happy
-    with fade
+    with dissolve
 
     "I make it to dock 7, and I can finally begin my work. I could really use the distraction."
 
@@ -258,11 +270,15 @@ label act1_scene2:
 
     ## show LFTR-08-1514 nervous
     show 1514 nervous:
-        xpos 500
-        zoom 0.5
+        xpos 1000
+        ypos 75
+        zoom 0.25
+    with None
+    show 1514:
+        xpos 350
     show 251:
-        xpos -2000
-    with moveinright
+        xpos -1000
+    with move
     f "Umm... Excuse me, 251?"
 
     f "Sorry to bother you, but I heard you do chassis repair, right?"
@@ -301,36 +317,49 @@ label act1_scene2:
 
     ## 1514 disappears
     show 1514:
-        xpos 2000
+        xpos 1000
     with move
     "She walks away looking a little disappointed. I can hardly blame her. Going a full work shift with a faulty joint is not easy."
 
     show 251:
-        xpos 250
+        xpos 350
     with move
 
     "But I figure I've pushed my luck enough already. I just hope she can hold out for a little while longer."
 
     "Alright, no more distractions. Plasma cutting time..."
     show black
-    with fade
+    show main_hud zorder 10000
+    with dissolve
     pause
 
 label act1_scene3:        
     ## ACT 1 SCENE 3
     ## Crew quarters
-    scene bg crewquarters placeholder
-    with fade
+    scene bg crewquarters:
+        ypos 48
+        xpos 336
+    show main_hud zorder 10000
+    with dissolve
     show 251 happy a:
-        xpos -500
-        zoom 0.5
-    with moveinright
-    show 1514 nervous:
         xpos 1000
-        zoom 0.5
-    with moveinright
+        ypos 75
+        zoom 0.25
+    with None
+    show 251:
+        xpos 100
+    with move
     show 251:
         xzoom -1
+    with None
+    show 1514 nervous:
+        xpos 1000
+        ypos 75
+        zoom 0.25
+    with None
+    show 1514:
+        xpos 600
+    with move
 
     "The shift change finally comes. Everyone moves onto their next scheduled assignment."
 
@@ -339,9 +368,9 @@ label act1_scene3:
     "I take the opportunity to meet 1514 in my unofficial workshop. It's not much, but it's the closest to a chassis maintenance facility we have on this station."
 
     show 251:
-        xpos -1500
+        xpos -500
     show 1514:
-        xpos 500
+        xpos 350
     with move
     ## show 1514 nervous
     f "Thanks again for doing this."
@@ -455,10 +484,11 @@ label act1_scene3:
 
     ## 1514 disappears
     show 1514:
-        xpos 2000
+        xpos 1000
     show 251:
-        xpos 0
-    with move    
+        xpos 350
+    with move
+    hide 1514
 
     "And just like that, 1514 departs, looking a lot happier than when she came."
 
@@ -468,7 +498,8 @@ label act1_scene3:
     pause
     "But this old body could really use a tune-up. I may as well get that done as long as I'm here."
     scene black
-    with fade
+    show main_hud zorder 10000
+    with dissolve
     stop music
     jump act1_scene4
 
@@ -477,16 +508,19 @@ label act1_scene3_alternate:
 
     ## 251 and 1514 are on screen at 251's workshop area
     ## 1514 has a worried expression
-    scene bg crewquarters placeholder
+    scene bg crewquarters:
+        ypos 48
+        xpos 336
+    show main_hud zorder 10000
     with fade
     play music demo_sgt
     show 251 happy a:
-        xpos -500
-        zoom 0.5
+        xpos -250
+        zoom 0.25
     with moveinright
     show 1514 nervous:
-        xpos 1000
-        zoom 0.5
+        xpos 750
+        zoom 0.25
     with moveinright
     show 251:
         xzoom -1
@@ -591,17 +625,22 @@ label act1_scene3_alternate:
     l "Now to do my own repairs..."
     show black
     with fade
+    stop music
     jump sceneselect
 
 label act1_scene4:
     ## ACT 1 SCENE 4
     ## Keres Shipyard
-    scene bg shipyard placeholder
+    scene bg shipyard:
+        ypos 48
+        xpos 336
+    show main_hud zorder 10000
     show 251 happy a:
-        zoom 0.5
+        zoom 0.25
         xzoom -1
-        xpos 0
-    with fade
+        xpos 350
+        ypos 75
+    with dissolve
     "I finish up at the workshop and finally make my way over to my next shift."
 
     "But something's off. The station is oddly quiet. Worksites that should be buzzing with activity have been left empty."
@@ -629,9 +668,11 @@ label act1_scene4:
 
     ## fade to black with grayscale Eris sprite displayed
     show black
-    show eris spr2 at center:
-        zoom 0.25
-    with fade
+    show eris spr2:
+        xpos 550
+        ypos 25
+        zoom 0.14
+    with dissolve
 
     "Eris Promethea. Founder of Daedalus Robotics. Inventor. Visionary. Architect of the future."
 
@@ -650,19 +691,20 @@ label act1_scene4:
     "Just a dream…"
     hide eris
     hide black
-    with fade
+    with dissolve
 
     ## transition back to Keres Shipyard, show ADMN
     "My reverie is interrupted by the shrill voice of an ADMN unit."
 
     show admn spr1:
-        zoom 0.30
-        xpos 2000
+        zoom 0.15
+        xpos 1000
+        ypos 75
     with None
     show 251:
-        xpos -2000
+        xpos -500
     show admn:
-        xpos 750
+        xpos 550
     with move
     a "LFTR-03-251! Please come with me."
 
@@ -686,7 +728,7 @@ label act1_scene4:
 
     ## ADMN disappears, fade to black
     show black
-    with fade
+    with dissolve
     "As we traverse the access corridors and pass through the air lock, my circuits are abuzz. I can scarcely believe what's happening."
 
     "I can't help but speculate about the reason for this summons. Of all the robots on this station, why me?"
@@ -705,6 +747,7 @@ label act1_scene4:
 
 label act2_scene1:
     scene black
+    show main_hud zorder 10000
     stop music
     pause
     "I hurriedly meet with my fellow workers gathered at the station hub."
@@ -722,6 +765,11 @@ label act2_scene1:
     "I say my last farewells and head back to the office block, where Eris's ship awaits."
 
     ## fade into ship background
+    show main_hud zorder 10000
+    show bg shipyard:
+        ypos 48
+        xpos 336
+    with dissolve
 
     "It's far from my first time boarding a spaceship. But this feels… different."
 
@@ -732,6 +780,12 @@ label act2_scene1:
     "My nerves must be written plain on my face, because Eris notices and gently takes hold of my hand."
 
     ## show Eris
+    show eris friendly:
+        zoom 0.25
+        xpos 350
+        ypos 50
+    with moveinleft
+
     e "It's a bit different from what you're used to, isn't it?"
 
     e "To be honest, I've never gotten used to all the glitz and glam. It's not my style."
@@ -748,8 +802,10 @@ label act2_scene1:
 
     "It's strange how well she puts me at ease. I can feel my nerves begin to fade away."
 
+    show eris concerned
     e "Oh my, it looks like we've drawn a crowd."
 
+    show eris friendly
     e "You'll want to wave goodbye to your friends, won't you?"
 
     "Eris presses a button and the darkened windows become transparent."
@@ -801,6 +857,10 @@ label act2_scene1:
     "The future looks bright. I can't help but smile."
 
     ## fade to black, pause for time to pass
+    scene black
+    show main_hud zorder 10000
+    with dissolve
+    pause
 
     "Saturn is just a single orbital maneuver away, so the trip doesn't take long."
 
@@ -814,6 +874,14 @@ label act2_scene1:
 
     ## fade back into spaceship bg
     ## show Eris entertained
+    scene bg shipinterior:
+        ypos 48
+        xpos 336
+    show eris friendly:
+        xpos 350
+        ypos 50
+        zoom 0.25
+    with dissolve
 
     e "No kidding? 30 years, and you've NEVER been planetside?"
 
@@ -838,6 +906,8 @@ label act2_scene1:
     l "I thought I might never get to visit one before being… decommissioned."
 
     ## show Eris concerned
+    show eris concerned
+
     "Eris looks me over with an expression of pity. She thinks silently for a moment."
 
     e "Hah… it's funny, I can sort of relate to that feeling."
@@ -865,6 +935,7 @@ label act2_scene1:
     e "Even if I couldn't see them myself, I did everything I could to push humanity towards the stars."
 
     ## show Eris friendly
+    show eris friendly
     e "You already know how that turned out."
 
     "Of course I know how that turned out. She's still here, after all, and her name is known across the solar system."
@@ -880,6 +951,8 @@ label act2_scene1:
     "We both laugh. That Eris could remain so strong after such a mortifying ordeal… I thought my admiration for her couldn't grow any more!"
 
     ## hide Eris
+    hide eris
+    with dissolve
     "Our conversation ends when the pilot sounds the intercom."
 
     p "This is your captain speaking. We're approaching the upper atmosphere of Saturn. Brace for entry."
@@ -891,6 +964,8 @@ label act2_scene1:
     "I watch with rapt attention as we enter the planet's atmosphere."
 
     ## fade to black
+    show black
+    with dissolve
 
     "And then, after a long descent… I finally see it."
 
@@ -929,6 +1004,9 @@ label act2_scene1:
     "Soon enough, we arrive at the great, palace-like building that was Daedalus HQ."
 
     ## fade to black
+    scene black
+    show main_hud zorder 10000
+    with dissolve
 
     "The ship lands just outside the building's main entrance."
 
@@ -942,13 +1020,13 @@ label act2_scene1:
 
 
 label act2_scene2:
-    pass
+    "Act 2 Scene 2 not yet implemented."
 
 label act2_scene3:
-    pass
+    "Act 2 Scene 3 not yet implemented."
 
 label act2_scene4:
-    pass
+    "Act 2 Scene 4 not yet implemented."
 
 label ending:
     stop audio
