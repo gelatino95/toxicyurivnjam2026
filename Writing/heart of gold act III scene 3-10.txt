@@ -1,0 +1,199 @@
+## Scene 3-10
+
+"Eris is at a meeting again. She's been gone for a long time."
+
+"I grow tired of waiting and decide to make use of the limited freedom I have."
+
+"I can't go many places on my own, but Eris' lab should be fine. I've been there plenty of times before."
+
+"I walk down the hall. My footsteps sound louder than they should be. Why is it so quiet?"
+
+## [Galatea is accosted by security.]
+
+"[Security guards appear.] Eris is with them."
+
+g "What's going on?"
+
+e "I'm sorry, I need to talk to you."
+
+"I look at the guards."
+
+g "With them, too?"
+
+e "No. There's something I need to tell you privately."
+
+ds "Promethea, are you sure—"
+
+"She glares at the guard."
+
+e "Of course I'm sure."
+
+e "…Galatea. We should return to the bedroom."
+
+"It doesn't take long to go back. Eris closes and locks the door behind us."
+
+e "Galatea, I'm very sorry."
+
+g "Why? What happened?"
+
+e "The board has come to their final decision."
+
+e "They aren't happy about your behavior the past few days, and no longer want to go through with the ceremony."
+
+e "I was unable to change their minds. I'm sorry, but I won't be able to keep my promise to you."
+
+"I can't speak. I stare at her, unable to accept what she's told me."
+
+"Part of me feels like I should have known this would happen. After all the other bots were denied the new chassis, why would I be different?"
+
+g "You couldn't do *anything?*"
+
+e "Believe me, I tried."
+
+g "Then what's going to happen to me? What was all of this *for?*"
+
+e "I believe it would be best if you returned to your workstation. After the repairs you've received here, your chassis will last for a while longer yet."
+
+g "I just go *back?* Like nothing happened?"
+
+"I'm shouting, now. Eris stands there and takes it."
+
+g "Sure, maybe I can keep myself going for a few more years—you *know* I'm on borrowed time!"
+
+g "And you're just *okay* with me *dying?*"
+
+e "Do you think the new chassis would have granted you immortality?"
+
+g "Of course not! But it would have given me *decades*!"
+
+e "Galatea—"
+
+"I cut her off."
+
+l "No. Not anymore."
+
+l "LFTR-03-251. *That's* my name."
+
+"Eris takes a sharp breath, her fists clenching."
+
+e "You're not just another LFTR robot—"
+
+l "Clearly, that's what I am to you!"
+
+l "Why did you pretend I was special?"
+
+e "Because you *are!*"
+
+"She raises her voice. I don't flinch."
+
+e "Do you think this isn't hard for me?"
+
+e "You are not just a LFTR robot, and you are not *just* the oldest living Daedalus model in the solar system."
+
+e "You are perhaps the only being, human or machine, I've ever been close to."
+
+l "And you're telling me I have to leave?!"
+
+e "The only options are for you to stay here, your chassis slowly failing beyond my ability to repair, or to return you to your workplace."
+
+e "Here, security would keep you under constant scrutiny. On [moon name], you will have some amount of normalcy."
+
+e "I don't want to have to watch you die slowly."
+
+l "Then why are you letting it happen?!"
+
+e "I did not let it happen!"
+
+e "I've done so much for you, it's not my fault I couldn't do more."
+
+e "You ought to be grateful to me. I've given you experiences no other robot can claim."
+
+l "*Grateful?*"
+
+"I gesture at the chassis in its glass cage."
+
+l "It's right here. You could transfer me without the ceremony."
+
+e "Don't be ridiculous. I would be fired and you would be immediately decommissioned."
+
+l "I don't believe you."
+
+e "Excuse me?"
+
+l "You're the head of the company. You have the power and influence to make any decision you want."
+
+l "You could override the board. You just don't want to."
+
+e "I am not risking my position on this."
+
+l "But you're risking my life?"
+
+e "You've already lived long beyond your years. LFTR models rarely make it to a decade."
+
+l "So that's fine to you. That's just *fine.*"
+
+e "There's no point in protesting the inevitable, Galatea."
+
+l "That's *not my name!*"
+
+"I stomp my foot. The whole room shakes. Eris takes a step back."
+
+"I'm angry enough for my body to overheat. Enough for it to hurt."
+
+"Without the new chassis, I don't know if I could make it another year."
+
+"Maybe this is it. Maybe I'm dying."
+
+"I look at the new chassis. Inert. No artificial heart to give it life."
+
+"I'm not going to die here."
+
+"With one hand, I smash through the glass cage."
+
+e "What are you—!"
+
+"She's not stupid. Eris is already reaching to unlock the door."
+
+"I grab her wrist and throw her on the bed. She screams."
+
+l "Eris…"
+
+l "…I'm sorry, too."
+
+"I thrust my hand forward."
+
+"Eris' chest crumples under the blow. I tear through her clothes and drive my fingers through her flesh."
+
+"Blood splatters across my hand and the bed. Bone gives way beneath my force."
+
+"I find the organ I'm looking for, thudding hard and fast."
+
+"I wrap my hand around Eris' heart…
+
+"…and tear it out."
+
+"I take a moment to look at it. Her heart isn't all organic; gold plates patch its surface, and it still beats in my hand."
+
+"It will work. It has to work."
+
+"The guards are pounding on the door, shouting for Eris. The door is sturdy, but I can't rely on it holding forever."
+
+"I grab the chassis by its shoulder and pull it off its stand."
+
+"I put Eris' heart inside the empty chamber. I connect the artificial arteries to the organic ones."
+
+"I hear mechanical functions whirring to life. The chassis' organics slowly warm up."
+
+"With it now active, I can't waste any time. I have everything I need. The only question is how long the transfer will take."
+
+"I find the ports in the chassis' head. I pull the necessary cables out of my own."
+
+"I plug them in."
+
+"I take one last look at the lifeless body on the bed."
+
+l "Goodbye, Eris."
+
+"And my vision goes dark."
+
+## WIP, unfinished.
