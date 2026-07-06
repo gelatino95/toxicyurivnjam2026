@@ -32,8 +32,8 @@ define config.version = "0.3"
 define gui.about = _p("""Made for the Toxic Yuri VN Game Jam 2, 2026
 This game was created by Gelatino Games.\n\n
 Director: Audrey Gelatino\n
-Programmer: Zora Morphimus, Marcy Nabors\n
-Writers: Torch, RogueMagpie, Alice!, Audrey Gelatino\n
+Programmers: Zora Morphimus, Marcy Nabors\n
+Writers: Torch, RogueMagpie, Alice (SilentWitch) Souza Pereira, Audrey Gelatino\n
 Artists: JeepersSqueakers, My little Sloany, Kidotix\n
 Music: Marcy Nabors\n
 """)
