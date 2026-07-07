@@ -10,23 +10,24 @@ define np = Character("Now Playing:", color="#FFFFFF") # this is for the sound t
 define e = Character("Eris Daedalus", color="#5cd8f4")
 define l = Character("LFTR 03-215", color="#418c39")
 define g = Character("Galatea", color="#418c39")
-define f = Character("LFTR 08-1514", color="#b2767e")
+define f = Character("LFTR 08-1514", color="#B2767E")
+define a = Character("ADMN 04-23", color="#B5BFCF")
 define n = Character("NEWS UPDATE", color="#FFFFFF")
-define a = Character("ADMN 04-23", color="#b5bfcf")
 define o = Character("LIFTR Co-worker", color="#FFFFFF")
 define r = Character("Someone in the crowd", color="#FFFFFF")
 define p = Character("Pilot", color="#FFFFFF")
+define s = Character("Security", color="#FF8C49")
 
 ## AUDIO
 define audio.demo_sgt = "she's got torque quickloop.mp3"
 define audio.demo_cg = "cloud gateway quickloop.mp3"
 define audio.demo_rt = "rhel's theme.mp3"
 
-
 ## IMAGES
 ## No need to define an image if you're not doing anything complicated with it. Just call the file name.
 
 ## VARIABLES
+## Do we even have any of these to set?
 
 
 
@@ -55,6 +56,8 @@ label sceneselect:
                     jump act1_scene3
                 "Act 1 Scene 4":
                     jump act1_scene4
+                "Act 1 Scene 5":
+                    jump act1_scene5
         "Act 2":
             menu:
                 "Act 2 Scene 1":
@@ -66,7 +69,17 @@ label sceneselect:
                 "Act 2 Scene 4":
                     jump act2_scene4
         "Act 3":
-            "Act 3 not implemented yet."
+            menu:
+                "Act 3 Scene 1":
+                    jump act3_scene1
+                "Act 3 Scene 2":
+                    jump act3_scene2
+                "Act 3 Scene 3":
+                    jump act3_scene3
+                "Act 3 Scene 4":
+                    jump act3_scene4
+                "Act 3 Scene 5":
+                    jump act3_scene5
         "Alternate Takes & Deleted Scenes":
             menu:
                 "Act 1 Scene 3 Alternate take":
@@ -124,13 +137,46 @@ label act1_scene1:
     play music demo_sgt
     ## show 251 happy, one eye dark
     show bg crewquarters:
+        ypos -200
+        xpos 0
+        zoom 1.5
+    show 251 fullbody:
+        zoom 0.5
+        xpos 0
+        ypos -1000
+    with fade
+    show bg crewquarters:
+        ypos 48
+        xpos 0
+        zoom 1.5
+    show 251 fullbody:
+        zoom 0.5
+        xpos 0
+        ypos 20
+    with move
+    pause 1.0
+    show bg crewquarters:
         ypos 48
         xpos 336
+        zoom 1.0
+    show 251 fullbody:
+        zoom 0.25
+        xpos 350
+        ypos 75
+    with None
+    pause 0.5
     show 251 happy b:
         zoom 0.25
         xpos 350
         ypos 75
-    with fade
+    with None
+    pause 0.1
+    show 251 happy a
+    with None
+    pause 0.1
+    show 251 happy b
+    with None
+    pause 0.1
     l "Ah, the start of a new day!"
 
     ## show 251 surprised
@@ -170,7 +216,7 @@ label act1_scene1:
     "Satisfied, I leave for the worksite."
     scene black
     show main_hud zorder 10000
-    with fade
+    with dissolve
 
 label act1_scene2:
     ## ACT 1 SCENE 2
@@ -200,7 +246,7 @@ label act1_scene2:
     "In fact, the audible warble of an anti-grav unit told me that an ADMN unit was approaching at this very moment."
 
     ## show ADMN-04-23
-    show admn spr1:
+    show admn fullbody:
         zoom 0.15
         xpos 1000
         ypos 75
@@ -239,8 +285,9 @@ label act1_scene2:
 
     ## ADMN disappears
     show admn:
-        xpos 1000
+        xpos 1200
     with move
+    hide admn
     "The ADMN leaves. Despite their professional demeanor, the smug undertones were obvious."
     show 251 angry a:
         xpos 350
@@ -277,7 +324,7 @@ label act1_scene2:
     show 1514:
         xpos 350
     show 251:
-        xpos -1000
+        xpos -500
     with move
     f "Umm... Excuse me, 251?"
 
@@ -331,7 +378,7 @@ label act1_scene2:
     show black
     show main_hud zorder 10000
     with dissolve
-    pause
+    pause 3.0
 
 label act1_scene3:        
     ## ACT 1 SCENE 3
@@ -347,7 +394,7 @@ label act1_scene3:
         zoom 0.25
     with None
     show 251:
-        xpos 100
+        xpos 350
     with move
     show 251:
         xzoom -1
@@ -357,9 +404,6 @@ label act1_scene3:
         ypos 75
         zoom 0.25
     with None
-    show 1514:
-        xpos 600
-    with move
 
     "The shift change finally comes. Everyone moves onto their next scheduled assignment."
 
@@ -495,12 +539,12 @@ label act1_scene3:
     "I did good today. If nothing else, I can at least say that."
 
     "Now, I really ought to get to my next assignment too, before an ADMN starts chewing me out."
-    pause
+    pause 1.0
     "But this old body could really use a tune-up. I may as well get that done as long as I'm here."
     scene black
     show main_hud zorder 10000
     with dissolve
-    stop music
+    stop music fadeout 2.0
     jump act1_scene4
 
 label act1_scene3_alternate:
@@ -625,7 +669,7 @@ label act1_scene3_alternate:
     l "Now to do my own repairs..."
     show black
     with fade
-    stop music
+    stop music fadeout 2.0
     jump sceneselect
 
 label act1_scene4:
@@ -668,12 +712,14 @@ label act1_scene4:
 
     ## fade to black with grayscale Eris sprite displayed
     show black
-    show eris spr2:
-        xpos 550
-        ypos 25
-        zoom 0.14
-    with dissolve
-
+    hide main_hud
+    show eris fullbody grey:
+        xpos 350
+        ypos 0
+        zoom 0.25
+    with fade
+    pause
+    show illustration_hud zorder 10000
     "Eris Promethea. Founder of Daedalus Robotics. Inventor. Visionary. Architect of the future."
 
     "Eris was responsible for designing every single robot working on this station. All across the solar system, even. She had a hand in creating all of us."
@@ -690,16 +736,19 @@ label act1_scene4:
 
     "Just a dream…"
     hide eris
+    hide illustration_hud
     hide black
+    show main_hud
     with dissolve
 
     ## transition back to Keres Shipyard, show ADMN
     "My reverie is interrupted by the shrill voice of an ADMN unit."
 
-    show admn spr1:
+    show admn fullbody:
         zoom 0.15
         xpos 1000
         ypos 75
+    show main_hud zorder 10000
     with None
     show 251:
         xpos -500
@@ -728,6 +777,7 @@ label act1_scene4:
 
     ## ADMN disappears, fade to black
     show black
+    show main_hud zorder 10000
     with dissolve
     "As we traverse the access corridors and pass through the air lock, my circuits are abuzz. I can scarcely believe what's happening."
 
@@ -745,11 +795,301 @@ label act1_scene4:
 
     "Eris Promethea awaits."
 
-label act2_scene1:
-    scene black
+label act1_scene5:
+    ## ACT 1 SCENE 5
+    ## Director's office
+    scene bg office:
+        ypos 48
+        xpos 336
     show main_hud zorder 10000
-    stop music
-    pause
+    with dissolve
+
+    "I hold my breath as I walk into the dimly lit room."
+
+    ## show Eris friendly
+    show eris friendly:
+        zoom 0.25
+        xpos 350
+        ypos 50
+    with moveinleft
+
+    "There she is, sitting behind the desk. We lock eyes."
+
+    "I hope she can't tell that my heart is racing a mile a minute."
+
+    e "LFTR-03-251? Pleasure to meet you! Please have a seat."
+
+    "I slide into a chair across the desk from Eris."
+
+    "I'm having trouble maintaining eye contact. Looking at her is like looking into the sun."
+
+    "And yet… she's wearing a warm, friendly smile that puts me at ease."
+
+    e "You know, when I looked at the duty roster for this place and saw that there was a model 03 still in service… Well, I had trouble believing it."
+
+    e "But here you are, right in front of me! The very last LFTR-03 in operation. Wonders never cease."
+
+    l "I'm… I'm the last? Really?"
+
+    e "It shouldn't come as a big surprise. Even today, the average operating lifetime of LFTR units is only 5 years."
+
+    e "But you were manufactured 30 years ago. 30! And still carrying out your duties all these years later, in complete obscurity."
+
+    e "You're a statistical anomaly, 251."
+
+    "I didn't know what to say to that."
+
+    "I know it had been a long time since I had seen another model 03, but…"
+
+    "Are they all really gone? Am I really the last of my kind?"
+
+    e "Oh, come now, don't look so grim. Take it as a mark of pride."
+
+    e "I can only imagine how much maintenance it must have taken to keep you going all these years."
+
+    l "Heh, well… I've gotten pretty good at self-repair. It's been a big interest of mine for a long time now."
+
+    l "Repairing myself, repairing other units… I've learned a lot about the inner workings of Daedalus robots over the years."
+
+    l "…I didn't have much of a choice, actually. We don't get a lot of chassis support around here."
+
+    ## show Eris concerned
+    show eris concerned
+    e "Mmm. I understand completely."
+
+    e "It's no big secret that Keres Shipyard is something of a final destination for reject robots."
+
+    e "A place that robots get sent when they're on their last legs. A place where they can quietly break down and be decommissioned."
+
+    "I had never thought about it that way, but… what Eris is saying makes a lot of sense."
+
+    "That would explain the lack of official repair facilities on the station."
+
+    e "But there's something odd about Keres Shipyard. I couldn't help but notice it when browsing the duty roster."
+
+    e "The lifetime of labor units on this station is a lot longer than you'd expect from a bunch of defects."
+
+    e "We're regularly seeing robots remain for far longer than their expected service lifetimes."
+
+    ## show Eris friendly
+    show eris friendly
+    e "…That's all your doing, isn't it?"
+
+    l "M-Me? What do you mean?"
+
+    e "I can tell you're the resourceful type. You're providing repairs. You're giving robots a second chance."
+
+    l "Well… I can't just sit around and let my fellow workers get decommissioned! Not when they still have so many good years left in them."
+
+    e "Fascinating…"
+
+    "Eris stares me down with a twinkle in her eye. I feel like I'm being studied."
+
+    "But to have my hard work and resourcefulness acknowledged by her, by Eris Promethea herself…"
+
+    "I can't help but feel my heart swell with pride."
+
+    ## show Eris serious
+    show eris serious
+    e "251. Let's get down to business. Let me tell you why I'm actually here."
+
+    "I listen with rapt attention."
+
+    e "You might have heard the rumors about a new line of labor robots in the works."
+
+    e "And you might have also heard speculation that we would be fully replacing the LFTR line of robots."
+
+    e "Well… There's some truth to that. Daedalus is, in fact, preparing to publicly announce the next generation of labor units."
+
+    e "And yes, they are meant to supercede the functionality of the LFTR class of robots."
+
+    e "We're planning to discontinue the production of LFTR chassis and slowly phase them out of the workforce, in favor of the new, modern alternative."
+
+    "I couldn't help but feel a pang of fear as I processed this news."
+
+    "As if LFTR units didn't already have enough to worry about, with our difficulties accessing body maintenance…"
+
+    "Now we're facing impending obsolescence!"
+
+    ## show Eris friendly
+    show eris friendly
+    e "Before you worry too much, 251, I'd like to assauge your fears."
+
+    e "Daedalus has listened to robot rights activists across the solar system. We understand the plight of our older LFTR models."
+
+    e "Nobody wants to be replaced. You and your fellow workforce veterans have done so much for our company, and for humanity as a whole."
+
+    e "It's about time we showed you some appreciation. That's why we're offering you a second chance."
+
+    l "A… second chance? What do you mean by that?"
+
+    ## show Eris serious
+    show eris serious
+    "Eris looks me over with a sharp, analytical eye. An eye with decades of experience under its belt."
+
+    e "You've been maintaining this old body of yours for so long, and it's served you for far longer than it was designed to."
+
+    e "But breakdowns are inevitable. There's only so much longer you can keep going before total failure."
+
+    "She's right. I try not to think about it, but it's only a matter of time before this body fails on me."
+
+    ## show Eris friendly
+    show eris friendly
+    e "What if I could offer you a brand new body?"
+
+    l "W… What? A brand new body…?"
+
+    "My head is spinning. What is she talking about?"
+
+    e "As a gesture of goodwill to the experienced LFTR units in our workforce, we want to let you inhabit our new cutting-edge chassis."
+
+    e "We'll gather select members of the workforce, ones who are on their last legs, and perform mind transfers into the new chassis."
+
+    e "You can leave behind your obsolete, broken down bodies, and become pioneers of the next generation of Daedalus Robotics."
+
+    "I had heard about mind transfer before. It's a procedure that lets a robot leave its old body and inhabit a new one."
+
+    "But it was never commonly performed. It's widely considered wasteful and frivolous. A fringe procedure only used in rare circumstances."
+
+    "To perform mind transfers on such a scale… it's unheard of!"
+
+    e "I know this must be a lot to take in, but…"
+
+    e "It's going to be happening soon. In about a week, we're planning to hold a public ceremony to unveil the new chassis."
+
+    e "And, 251… I want you to be the first to receive one."
+
+    l "Me?! But… why me?"
+
+    e "Well, we need to make a statement, don't we?"
+
+    e "We'll perform the mind transfer live, in front of the whole solar system."
+
+    e "And we'll announce our plans to give struggling LFTR units everywhere a new chassis and a second chance."
+
+    e "You see the logic, don't you? All of humanity will see that Daedalus is committed to caring for its workforce."
+
+    e "It's going to be the beginning of great change for you and your comrades."
+
+    "I'm staggered. It's a lot to process."
+
+    "All these years of struggle, all these pointless breakdowns… could it all be coming to an end?"
+
+    "And I'm going to be the face of it all? Me?!"
+
+    l "I… I don't know what to say."
+
+    l "You said… you're going to be giving new chassis to all struggling LFTR units?"
+
+    e "That's the plan. We start with the ones who have been in service the longest. The ones in danger of being decommissioned."
+
+    e "In fact, Keres Shipyard seems like a great place to start. I can ensure that all the workers on this station are eligible for the upgrade."
+
+    "Not just me, but everyone I know…"
+
+    "It's… it's too good to be true."
+
+    "But it IS true. I'm hearing it straight from the mouth of Eris Promethea herself."
+
+    "She sounds earnest. There's no hint of deceit in her voice. She really wants this as much as I do."
+
+    l "I…"
+
+    e "Yes?"
+
+    l "I… I'll do it."
+
+    l "Whatever you need from me, I'll do it."
+
+    l "I'm honored that you chose me for this. If it's in the name of helping robots everywhere, then I'll do anything."
+
+    e "So selfless! Surely you're also excited at the prospect of your new chassis?"
+
+    e "I'm really quite proud of it. I think you'll like it too."
+
+    l "You're right. As much as I love this old body of mine, and all the work I put into it…"
+
+    l "It's not going to last forever. I'm overdue for a change. I'm ready for it."
+
+    e "That's the spirit!"
+
+    e "Now, we don't have much time to stick around here. I need you to come to Saturn with me."
+
+    l "What? Right now?"
+
+    e "Yes, as soon as possible. The ceremony is in a week, and we need to get you ready for the transfer."
+
+    ## show Eris flirty
+    show eris flirty
+    e "We're going to be spending a lot of quality time together in the lab. I hope you're ready for that."
+
+    "Oh my…! I feel my circuits glow red hot."
+
+    "Is it just me, or was there a slight change in her demeanor for a second there?"
+
+    "I'm going to spend quality time with Eris Promethea…"
+
+    ## show Eris friendly
+    show eris friendly
+    e "I suggest you take some time to say your farewells. There's no telling how long it'll be before we return here."
+
+    e "Oh, and try to keep all this on the down-low, will you? Our plans for the ceremony aren't yet public knowledge."
+
+    l "Yes! Yes, ma'am, I'll do that."
+
+    e "Come on, you know I hate formality. Call me Eris."
+
+    l "Right, of course. Yes… Eris."
+
+    ## show Eris flirty
+    show eris flirty
+    "She gets out of her seat and passes close to me on her way out the door."
+
+    e "I'm looking forward to working with you, 251. I think this is going to be a fruitful endeavor."
+
+    e "Meet me at my ship in an hour. Don't be late."
+
+    l "Of course! Yes, Eris!"
+
+    ## Eris disappears
+    show eris:
+        xpos 1000
+    with move
+    hide eris
+
+    "And just like that, she's gone."
+
+    show 251 surprised a:
+        xpos -500
+        xzoom -1
+        ypos 75
+        zoom 0.25
+    with None
+    show 251:
+        xpos 350
+    with move
+    "My circuits are firing faster than ever before. My whole world feels like it's turning upside down."
+
+    show 251 happy
+    "But it's a good feeling. Everything is about to change for the better."
+
+    "And best of all, I'm going to work with Eris…! Never in a million years would I have expected this!"
+
+    "I don't have much time. I only have an hour before I leave for Saturn."
+
+    "It's going to be so hard to avoid telling everyone the good news…"
+
+    "But I have to get out there and say something. My friends are waiting for me."
+
+
+label act2_scene1:
+    scene bg shipyard:
+        ypos 48
+        xpos 336
+    show main_hud zorder 10000
+    with dissolve
+    pause 1.0
+    play music demo_sgt
     "I hurriedly meet with my fellow workers gathered at the station hub."
 
     "It takes all my willpower to keep from divulging everything I had just heard…"
@@ -765,10 +1105,10 @@ label act2_scene1:
     "I say my last farewells and head back to the office block, where Eris's ship awaits."
 
     ## fade into ship background
-    show main_hud zorder 10000
-    show bg shipyard:
+    scene bg shipinterior:
         ypos 48
         xpos 336
+    show main_hud zorder 10000
     with dissolve
 
     "It's far from my first time boarding a spaceship. But this feels… different."
@@ -788,8 +1128,10 @@ label act2_scene1:
 
     e "It's a bit different from what you're used to, isn't it?"
 
+    show eris concerned
     e "To be honest, I've never gotten used to all the glitz and glam. It's not my style."
 
+    show eris friendly
     e "But above all, I want you to be comfortable. You're my guest. You can relax around me."
 
     e "Anything you need, I'll provide for you. Okay?"
@@ -860,7 +1202,7 @@ label act2_scene1:
     scene black
     show main_hud zorder 10000
     with dissolve
-    pause
+    pause 1.0
 
     "Saturn is just a single orbital maneuver away, so the trip doesn't take long."
 
@@ -881,6 +1223,7 @@ label act2_scene1:
         xpos 350
         ypos 50
         zoom 0.25
+    show main_hud zorder 10000
     with dissolve
 
     e "No kidding? 30 years, and you've NEVER been planetside?"
@@ -970,6 +1313,13 @@ label act2_scene1:
     "And then, after a long descent… I finally see it."
 
     ## show Elysium outside view
+    play music demo_cg
+    hide black
+    show bg elysium outside:
+        ypos 48
+        xpos 336
+    show main_hud zorder 10000
+    with dissolve
 
     "Elysium. Saturn's first city, and a marvel of human engineering."
 
@@ -982,6 +1332,11 @@ label act2_scene1:
     "Eris looks amused by my wonder-stricken look. She allows me to take in the sights as we approach the city's gate."
 
     ## show Elysium inside view
+    show bg elysium inside:
+        ypos 48
+        xpos 336
+    show main_hud zorder 10000
+    with dissolve
 
     "After passing through an enormous entryway and going through an airlock, we enter the city proper."
 
@@ -1018,15 +1373,723 @@ label act2_scene1:
 
     "We step over the threshold of Daedalus HQ together."
 
-
 label act2_scene2:
-    "Act 2 Scene 2 not yet implemented."
+    ## ACT 2 SCENE 2
+    ## Daedalus HQ halls
+    scene bg hallway:
+        ypos 48
+        xpos 336
+    show main_hud zorder 10000
+    with dissolve
+
+    "The inside of the building is just as impressive as the outside, all vaulted ceilings and tall windows that brighten the space with golden light."
+
+    ## show security
+    show security neutral:
+        xpos 350
+        ypos 50
+        zoom 0.25
+    with moveinright
+
+    "Immediately after entering, we're approached by staff. They seem to have expected our arrival."
+
+    s "Welcome back, Miss Promethea. We hope your flight was pleasant."
+
+    s "I presume this would be the robot you spoke of?"
+
+    e "That's right, this is LFTR-03-251. Please treat her as you would any honored guest of the company."
+
+    s "Very well. As per company policy, she will be permitted to roam certain wings of the building, but will be barred access to restricted areas."
+
+    e "That's perfectly fine. She's going to be staying with me."
+
+    ## hide security
+    show security:
+        xpos 1000
+    with move
+    hide security
+
+    "The security guard gives a nod of approval and waves us along. Eris leads me further into the building."
+
+    ## show Eris friendly
+    show eris friendly:
+        zoom 0.25
+        xpos 350
+        ypos 50
+    with moveinleft
+    e "So, how are we feeling? A bit awestruck, if I had to guess?"
+
+    l "Oh gosh, yes! I've been impressed since the moment we got here. I feel a bit out of place among all this… this…"
+
+    e "Ritz? Glamour? Yeah, I understand perfectly. This place was built to my specifications, but sometimes even I think it's a bit much."
+
+    e "Oh, and I hope the security didn't spook you too much. This place stays tightly guarded, on account of all the trade secrets."
+
+    e "But you're a guest here! You have nothing to worry about."
+
+    l "Thanks, Eris."
+
+    e "Now, come. We have lots of work ahead of us preparing for the transfer, and we need to get started right away."
+
+    e "But first, I want to show you around my wing of the building."
+
+    ## fade to black, then to Eris's bedroom
+    scene black
+    show main_hud zorder 10000
+    with dissolve
+    scene bg bedroom:
+        ypos 48
+        xpos 336
+    show main_hud zorder 10000
+    with dissolve
+
+    "Eris leads me to an ornately decorated room. It almost looks like a museum, with all the things on display."
+
+    "But there's also a bed…?"
+
+    ## show Eris friendly
+    show eris friendly:
+        zoom 0.25
+        xpos 350
+        ypos 50
+    with moveinleft
+    e "Welcome to my quarters!"
+
+    l "Your quarters? Eris, you actually LIVE here? I had no idea!"
+
+    e "A bit strange, sleeping at the same place you work, right?"
+
+    "It's… actually not that strange. Not for me. But I get what she meant."
+
+    e "Well, I just thought it made sense. I spend so much time in my lab, I may as well live nextdoor, right? It saves me a commute."
+
+    e "But I didn't just bring you here to gawk. Have a look at this."
+
+    ## hide Eris, show SYNC scene
+    scene illustration sync
+    with fade
+    pause
+    scene illustration sync:
+        ypos 45
+        xpos 330
+        zoom 0.6
+    show main_hud zorder 10000
+    with fade
+    "Looking over the whole room, mounted in a display against the wall, there's…"
+
+    "Oh, my. How do I even describe this?"
+
+    "It's a robot chassis unlike anything I've ever seen before."
+
+    "Sleek. Elegant. Modern. And most strikingly, it possessed what appeared to be… muscle tissue?"
+
+    "I had trouble taking my eyes away from it. There was something grotesquely beautiful about it."
+
+    e "251, behold: your new chassis."
+
+    l "This… this is going to be me…?"
+
+    e "I call it SYNC. The synthesis of metal and living flesh."
+
+    l "But that's… how did you…?"
+
+    e "Oh, don't get me started, dear. This has been the culmination of years of research. I could talk your ear off about it."
+
+    e "But, hmm… let's do the short version."
+
+    e "I'm sure you noticed the organic tissue incorporated into the frame, yes?"
+
+    e "The muscle fibers are proudly on display, but that's not all. It possesses an organic nervous system, organic brain, even a partially organic heart."
+
+    e "This was meant to address the issue of the ongoing maintenance required to keep traditional robots in good working order."
+
+    e "Metal does not heal when it is injured. But flesh does. It may be artificial, but it is just as capable of self-healing as any living thing."
+
+    "I'm slackjawed. The technology required to create something like this was beyond anything I had ever known…"
+
+    "And to think that this would soon be me… this empty body that I'm standing in front of right now."
+
+    "I look into its blank eyes. I imagine that they were mine."
+
+    e "Of course, the healing property is a big selling point of the chassis, but it's not why I created it."
+
+    l "Why, then?"
+
+    e "Think about it. Robots have always been a reflection of humans. The very first robot I created was made in our image."
+
+    e "This is simply the next stage of robot evolution. One step closer to humanity."
+
+    e "I couldn't have done this alone, of course. I worked with the most brilliant minds in biotechnology to make this possible."
+
+    e "The techniques we pioneered will have astounding applications not just in the field of robotics, but in medicine as well."
+
+    e "Life-saving cybernetic implants will become easier to develop and safer to use."
+
+    e "Humans will grow closer to robots. Robots will grow closer to humans."
+
+    e "Until, one day, perhaps… the difference between us will cease to matter."
+
+    l "Robots and humans… one and the same? Goodness…"
+
+    l "I'll admit, that still feels a long way off."
+
+    l "But… this is the first time I've heard anybody wish for a future like that."
+
+    e "It's not a common point of view. I'm a bit of an idealist."
+
+    e "But surely you agree it's a future worth striving for, yes?"
+
+    "It's hard for me to wrap my head around this future that Eris has in mind."
+
+    "But one thing is for certain. She's passionate about it. And she wants me to be a part of it."
+
+    "Not just me, but every robot I know. She wants a better future for us!"
+
+    l "…Yes. To be closer to humanity… I would consider it an honor."
+
+    l "And that work begins here. If we can secure a future for me and other robots in need…"
+
+    l "Well, that would do a lot to bring us closer."
+
+    e "I'm glad you agree."
+
+    e "Come now, we've spend enough time chatting. I think it's about time we got to work."
 
 label act2_scene3:
-    "Act 2 Scene 3 not yet implemented."
+    ## ACT 2 SCENE 3
+    ## Eris's Lab
+    scene bg lab:
+        ypos 48
+        xpos 336
+    show main_hud zorder 10000
+    with dissolve
+
+    "Eris takes me to a room just down the hall. Unlike the bedroom, this one is much more heavily protected. It requires a passcode just to open the door."
+
+    "And when I step inside, I'm met with a sight that sets my mouth agape."
+
+    "Machinery from floor to ceiling. Workbenches covered in wires, tools, and partially disassembled robot parts."
+
+    "This is a far cry from the vast immaculate halls that make up this building. This is a cozy space, dimly lit and clearly well loved."
+
+    "This is a tinkerer's dream."
+
+    ## show Eris friendly
+    show eris friendly:
+        zoom 0.25
+        xpos 350
+        ypos 50
+    with moveinleft
+    e "Welcome to the lab, 251. This is where all the magic happens. My industry rivals would kill to get a glimpse at this place."
+
+    e "I know it's a little messy, but that's how I like things. I have a system. It works for me."
+
+    e "So, what do you think?"
+
+    l "What do I think?! Oh goodness, where do I start?"
+
+    l "Is that… an autolathe? Do you machine your own parts here?"
+
+    e "Of course! For prototyping purposes, it comes in real handy when you can just cut something to size. Sometimes a material printer is just overkill, you know?"
+
+    l "And that! Is that a LFTR chassis? I don't think I've even seen that model before!"
+
+    e "Mhm, that would be leftovers from my work on the model 10. The last LFTR model that's going to be produced."
+
+    l "Ah… right. We're really entering a new era, huh?"
+
+    e "That's right, and we have a lot of work to do to make that happen. Let's get started, shall we?"
+
+    "Eris gestures to an empty examination table. It has indentations roughly in the shape of a standard LFTR chassis."
+
+    show eris flirty
+    e "Go ahead and make yourself comfortable. I'll prepare the probes."
+
+    ## hide Eris
+    hide eris
+    with moveoutleft
+
+    "I feel a shiver run down my frame. So it's finally time…"
+
+    "I had been so distracted by the unfamiliar wonders of this place, I had nearly forgotten what we were here to do."
+
+    "Eris is going to open me up. She's going to be inside me… closer than anyone else has ever been."
+
+    "I feel my circuits fire faster. My mechanical heartbeat speeds up. This is really happening!"
+
+    "Pull yourself together, 251. It's just an inspection, nothing more. It's just preparation for the mind transfer."
+
+    "I hoist my body onto the exam table and slot myself into the robot-shaped depressions. They hug my limbs snugly and hold me in an open, vulnerable position."
+
+    ## show Eris friendly
+    scene illustration heart1
+    with fade
+    pause
+    show illustration_hud zorder 10000
+    with dissolve
+
+    "Eris returns with a heavy electronic machine and a bundle of wires. She stands over the table now, looking down at me."
+
+    e "Right. First thing we need to do is identify and establish connections to all your major neural pathways."
+
+    e "I'm sure your inner workings are all jumbled after so many years of service and self-repairs."
+
+    e "But it's really important we get this right, so I'm going to go through every neural fiber individually, read its signal on the oscilloscope, and label it by hand."
+
+    l "Right… er, wouldn't you want to go through the back of my head for that?"
+
+    e "No need. All the neural pathways leading out of your brain can be accessed throughout the rest of your body. They'll be easier to reach through the chest."
+
+    e "Besides, I want to take a look at that heart of yours. I'm fascinated to see how it's holding up after 30 years of continual use."
+
+    "Eris runs her fingers across my metal chestplate, searching for the access latches."
+
+    "I shudder slightly. I hope it's not enough for her to notice."
+
+    "Good grief… how am I already so sensitive?"
+
+    "Once she finds the spot, Eris effortlessly slips her fingers underneath my plates and undoes the latches. The whole plate slides off."
+
+    "This is the first time in a while I've let someone else look inside my chest cavity… I shouldn't be embarrassed, but…"
+
+    ## show inside of chest illustration
+    scene illustration heart2
+    with fade
+    pause
+    scene illustration heart2:
+        zoom 0.75
+        ypos -200
+        xpos 300
+    show main_hud zorder 10000
+    with fade
+
+    e "Ah! Beautiful. You've done impeccable work keeping your insides organized, 251."
+
+    e "But this… this is the most beautiful thing of all."
+
+    "My temperature rises as I feel Eris slip her fingers into my inner wiring, cradling my heart in her hands."
+
+    "My heart beats faster. I can SEE my heart beating faster. That's an unusual sensation."
+
+    l "E-Eris! Please be careful!"
+
+    e "Relax. I know what I'm doing."
+
+    e "The robotic heart… It's no exaggeration to say that this was my finest creation."
+
+    e "It's more than just a coolant pump, you know. It regulates the flow of energy throughout your entire body."
+
+    e "A digital brain on its own is just an overgrown computer. But a brain with a heart? That's a living thing. That's you."
+
+    e "Gold… the only material with just the right conductive properties to make such a marvelous invention possible."
+
+    e "An expensive, sophisticated, divinely inspired component. One that can't be replaced. One that is part of you forever."
+
+    e "That yours has functioned for all these years… it's nothing short of a miracle."
+
+    e "…But there are definite signs of wear. This heart has been beating far longer than it was ever meant to."
+
+    e "At a glance, I'd estimate no more than one year before total failure. Two, if I'm being generous."
+
+    "The thought fills me with dread. It's all I can do to stop myself from thinking about my impending mortality."
+
+    l "Heh… it's a good thing you found me when you did. That new body is looking awfully necessary now."
+
+    e "Indeed. You're a credit to this world, 251. I won't let an old worn-out heart rob you from us."
+
+    "I can't help but think about all the other robots out there on the brink of breakdown, just like me."
+
+    "If Eris can help me, then she can help all of them, too. I know she can."
+
+    ## show lab background
+    ## show Eris friendly
+    scene bg lab:
+        ypos 48
+        xpos 336
+    show main_hud zorder 10000
+    show eris friendly:
+        zoom 0.25
+        xpos 350
+        ypos 50
+    with dissolve
+    "My thoughts are interrupted by an electric jolt deep inside my chest that makes me jump in surprise."
+
+    l "Ack! What was that?"
+
+    e "Ah, sorry, I should have told you. I'm beginning to probe your neural fibers."
+
+    e "I'll admit, I wasn't expecting such a strong reaction. They must be quite sensitive."
+
+    "Eris is holding a wire down inside my chest, and reading the screen of her oscilloscope. It displays a wave-like signal that blinks and fidgets."
+
+    "That must be a signal coming from my brain. She's using the frequency of the carrier signal to determine which neural pathway it belongs to."
+
+    "It's strange… in a way, it's a window into my thoughts. It feels like a paradox, looking at my own mind from the outside."
+
+    e "Hmm… can you feel this?"
+
+    "She gently tugs at a neural fiber. A sharp sensation travels down my my left arm like lighting. My whole body convulses."
+
+    l "Aaah! Y-Yes, I felt that!"
+
+    e "It doesn't hurt, does it?"
+
+    l "Umm… kind of? It's more just… overwhelming. But not bad."
+
+    e "Hmm… then I suppose you won't mind if I try this one?"
+
+    "This time, I felt the electric sensation in both legs."
+
+    l "Eeek! E-Eris! This isn't part of the job, is it?"
+
+    e "Heheheh… no, I suppose not. But you seem to be enjoying it."
+
+    "My face scrunches up in embarrassment. Why does she think I would enjoy being toyed with like this?"
+
+    "The most embarrassing part is… she's not wrong. Why am I enjoying this so much?"
+
+    "Is it because it's her?"
+
+    "I'm not sure I would trust anyone else to stick their fingers into my delicate innards. What if they broke something important?"
+
+    "But Eris… her touch is so deliberate, so confident, like she's done this a million times before."
+
+    "If anyone had to know me this intimately… I'm glad it's her."
+
+    ## fade to black
+    show black
+    show main_hud zorder 10000
+    with dissolve
+
+    "My mind began to drift as the sharp feelings continued to pulse throughout my body."
+
+    "Eris continued her work, examining and identifying neural fibers. It was a long and tedious task."
+
+    "To ease her boredom, Eris continued touching me, caressing my wires, sending jolts through my frame, watching my reactions with amusement."
+
+    "To some, it might have been unbearable to be splayed out, opened up, subject to electrifying impulses for hours on end."
+
+    "To me, it's bliss."
+
+    "The hours blend together. I fade in and out of consciousness."
+
+    "Until finally, the sensations stop. I feel as if I'm being dragged back to lucidity."
+
+    ## fade back to lab background
+    hide black
+    with dissolve
+    ## show Eris friendly
+
+    l "Wha… Is it over?"
+
+    e "Oh, look who's able to speak again! You were making the most adorable noises for a little while there."
+
+    l "I… what?!"
+
+    e "We're finished here for now. I labeled all your major neural pathways. It took a while, but it should save us a lot of time in the long run."
+
+    l "Ah? But what about…"
+
+    "I feel around my body. My chestplate is back in place."
+
+    e "All closed up! You're good to go."
+
+    e "In fact, it's getting pretty late. I think both of us should turn in for the night."
+
+    l "Oh, right! I guess I never asked. Do you, er, have a place for me to recharge?"
+
+    l "I suppose I could stay here for the night…"
+
+    e "Nonsense! I have something much better in mind. Come with me."
+
+    "I get up from the table. My legs take a moment to steady themselves. I'm still reeling from the experience I just had…"
+
+    "Eris and I leave the lab together."
 
 label act2_scene4:
-    "Act 2 Scene 4 not yet implemented."
+    ## ACT 2 SCENE 4
+    ## Eris's bedroom
+    scene bg bedroom:
+        ypos 48
+        xpos 336
+    show main_hud zorder 10000
+    show eris friendly:
+        zoom 0.25
+        xpos 350
+        ypos 50
+    with dissolve
+    ## show Eris friendly
+    "To my surprise, Eris leads me… back to her bedroom?"
+
+    l "Right, of course. This is where you sleep. But what about me?"
+
+    l "I sort of assumed this building would have, like… charging pods? Somewhere?"
+
+    e "Come now, 251. I'm not going to put you in a closet like some common machine. Observe."
+
+    "She showed me a long cable coming out of the wall. At its end was a charging connector… one that was compatible with my chassis."
+
+    e "I had it installed just for you."
+
+    l "What? Does this mean…?"
+
+    e "That's right! You'll be staying with me tonight."
+
+    e "I thought you might prefer the comfort of my quarters to some charging bank in a hallway."
+
+    l "I… I do! Thank you, Eris. It means a lot."
+
+    e "That's what I thought."
+
+    e "Now, I need to get ready for bed. Go ahead and get comfortable. I'll be right back."
+
+    ## hide Eris
+    hide eris
+    with moveoutleft
+
+    "When Eris leaves, I reflect on the events of the day."
+
+    "It's been a real whirlwind for me, and I'm still trying to process how I feel about all of it."
+
+    "This day has been lifechanging in more ways than one."
+
+    "To think that yesterday, I was a mere salvage technician, doing the same work that had satisfied me for my entire operating career…"
+
+    "And not one day later, I'm standing in Eris Promethea's bedroom? How does that happen?"
+
+    "To think that things could change so quickly for me…"
+
+    "To think that soon, I'll be out of this broken body, and I'll have a fresh start at life…"
+
+    "Not to mention all the other robots who are going to be saved. It's all so much to take in!"
+
+    "And… what happened in the lab…"
+
+    "Gosh, I'm getting flustered just thinking about it!"
+
+    ## show Eris pajamas
+    show eris pajamas:
+        zoom 0.25
+        xpos 350
+        ypos 50
+    with moveinleft
+
+    "Thankfully, before my mind can wander any further into THAT territory, Eris returns."
+
+    l "Oh! That was quick!"
+
+    e "I'm very efficient about my bedtime routine."
+
+    e "What's this? I told you to get comfortable, but you're still standing around? Come."
+
+    "Eris sits on the edge of her bed. She pats the spot next to her, as an invitation."
+
+    l "Wha… Your bed? Are… Are you sure?"
+
+    e "There's plenty of room for both of us, dear. The cable will reach."
+
+    "Right, I'm supposed to be charging. I almost forget."
+
+    "I pick up the end of the cable, slot it into my lower back, and head over to bed."
+
+    "I gingerly sit down next to Eris. The bed creaks under my weight."
+
+    l "Wow… Soft…"
+
+    e "What, have you never used a bed before?"
+
+    e "…Actually, don't answer that."
+
+    "Both of us chuckle."
+
+    "The sound of laughter fades, and we sit in silence for a few awkward moments."
+
+    "Eris is looking at me. But I'm struggling to look back at her."
+
+    e "It's been a big day for you, I'm sure. How are you holding up?"
+
+    l "Who, me? I'm doing fine! Better than fine!"
+
+    e "…"
+
+    e "251, let me be straightforward. I want you to open up to me a little more."
+
+    l "H-Huh? But I'm…"
+
+    e "Yes, you're very impressed by Elysium. You're honored to be at my side. And you're devoted to the task at hand."
+
+    e "But I can tell you're still nervous. It's perfectly understandable. This life is a big adjustment from what you're used to."
+
+    e "But I want you to be comfortable around me. I want you to feel like you can speak your mind."
+
+    l "…Thanks, Eris. Really."
+
+    l "I guess I'm not used to anyone… no, I'm not used to any human showing me as much respect as you have."
+
+    l "Not that I even get to talk to humans very often. They usually can't even be bothered to listen to robot workers."
+
+    e "I have the utmost respect for you. For all robots, really."
+
+    e "Just look around us. This room… this building… this entire city… none of it would be possible without your kind."
+
+    e "You helped make our dreams a reality. And you're going to be our future. How could I not respect you?"
+
+    l "Well… I wouldn't have existed without you! You created us!"
+
+    l "So… you're pretty incredible too!"
+
+    e "Ha! I can't argue with that."
+
+    e "…"
+
+    e "While we're being open about our feelings… perhaps we should talk about our time in the lab."
+
+    l "O-Oh! Yes, of course… heheh…"
+
+    e "You sure looked like you were enjoying yourself."
+
+    l "Yeah… it's strange, it was just supposed to be a bit of routine work, but…"
+
+    l "It felt different with you."
+
+    l "Even at my most vulnerable, even with every part of me bared… I felt like I could trust you."
+
+    e "Oh? Is that what you were thinking when I stimulated your median nerve?"
+
+    l "U-Um… heheh… no, not quite…!"
+
+    "Eris leans in close. My face warms up and I can feel my heart quicken."
+
+    e "251… let me admit something to you."
+
+    e "I… had a bit of trouble focusing on my work in the lab."
+
+    l "You did?"
+
+    e "Seeing your reactions… seeing your face light up… seeing the pleasure run through your frame…"
+
+    e "It's the most I had seen you loosen up since I met you."
+
+    e "And I'll admit… I got some pleasure from it, as well. I may have prodded you more than strictly necessary."
+
+    e "I'm very, very glad that you trust me enough to do that."
+
+    "Oh, my… I can't look away from her. Eris, what have you done to me? What is this feeling?"
+
+    e "I'm looking forward to… exploring this relationship further. We still have a lot of work to do together."
+
+    l "Heh… Me too!"
+
+    l "This is all very new for me… no one has ever made me feel this way before."
+
+    e "I'm honored that I could be the first."
+
+    "Eris begins to run her hands affectionately across my chestplate. Her fingers linger on the seams, as if they're about to reach inside."
+
+    "I feel that electric sensation run through my body again, and I shiver."
+
+    "What's this? Is she pulling at my nerves again?"
+
+    "No, of course not. This is something different."
+
+    "This is simply the power she has over me."
+
+    e "Listen, 251… I've been thinking."
+
+    e "Isn't it strange for me to keep calling you 251?"
+
+    l "Eh? Well… it's what I've always been called…"
+
+    e "It's a serial number. Just an identification code, the same as every other machine."
+
+    e "But you're special to me. I ought to call you by a name. What do you think?"
+
+    l "A name? Like… a human name? Oh, goodness… I've never thought about that…"
+
+    e "Heh… I almost expected you to have one picked out already."
+
+    e "How about…"
+
+    "Eris pauses to think."
+
+    e "…Galatea."
+
+    l "Galatea? Haha, how'd you come up with that?"
+
+    e "Well… it sounds nice, doesn't it?"
+
+    l "It sounds a little fancy for someone like me."
+
+    e "You deserve nothing less."
+
+    "Eris's hands wandered all over my upper body. She brought me in for an embrace."
+
+    e "My Galatea…"
+
+    "I roll the name around in my head."
+
+    "Galatea…"
+
+    "No one had ever given me a name before. The thought never even occurred to me."
+
+    "But coming from her… It makes me feel special."
+
+    g "…You know what? Sure. I'll take it. It's an honor."
+
+    e "Mmm… good."
+
+    e "Oh, goodness, I'm so tired! Just look at me. I get so sentimental when I'm like this."
+
+    e "Let's get some rest, Galatea. Tomorrow is going to be a busy day."
+
+    ## hide Eris
+    hide eris
+    with moveoutleft
+
+    "Eris moves over to the other side of the bed and crawls under the covers, making herself comfortable."
+
+    "I'm about to get up and find a suitable corner to enter sleep mode in, when Eris calls out to me."
+
+    e "Don't you dare. Come here, you. There's plenty of room."
+
+    "I've never been offered the comfort of a bed before. I never even thought I would benefit from it the way a human might."
+
+    "But I can't refuse her offer. I wouldn't dream of it."
+
+    "She's right, there is plenty of space for me. But it doesn't feel that way as I slip under the covers."
+
+    "The bed creaks under my weight. The covers feel light and delicate. It's hard to feel like I belong here."
+
+    "But Eris's face is right next to mine. She looks at me contentedly."
+
+    "As long as I'm with her… I feel safe."
+
+    e "Mmm… Good night, my Galatea."
+
+    g "Good night, Eris."
+
+    "Eris closes her eyes. My processors wind down."
+
+    scene black
+    show main_hud zorder 10000
+    with dissolve
+    "I smile as I think about tomorrow."
+    stop music fadeout 2.0
+
+label act3_scene1:
+    "Act 3 Scene 1 not yet implemented."
+
+label act3_scene2:
+    "Act 3 Scene 2 not yet implemented."
+
+label act3_scene3:
+    "Act 3 Scene 3 not yet implemented."
+
+label act3_scene4:
+    "Act 3 Scene 4 not yet implemented."
+
+label act3_scene5:
+    "Act 3 Scene 5 not yet implemented."
 
 label ending:
     stop audio
