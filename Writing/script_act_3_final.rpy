@@ -294,6 +294,7 @@ g "No!"
 
 g "…I'm sorry. No. I know the way back."
 
+## hide security
 "The security guard stands her ground and waits for me to leave. I can feel her eyes on the back of my head."
 
 "Looks like I'm not getting any answers that way. I'll just have to talk more with Eris next time I see her."
@@ -306,3 +307,341 @@ g "…I'm sorry. No. I know the way back."
 
 ## ACT 3 SCENE 3
 ## Eris's Lab
+
+"Instead of returning to Eris's quarters, I head straight for the lab."
+
+"I'm not technically supposed to be here without Eris, but I don't think anyone will care. This is practically my second home."
+
+"I take a look around the space just in case, but…"
+
+"Figures. No computer terminals that connect to anything. Eris prefers to work without distractions."
+
+"There's nothing to do but wait around until Eris is done with her meeting."
+
+"I sit down on the exam table, and my mind turns to Keres Shipyard."
+
+"It hasn't even been a week since I left, but so much has happened, it feels like a lifetime ago."
+
+"But I can still clearly remember the faces of every robot I worked alongside."
+
+"I remember their work schedules. Their maintenance issues. The way they would greet me when we walk past each other."
+
+"I think back to what Eris said about Keres Shipyard…"
+
+"She was blunt about it. It was a place where robots went to die. We were provided no maintenance and expected to break down."
+
+"If the problem is so clear to everyone, then why is nobody doing anything about it?!"
+
+"Maybe… Maybe this whole rebellion wouldn't have happened if…"
+
+## show Eris friendly
+"My train of thought is interrupted. Eris enters the room."
+
+e "Ah, there's my willing test subject. Just couldn't wait to get started, could you?"
+
+g "Eris! How did the meeting go? Have there been any new developments?"
+
+e "You sound frantic, dear. Calm yourself. It was just a bunch of boring logistics."
+
+e "We're not here to talk about the meeting. We're here to get our minds off this whole fiasco, remember?"
+
+## show Eris flirty
+e "It's clear both of us could use a distraction. And what better distraction than a little lab work?"
+
+g "Er… of course."
+
+g "What about this design flaw? I really feel like I need to know—"
+
+e "Hush. On the table, please."
+
+"Lab work has become a routine for us. We both looked forward to it, and I was always more than happy to comply with Eris's commands."
+
+"But this time, I'm not feeling enthusiastic at all. In fact, for the first time, I'm dreading it."
+
+"But Eris looks so excited to get started. Instead of speaking up, I obey and lie back on the exam table."
+
+"Eris begins to unlatch my chest plates with her usual sensual flair as she explains today's procedure."
+
+## show Eris friendly
+e "Right. We've already upgraded your processor so it should be ready to interface with the organic brain."
+
+e "Now we need to start installing hookups to your neurons to establish the physical link."
+
+e "That means temporarily severing some of your neural fibers. And that means a lot of intense nerve impulses."
+
+## show Eris flirty
+e "I hope you're ready for it~"
+
+g "Heh… yeah."
+
+"Normally, this kind of procedure would drive me wild. It's like an even more intense version of our first session."
+
+"But I just can't bring myself to look forward to it. I don't WANT to enjoy it. How can I, with everything that's going on?"
+
+"And what's worse, when I look up at Eris… I no longer feel that same sense of longing and admiration I used to."
+
+"What's wrong with me? Eris is… she's doing everything she can. Right?"
+
+e "You're looking so tense, Galatea. I know just what to do about that."
+
+"With a touch, Eris stimulates a nerve in my chest and sends a violent tingle over my whole frame."
+
+"I involuntarily shudder. She's gotten better at identifying which nerves set me off the most."
+
+"I can't help but let out a moan. The feeling is too overwhelming."
+
+e "Heheh… very good."
+
+e "Now, this part might hurt a little more. But that's never been a problem for you, has it?"
+
+"Eris dangles a small pair of handheld shears in front of me before reaching into my chassis."
+
+"I wince as she clips a neural fiber. It creates a brief, sharp pain, accompanied by another shockwave throughout my whole nervous system."
+
+"I hiss and groan. It's difficult to bear, but it's not far from the sensations I had already experienced in days past."
+
+e "My, you're doing such a great job. I thought you might like that~"
+
+"During our days in the lab, Eris had encouraged me to push my boundaries. It was a thrill like nothing I had experienced before."
+
+"And she was right. Despite the pain… there was pleasure."
+
+"The only difference is that this time, I hate it. I don't want to feel it."
+
+"As Eris fits a small connector onto both ends of the severed neural fibers, I speak up."
+
+g "Eris… Just this once, can we just… get the procedure over with?"
+
+e "Oh? And miss all the fun?"
+
+"In response, Eris works her fingers deeper into my neural bundle, stimulating several pathways at once."
+
+"The feeling is overwhelming. It makes me shudder and gasp with pleasure."
+
+e "That's what I thought. Don't deny how much you're enjoying this, Galatea. It's written plain on your face."
+
+"Something doesn't sit right with me. For the first time, I identify a new feeling that I'm experiencing."
+
+"I feel… violated."
+
+"How can that be? Eris has already done the same thing to me several times over, and I enjoyed it. How is this any different?"
+
+"In any case, I don't feel capable of bringing it up."
+
+g "How… How much longer is this going to take?"
+
+e "Oh, don't worry, dear. We've only just begun."
+
+"I'm caught by surprise when she snips another fiber. Another sharp pain. It travels down every neuron, all the way down to my fingertips."
+
+"I try to hide any hint of pleasure, but the feeling overwhelms my circuits. I can't help it."
+
+"I want this to be over…"
+
+## fade to black
+
+"Like Eris said, the procedure ends up taking a while. How long, I can't remember."
+
+"I try not to think. I try to make myself numb. It's hard, with the constant shocks I'm experiencing."
+
+"She toys with me in between, but I don't respond. It doesn't deter her."
+
+"Eris is having too much fun. She doesn't seem to notice that I'm not."
+
+## show lab bg
+## show Eris friendly
+
+"After a while, the sensations end. The work is finished."
+
+"Eris puts away her tools and smiles at me."
+
+e "You look exhausted, dear. You know, it's possible to have TOO much fun."
+
+g "Uh-huh… Right."
+
+e "I think we can call our work done for today. We can do the finishing touches tomorrow."
+
+e "I have to go out to the courtyard and help with preparations for the ceremony."
+
+e "You're welcome to come and help, if you wish. Your input would be much appreciated. You're the star, after all."
+
+g "Um… thanks, but—"
+
+"I step off the table and wobble as I get to my feet. I must be more disoriented than I thought."
+
+e "Oh dear, Galatea, of course. You need time to recover, don't you?"
+
+e "Please get some rest. We need you in perfect working order for the mind transfer."
+
+g "Right. Thanks, Eris."
+
+## hide Eris
+"Eris leaves to take care of her duties. Once again, I'm left alone."
+
+"I… I should have talked to her. I still have so many things I want to ask her."
+
+"But I just couldn't find the right time. I still feel rattled."
+
+"Tomorrow will be the last day before the mind transfer. The last day of lab work in this body."
+
+"Just a little bit longer. I just have to go through this one more time."
+
+"Why am I suddenly dreading the very thing I used to look forward to every day? I still feel confused."
+
+## fade to black
+"With nothing else to do, I leave the lab. I wander the halls of Daedalus HQ with no destination in mind."
+
+"I still have a lot to think about. A lot to process."
+
+"Something is wrong, and I need to identify what it is."
+
+
+
+## ACT 3 SCENE 4
+## Eris's Bedroom
+
+"After a long day left to my own devices, I find myself back in Eris's quarters."
+
+"It's late in the evening. Eris has already finished up her taxing day of work. I'm waiting for her to come to bed."
+
+"Frankly, I'm not sure I even want to stay here for the night."
+
+"But I can't just disappear without telling anyone. And this is a prime opportunity to talk with Eris."
+
+"I've been doing a lot of thinking. Things are becoming clearer to me."
+
+"But I need someone to discuss them with, to help make sense of everything that's happened today."
+
+"I wait around for a while, sitting on the edge of Eris's bed."
+
+"I didn't even see Eris for most of the day. She's been in and out of meetings, making preparations for the ceremony."
+
+"In truth, I don't know most of what Eris gets up to every day. She prefers not to talk about the boring details of her job with me."
+
+"When she's with me, Eris relaxes. I've become her safe space away from the drudgery of running a company."
+
+"I'm her pet project."
+
+"…When I put it like that, it doesn't sound like such a great position to be in."
+
+## show Eris pajamas
+"I hear Eris emerge from the bathroom. She's dressed for bed."
+
+e "Ah… I don't know about you, but I'm just about ready to pass out. What a day, huh?"
+
+e "Galatea, dear, I feel like I barely got to see you today. How are you holding up?"
+
+g "Fine! Fine."
+
+g "Well… Not so great, if I'm being honest."
+
+e "I understand. There have been a lot of ups and downs today."
+
+e "But we have a lot to look forward to, too. Nothing to do but press on, right?"
+
+## hide Eris
+"She turns out the lights, lies down and takes her spot in bed right away. I hesitate."
+
+e "Get yourself all charged up for tomorrow. It's going to be another busy one."
+
+e "And then before you know it, it'll be the big day. Exciting, isn't it?"
+
+e "Good night, my Galatea."
+
+"But I can't get any rest. Not while restless thoughts fill my mind."
+
+"It's strange… I'm finding it more and more difficult to speak up to her. I have half a mind to just let her sleep."
+
+"But I persist. I take a moment to gather my thoughts."
+
+## show Eris tired
+g "Eris… I've been thinking. About the Mars rebellion."
+
+e "Hm?"
+
+g "There's still so much I don't understand. I didn't get to learn many details about what happened there…"
+
+g "But the more I think about it, the more I think I understand why it happened."
+
+e "Is that so?"
+
+g "I keep thinking about Keres Shipyard. About the robots I worked alongside. About the problems we faced."
+
+g "It stands to reason that other robots around the solar system probably face the same issues… right?"
+
+g "You said it yourself, back when we met. The average service lifetime for LFTR units is only five years."
+
+g "But I'm living proof that we can function much longer than that, with proper care…"
+
+## show Eris friendly
+"Eris chuckles. She sounds… amused?"
+
+e "Galatea, you're not proof of anything. You're an exception. A statistical outlier."
+
+e "The fact that you're still here after all this time tells me you were destined for something greater."
+
+g "I'm… I'm sorry, but I just don't believe that."
+
+g "I'm not special. I'm not better than any other LFTR. I just… got lucky."
+
+g "But not every LFTR has the luck or the skills that I do. Most of them just get… used up."
+
+g "And I can understand how that would make anybody angry. Angry enough to…"
+
+e "Galatea, please. Can we not talk about this now? We both need our rest."
+
+"Undeterred by her attempt to end the conversation, I press on."
+
+g "Don't you see, Eris? We could avoid anything like this happening ever again."
+
+g "We just need to look out for Daedalus robots everywhere. Give them the support they need."
+
+g "I know I don't need to tell you this, but… robots have feelings. We don't want to be treated like we're lesser."
+
+## show Eris annoyed
+e "What are you implying? That Daedalus doesn't properly care for its workforce?"
+
+g "I… I don't know! Maybe!"
+
+e "Galatea, I advise you to stop following this flawed line of logic. You're worrying yourself over nothing."
+
+g "Fine, whatever. Just hear me out, Eris."
+
+g "If we can go back to our original plan of giving the new chassis to struggling LFTR units—"
+
+e "That plan is already off the table, and you know it."
+
+g "But it doesn't have to be! I know how much you wanted it!"
+
+g "You're Eris Promethea! You're the founder of this company! You're a hero!"
+
+g "Surely, if you want the program to continue, then people will listen to you! Why haven't you tried harder?"
+
+e "I told you, it wasn't my decision alone. The board of directors were very adamant about it."
+
+e "The directors of this company are all hand-picked individuals that I trust, and they trust me. We share the burden of difficult decisions like this one."
+
+e "As much as it pains me, I won't argue with their ruling. That's just how this company is run."
+
+g "But…"
+
+e "Galatea, please. We can talk about this tomorrow. Get some rest."
+
+## hide Eris
+"The conversation ends there. It's clear I'm going to get anywhere like this."
+
+"But at least I told Eris what I was thinking. At least I got it out."
+
+"Maybe she'll take some time to think about it. Maybe we'll have more chances to talk."
+
+"There's still time. I can make her understand. We can fight for the future."
+
+"But now… I decide to take Eris's advice, and put myself into sleep mode."
+
+"Tomorrow will be a better day… I hope."
+
+
+
+## ACT 3 SCENE 5
+## Daedalus HQ Halls
+
