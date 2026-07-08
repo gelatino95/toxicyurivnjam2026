@@ -8,7 +8,7 @@
 ## CHARACTERS
 define np = Character("Now Playing:", color="#FFFFFF") # this is for the sound test page
 define e = Character("Eris Daedalus", color="#5cd8f4")
-define l = Character("LFTR 03-215", color="#418c39")
+define l = Character("LFTR 03-251", color="#418c39")
 define g = Character("Galatea", color="#418c39")
 define f = Character("LFTR 08-1514", color="#B2767E")
 define a = Character("ADMN 04-23", color="#B5BFCF")
