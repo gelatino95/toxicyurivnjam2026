@@ -22,6 +22,7 @@ define s = Character("Security", color="#FF8C49")
 define audio.demo_sgt = "she's got torque quickloop.mp3"
 define audio.demo_cg = "cloud gateway quickloop.mp3"
 define audio.demo_rt = "rhel's theme.mp3"
+define audio.demo_yw = "your world quickloop.mp3"
 
 ## IMAGES
 ## No need to define an image if you're not doing anything complicated with it. Just call the file name.
@@ -101,6 +102,9 @@ label soundtest:
         "Rhel's Theme":
             play music "<loop 11.707 to 40.976>rhel's theme.mp3"
             np "Rhel's Theme"
+        "Your World":
+            play music demo_yw
+            np "Your World"
         "Back to Scene Select menu":
             stop music
             jump sceneselect
