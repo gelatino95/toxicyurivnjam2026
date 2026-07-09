@@ -171,12 +171,14 @@ l "Hey, the pleasure is all mine! Please, have a seat."
 
 "I sit her down and begin my inspection of the shoulder joint."
 
+## show scanning overlay highlighting 1514's shoulder
 "I'm equipped with wide-spectrum optical sensors that can see right through the outer casing of any machine. I can identify the problem without having to open anything up."
 
 "In this case, the problem is immediately clear. The threading on a screw had worn down and lodged the screw deep into the joint, where it was grinding against the inner mechanism."
 
 "It's a good thing 1514 came to me when the damage wasn't too bad. If she waited too long, she might have needed a full joint replacement."
 
+## remove overlay
 f "Is it bad…?"
 
 l "Not at all! Just a faulty screw. I'm sure I can find you a replacement in a jiffy."

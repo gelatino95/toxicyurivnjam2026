@@ -498,6 +498,31 @@ e "Indeed. You're a credit to this world, 251. I won't let an old worn-out heart
 
 ## show lab background
 ## show Eris friendly
+
+e "You know, my heart implants actually use very similar technology to yours."
+
+l "Wow! Really?"
+
+e "Mhm. Want to take a look?"
+
+"Wha…? What does she… Oh, right! I forgot my optical scanner could be used for that."
+
+l "Um… if you're sure it's okay."
+
+e "Go for it. Not like I can take it out and show you, right?"
+
+## show scanner overlay highlighting Eris's heart
+"I adjust my scanner to a frequency that can see through human flesh."
+
+l "Woah… you're right! I can see the implants! They… They're made of gold!"
+
+e "Mhm. They're designed on the same principle. Your heart served as the blueprint for some real medical breakthroughs."
+
+"Half organic, half mechanical… she really is a living embodiment of her hopes for the future."
+
+"Plus, we have something in common…!"
+
+## remove overlay
 "My thoughts are interrupted by an electric jolt deep inside my chest that makes me jump in surprise."
 
 l "Ack! What was that?"
