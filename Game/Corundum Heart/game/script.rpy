@@ -23,6 +23,7 @@ define audio.demo_sgt = "she's got torque quickloop.mp3"
 define audio.demo_cg = "cloud gateway quickloop.mp3"
 define audio.demo_rt = "rhel's theme.mp3"
 define audio.demo_yw = "your world quickloop.mp3"
+define audio.demo_m = "murmur quickloop.mp3"
 
 ## IMAGES
 ## No need to define an image if you're not doing anything complicated with it. Just call the file name.
@@ -105,6 +106,9 @@ label soundtest:
         "Your World":
             play music demo_yw
             np "Your World"
+        "Murmur":
+            play music demo_m
+            np "Murmur"
         "Back to Scene Select menu":
             stop music
             jump sceneselect
