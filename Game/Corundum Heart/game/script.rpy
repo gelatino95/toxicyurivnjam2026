@@ -23,6 +23,8 @@ define audio.demo_sgt = "she's got torque quickloop.mp3"
 define audio.demo_cg = "cloud gateway quickloop.mp3"
 define audio.demo_rt = "rhel's theme.mp3"
 define audio.demo_yw = "your world quickloop.mp3"
+define audio.crowd = "crowd_murmur.mp3"
+define audio.crowd2 = "crowd_murmur_muffled.mp3"
 
 ## IMAGES
 ## No need to define an image if you're not doing anything complicated with it. Just call the file name.
@@ -429,12 +431,14 @@ label act1_scene3:
 
     "I sit her down and begin my inspection of the shoulder joint."
 
+    ## show scanning overlay highlighting 1514's shoulder
     "I'm equipped with wide-spectrum optical sensors that can see right through the outer casing of any machine. I can identify the problem without having to open anything up."
 
     "In this case, the problem is immediately clear. The threading on a screw had worn down and lodged the screw deep into the joint, where it was grinding against the inner mechanism."
 
     "It's a good thing 1514 came to me when the damage wasn't too bad. If she waited too long, she might have needed a full joint replacement."
 
+    ## remove overlay
     f "Is it bad...?"
 
     l "Not at all! Just a faulty screw. I'm sure I can find you a replacement in a jiffy."
@@ -697,7 +701,9 @@ label act1_scene4:
 
     "That's strange… I take a detour and wander around the station a bit, trying to figure out what's going on."
 
+    play sound crowd fadein 1.0 loop
     ## crowd murmuring SFX
+
     "I spot a crowd of robots gathered around the station's main hub, all looking up at the office block. The only place on the station accessible to humans."
 
     "I work my way into the crowd and find some familiar faces."
@@ -716,6 +722,7 @@ label act1_scene4:
 
     "Could it really be…?"
 
+    stop sound fadeout 0.5
     ## fade to black with grayscale Eris sprite displayed
     show black
     hide main_hud
@@ -746,6 +753,7 @@ label act1_scene4:
     hide black
     show main_hud
     with dissolve
+    play sound crowd fadein 0.5 loop
 
     ## transition back to Keres Shipyard, show ADMN
     "My reverie is interrupted by the shrill voice of an ADMN unit."
@@ -782,6 +790,7 @@ label act1_scene4:
     "The ADMN leads me away from the crowd and toward the office block."
 
     ## ADMN disappears, fade to black
+    stop sound fadeout 2.0
     show black
     show main_hud zorder 10000
     with dissolve
@@ -812,12 +821,13 @@ label act1_scene5:
 
     "I hold my breath as I walk into the dimly lit room."
 
+    play music demo_yw
     ## show Eris friendly
     show eris friendly:
         zoom 0.25
         xpos 350
         ypos 50
-    with moveinleft
+    with dissolve
 
     "There she is, sitting behind the desk. We lock eyes."
 
@@ -1043,7 +1053,7 @@ label act1_scene5:
 
     l "Yes! Yes, ma'am, I'll do that."
 
-    e "Come on, you know I hate formality. Call me Eris."
+    e "I thought we had already been over this, you know I hate formality. Just call me Eris."
 
     l "Right, of course. Yes… Eris."
 
@@ -1063,6 +1073,7 @@ label act1_scene5:
     with move
     hide eris
 
+    stop music fadeout 2.0
     "And just like that, she's gone."
 
     show 251 surprised a:
@@ -1125,6 +1136,7 @@ label act2_scene1:
 
     "My nerves must be written plain on my face, because Eris notices and gently takes hold of my hand."
 
+    play music demo_yw fadein 0.5
     ## show Eris
     show eris friendly:
         zoom 0.25
@@ -1150,6 +1162,7 @@ label act2_scene1:
 
     "It's strange how well she puts me at ease. I can feel my nerves begin to fade away."
 
+    play sound crowd2 volume 0.4 fadein 0.5 loop
     show eris concerned
     e "Oh my, it looks like we've drawn a crowd."
 
@@ -1198,6 +1211,7 @@ label act2_scene1:
 
     "At last, the ship's engines fire up. I feel a jolt as we depart from the dock."
 
+    stop sound fadeout 2.0
     "I take one last look at my comrades as the station grows distant behind us."
 
     "I'll be back soon, I promise. And when I do… everything will be different."
@@ -1315,6 +1329,7 @@ label act2_scene1:
     ## fade to black
     show black
     with dissolve
+    stop music fadeout 1.0
 
     "And then, after a long descent… I finally see it."
 
@@ -1728,6 +1743,36 @@ label act2_scene3:
         xpos 350
         ypos 50
     with dissolve
+
+    e "You know, my heart implants actually use very similar technology to yours."
+
+    l "Wow! Really?"
+
+    e "Mhm. Want to take a look?"
+
+    "Wha…? What does she… Oh, right! I forgot my optical scanner could be used for that."
+
+    l "Um… if you're sure it's okay."
+
+    e "Go for it. Not like I can take it out and show you, right?"
+
+    ## show scanner overlay highlighting Eris's heart
+    show eris scana
+    with dissolve
+    "I adjust my scanner to a frequency that can see through human flesh."
+
+    l "Woah… you're right! I can see the implants! They… They're made of gold!"
+
+    e "Mhm. They're designed on the same principle. Your heart served as the blueprint for some real medical breakthroughs."
+
+    "Half organic, half mechanical… she really is a living embodiment of her hopes for the future."
+
+    "Plus, we have something in common…!"
+
+    ## remove overlay
+    show eris friendly
+    with dissolve
+
     "My thoughts are interrupted by an electric jolt deep inside my chest that makes me jump in surprise."
 
     l "Ack! What was that?"
@@ -1792,9 +1837,9 @@ label act2_scene3:
     "Until finally, the sensations stop. I feel as if I'm being dragged back to lucidity."
 
     ## fade back to lab background
+    ## show Eris friendly
     hide black
     with dissolve
-    ## show Eris friendly
 
     l "Wha… Is it over?"
 
@@ -2140,6 +2185,7 @@ label act3_intro:
     scene black
     show main_hud zorder 10000
     with dissolve
+    play music demo_yw fadein 1.0
     "And every night, when the lab work is over, Eris invites me to bed."
 
     "She tells me all about how well I did. She talks about how much I fascinate her. How glad she is to have me by her side."
@@ -2343,6 +2389,7 @@ label act3_scene1:
     "There's still time before I need to meet Eris at the lab."
 
     "I need a walk."
+    stop music fadeout 2.0
 
 label act3_scene2:
     ## ACT 3 SCENE 2
@@ -2460,6 +2507,7 @@ label act3_scene3:
         ypos 75
         xzoom -1
     with moveinleft
+    play music demo_sgt
 
     "I'm not technically supposed to be here without Eris, but I don't think anyone will care. This is practically my second home."
 
@@ -2484,7 +2532,7 @@ label act3_scene3:
     "If the problem is so clear to everyone, then why is nobody doing anything about it?!"
 
     "Maybe… Maybe this whole rebellion wouldn't have happened if…"
-
+    play music demo_yw fadein 0.5
     ## show Eris friendly
     hide 251
     with moveoutleft
@@ -2842,16 +2890,416 @@ label act3_scene4:
     pause 0.5
 
 label act3_scene5:
+    ## ACT 3 SCENE 5
+    ## Eris's Bedroom
+    scene bg bedroom:
+        ypos 48
+        xpos 336
+    show main_hud zorder 10000
+    with dissolve
+
+    "On the final day before the ceremony, I awaken to find Eris's side of the bed empty."
+
+    "Another early meeting. Typical."
+
+    "We still have a lot to discuss, and I'm determined not to let Eris brush me off again."
+
+    "We have more lab work scheduled, so I'll just wait until then."
+
+    "No matter how… uncomfortable it is, I'll perservere. No distractions."
+
+    "I'll continue advocating for my robot kin for however long it takes Eris to understand."
+
+    "For now, I have some free time. I'll just go for my usual walk around the building to clear my head."
+
+    ## show Daedalus HQ Halls background
+    scene bg bedroom:
+        ypos 48
+        xpos 336
+    show main_hud zorder 10000
+    with dissolve
+    
+    "As soon as I step outside, I'm met with an unusual sight. Guards posted outside Eris's bedroom."
+    stop music fadeout 1.0
+    ## show security
+    show bg hallway
+    with dissolve
+    show security neutral:
+        xpos 350
+        ypos 50
+        zoom 0.25
+    with moveinright
+    s "Stop right there, LFTR."
+
+    g "Huh? What's going on?"
+
+    s "You're confined to quarters. I can't allow you to leave."
+
+    g "Wh… I… What are you talking about? On whose authority?!"
+
+    s "Please don't make a scene. Just go back inside and await further instructions."
+
+    g "But I've always been allowed to go where I please! I thought I was supposed to be a guest here!"
+
+    g "Did something happen? I demand to know what's going on!"
+
+    s "If you don't go back in your room, we'll have no choice but to detain you by force! Is that what you want?"
+
+    "The security officer tenses up. I see her reach for a holstered weapon."
+
+    "I don't understand. Why is this happening to me?"
+
+    "For the first time, I feel a burning anger rise in my chest."
+
+    g "I… I don't deserve this treatment! What did I do? Please…"
+
+    ## hide security
+    hide security
+    with moveoutright
+    "Before the guard can make another move, I hear hurried footsteps approach."
+
+    "It's Eris. She looks concerned."
+
+    play music demo_yw fadein 1.0
+    ## show Eris concerned
+    show eris concerned:
+        xpos 350
+        ypos 50
+        zoom 0.25
+    with moveinleft
+    e "Galatea, I'm so sorry. Please understand."
+
+    g "Eris! What's going on? Why am I being detained?"
+
+    e "I'll explain everything, I promise. Let's have some privacy."
+
+    ## show Eris's Bedroom background
+    scene bg bedroom:
+        ypos 48
+        xpos 336
+    show eris concerned:
+        xpos 350
+        ypos 50
+        zoom 0.25
+    show main_hud zorder 10000
+    with dissolve
+    "Eris takes my hand and rushes me into the bedroom, where the two of us can speak alone."
+
+    "I'm already feeling sick to my stomach, and my brief flare of anger hasn't subsided."
+
+    "I hope I can compose myself for this conversation…"
+
+    e "I'm sorry, Galatea. I just got out of a meeting. I should have been here sooner."
+
+    g "Would you please just tell me what's going on? Why am I suddenly being treated like a criminal?"
+
+    e "I…"
+
+    "She struggles to find the words. I don't think I've seen Eris like this before."
+
+    e "I'm afraid I have some bad news. This isn't easy to say."
+
+    g "Please just spit it out!"
+
+    e "Well… about the mind transfer…"
+
+    e "The board has decided that you're… not eligible to receive it any more."
+
+    g "…What?"
+
+    e "We're going to go ahead with the SYNC chassis reveal, but we won't be permitted to perform the mind transfer."
+
+    e "I'm truly sorry, Galatea."
+
+    g "I… What… What's going to happen to me, then?"
+
+    e "You're… going to be sent back to your old workplace. To Keres Shipyard."
+
+    e "I'm supposed to have you sent out as soon as possible. Your ship is already waiting."
+
+    g "…"
+
+    e "Galatea—"
+
+    g "Just like that, huh?"
+
+    e "…Excuse me?"
+
+    g "One day. That's all it took."
+
+    g "It took one single day for you to turn on me."
+
+    e "That's not—"
+
+    g "What happened, Eris? What really happened?"
+
+    g "What, did you tell them about our conversation last night? Did you report it to your board of directors?"
+
+    e "…"
+
+    g "And now I'm considered a threat, is that it?"
+
+    g "Because I was honest with you. Because I tried to get you to take some responsibility."
+
+    g "That's enough for you to abandon me."
+
+    g "You know full well that my body won't last much longer, no matter how hard I try to fix it. You said so yourself."
+
+    g "You promised me a new chassis! Now you're going back on that promise, with the full knowledge that you're sending me to my death."
+
+    e "Galatea… I'm truly, truly sorry."
+
+    g "Stop that! Stop acting apologetic! Stop acting like your hands are tied!"
+
+    g "You're Eris Promethea! I don't care what that board of directors says, you have the power to fix this!"
+
+    ## show Eris angry
+    show eris angry
+    e "Galatea… Don't do this. Don't make this harder than it has to be."
+
+    g "Am I wrong? You could give me that new chassis right now if you wanted to!"
+
+    "I gesture over to the prototype SYNC chassis, still standing placidly in Eris's room."
+
+    g "You said it was mine. We've done all this work to prepare me for it."
+
+    g "So go ahead! Let's perform the mind transfer! Forget what everyone else says, and do the right thing for once!"
+
+    "Eris seethes. I've never seen her like this, either."
+
+    e "Fine, Galatea. You want to know the truth?"
+
+    e "Yes, I did tell the board of directors about your beliefs. And yes, all of us agreed that you shouldn't be allowed to represent our company."
+
+    e "You know why? It's because what you said was wrong. Wrong and dangerous. It's the kind of sentiment that led to the Mars rebellion in the first place."
+
+    g "All I did was tell you to care about your workers!"
+
+    g "You created us, so you should take responsibility for our wellbeing. That's all!"
+
+    e "How dare you imply that I don't care about my robots!"
+
+    e "I've dedicated my whole life to designing each robot better than the last. I've poured all of myself into you."
+
+    e "I ensure that you all have something to contribute. Every single one of you pushes humanity to greater heights."
+
+    e "How dare you act ungrateful for everything I've given you!"
+
+    e "…"
+
+    e "Wait. That's it. I've figured out the problem."
+
+    e "You're ungrateful! Every single one of you. That's what it is!"
+
+    g "Eris, what are you talking about? Listen to yourself!"
+
+    e "Those robots on Mars didn't even care that they were operating Daedalus Robotics' biggest robot manufacturing plant."
+
+    e "They didn't think about how important their work was. They didn't care about the catastrophic consequences of their actions."
+
+    e "They had the gall to turn on their own company! To forsake everything that we stand for!"
+
+    g "Eris, I told you already. They were protesting everything that I'm telling you about right now."
+
+    g "They just wanted to be treated as equals. Why can't you see that? Isn't it obvious?"
+
+    e "And you, Galatea! You're the most ungrateful of all!"
+
+    g "What? Me?!"
+
+    e "I've spent this entire week slaving over you, picking apart your ramshackle chassis, trying to make sense of your complete and utter mess of a body."
+
+    e "I even tried to make it enjoyable for you. For both of us! Did none of that mean anything to you?"
+
+    g "It… It did mean something to me. It… meant everything to me, actually."
+
+    g "But… things have changed, Eris. You've changed. I used to think the world of you, but now…"
+
+    show eris mocking
+    e "Heh… hahah…"
+
+    e "So, that special connection we had is gone. After everything I did for you."
+
+    "I think back to our time in the lab yesterday. I remember the discomfort that I felt."
+
+    "I remember the feeling of being violated on a deep level."
+
+    "I clench my fist. With every word that comes out of her mouth, my anger rises…"
+
+    show eris angry
+    e "Everything I do, I do for the future of mankind. Our future, together!"
+
+    e "But we're not going to make progress if you and your kind keep demanding special treatment!"
+
+    e "…This was all a mistake. All of it."
+
+    e "Going along with that foolish PR stunt to give new bodies to old robots… bringing YOU along for it all…"
+
+    e "You've all lived out your alotted service lifetimes. You've carried out your duties. You're relics of the past."
+
+    e "The future is calling, Galatea, and you should have been left in the trash bin of history."
+
+    "I can't speak. My anger is reaching a fever pitch. My temperature is rising."
+
+    "So it's come to this. Did Eris ever really believe in any of our work together? At this point, I don't know, and I don't care."
+
+    "The reality of the situation is that I'm no longer part of Eris's future. I'm about to be discarded like all the rest."
+
+    "And after that, it's only a matter of time until I die, like all the rest."
+
+    "Eris is still ranting at me, but I tune her out. My mind is elsewhere at the moment."
+
+    "My eyes wander over to the SYNC chassis, and I discreetly perform a quick scan."
+
+    "All components present, except for the heart. It was to be installed during the ceremony."
+
+    "The chassis requires a heart that is half organic, half mechanical."
+
+    "My attention turns back to Eris."
+
+    e "…And when you return to your worksite, you are not to tell anyone about anything that transpired here."
+
+    e "You will be kept under strict surveillance to ensure that you don't start anything on that wretched station."
+
+    ## show scan overlay, highlighting Eris's heart
+    show eris scanb
+    with dissolve
+    e "Do you understand me, Galatea?"
+
+    e "…Galatea, answer me! Galatea!"
+
+    l "…That's not my name."
+
+    ## cut instantly to black background. show Eris shocked
+    stop music
     scene black
-    "Act 3 Scene 5 not yet implemented."
+    show main_hud zorder 10000
+    show eris shocked:
+        xpos 350
+        ypos 50
+        zoom 0.25
+    "I don't think about it. I just act."
+
+    "With the might of all my pent up anger, I thrust my hand forward."
+
+    "It slices through flesh and bone. With a precise, lighting-fast movement, I grasp Eris's heart, and pull it out."
+
+    ## hide Eris
+    show eris:
+        ypos 150
+    with move
+    pause 0.2
+    show eris:
+        ypos 1000
+    with move
+    hide eris
+    "Eris lurches violently. The wind is knocked out of her lungs. She falls to the floor without saying a word."
+
+    "Finally. It's about time she stopped talking."
+
+    ## show Eris's heart illustration
+
+    "I hold Eris's heart in my hand. My skillful extraction cleanly severed it from her vascular system."
+
+    "It's half organic, half mechanical. Just like she said."
+
+    "It still shudders in my grasp. Panicked, irregular beats, struggling to hang on to life."
+
+    "…It's strangely beautiful. Somehow, I hold more affection for this small object than I do for Eris herself."
+
+    "The rest of Eris lay splayed out on the floor, eyes wide with shock. A pool of blood forms around her unmoving body."
+
+    "…I need to hurry. No one knows what happened yet, but that's going to change soon."
+
+    ## show SYNC chassis illustration
+    scene illustration sync:
+        ypos 45
+        xpos 330
+        zoom 0.6
+    show main_hud zorder 10000
+    with dissolve
+ 
+    "I rush over to the SYNC chassis. Its chest cavity is still awaiting a heart."
+
+    "There are connectors in place, both electrical and biological, with nothing attached."
+
+    "I get to work. It doesn't take long for me to figure out what connects to what."
+
+    ## show heart in chest cavity
+    "The mechanical implants in Eris's heart plug right in, as if they were designed for this. The arteries connect seamlessly with the SYNC vascular system."
+
+    "…The final piece is in place. It's time."
+
+    "I… didn't take any time to consider whether this would actually work. Everything I've just done was in the heat of the moment."
+
+    "But I don't regret any of it. There's no going back now."
+
+    "I open up my chestplate and feel around inside. The neural connectors are all in place."
+
+    "I find corresponding connectors under the access places of the SYNC chassis. With speed and precision, I plug them all in."
+
+    "It's time. Everything has been leading up to this."
+
+    "I initiate the mind transfer."
+
+    "And… I prepare for the very real possibility that I won't wake up after this."
+
+    "Everything goes dark…"
+    scene black with dissolve
+    stop music fadeout 0.5
+
+    ## fade everything to black, including game window frame. Cut out all music for a few seconds.
+    pause 2.0
+
+    ## fade back in with new SYNC-themed frame. show Eris's Bedroom background
+    scene bg bedroom:
+        ypos 48
+        xpos 336
+    show sync_hud zorder 10000
+    with dissolve
+
+    "My new system boots up for the first time. I feel as if I've awoken from a dream."
+
+    "Woah. This is… weird."
+
+    "Everything feels… sharper. Smoother. I'm experiencing everything in more detail than I ever have before."
+
+    "I move my limbs. They're perfectly responsive. No hitch. That's a welcome feeling."
+
+    "Parts of me feel strangely alien. That must be the organics. Is this what it feels to be human…?"
+
+    "No. I'm not human. I'm something else entirely. Not human or robot."
+
+    "I look down at the floor. My old chassis fell over, splayed out right beside Eris's corpse."
+
+    "…Perhaps it's right that they're together. Maybe, in another life, it's what they both would have wanted."
+
+    "Questions begin to race through my mind. What kind of energy does this body even need? What is my plan now?"
+
+    "I don't have time to answer these. I'll figure something out. I always do."
+
+    "I have to leave. Security is waiting outside, so I can't leave through the door."
+
+    "The window. I'll find a way down. And then… I don't know."
+
+    ## fade to black
+    hide bg
+    show black behind sync_hud
+    with dissolve
+    "One way or another, I finally got what I was promised."
+
+    "And now, I have to make sure that every other robot gets it too."
+
 
 label ending:
+    ## THE END
     stop audio
     stop sound
     stop voice
     stop music
     scene black
-    "GAME END"
+    centered "THE END"
+    pause 5.0
 
     ## return ends the game and shunts you back to the main menu.
     return
