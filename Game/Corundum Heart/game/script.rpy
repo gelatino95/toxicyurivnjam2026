@@ -23,6 +23,7 @@ define audio.demo_sgt = "she's got torque quickloop.mp3"
 define audio.demo_cg = "cloud gateway quickloop.mp3"
 define audio.demo_rt = "rhel's theme.mp3"
 define audio.demo_yw = "your world quickloop.mp3"
+define audio.demo_m = "murmur quickloop.mp3"
 define audio.crowd = "crowd_murmur.mp3"
 define audio.crowd2 = "crowd_murmur_muffled.mp3"
 define audio.syncboot = "sync_bootup.mp3"
@@ -110,6 +111,9 @@ label soundtest:
         "Your World":
             play music demo_yw
             np "Your World"
+        "Murmur":
+            play music demo_m
+            np "Murmur"
         "Back to Scene Select menu":
             stop music
             jump sceneselect
