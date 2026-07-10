@@ -25,6 +25,9 @@ define audio.demo_rt = "rhel's theme.mp3"
 define audio.demo_yw = "your world quickloop.mp3"
 define audio.crowd = "crowd_murmur.mp3"
 define audio.crowd2 = "crowd_murmur_muffled.mp3"
+define audio.syncboot = "sync_bootup.mp3"
+define audio.lftrboot = "old_bootup.mp3"
+define audio.heartbeat = "heartbeat.mp3"
 
 ## IMAGES
 ## No need to define an image if you're not doing anything complicated with it. Just call the file name.
@@ -130,6 +133,7 @@ label act1_scene1:
     ## Crew quarters
     ## black screen
     scene black
+    play sound lftrboot
 
     n "Expanding Our Reach: First Manned Voyage Beyond Solar System Takes Off"
 
@@ -3149,12 +3153,18 @@ label act3_scene5:
 
     "Eris is still ranting at me, but I tune her out. My mind is elsewhere at the moment."
 
+    show illustration sync:
+        ypos 45
+        xpos 330
+        zoom 0.6
+    with dissolve
     "My eyes wander over to the SYNC chassis, and I discreetly perform a quick scan."
 
     "All components present, except for the heart. It was to be installed during the ceremony."
 
     "The chassis requires a heart that is half organic, half mechanical."
-
+    hide illustration
+    with dissolve
     "My attention turns back to Eris."
 
     e "…And when you return to your worksite, you are not to tell anyone about anything that transpired here."
@@ -3180,25 +3190,44 @@ label act3_scene5:
         zoom 0.25
     "I don't think about it. I just act."
 
+    hide eris
+    with dissolve
+    scene illustration final 1:
+        zoom 0.6
+        ypos 0
+        xpos 300
+    show main_hud zorder 10000
+    with dissolve
     "With the might of all my pent up anger, I thrust my hand forward."
 
+    scene black
+    show main_hud zorder 10000
+    with dissolve
+    scene illustration final 2:
+        zoom 0.6
+        ypos 0
+        xpos 300
+    show main_hud zorder 10000
+    with dissolve
     "It slices through flesh and bone. With a precise, lighting-fast movement, I grasp Eris's heart, and pull it out."
 
     ## hide Eris
-    show eris:
-        ypos 150
-    with move
-    pause 0.2
-    show eris:
-        ypos 1000
-    with move
-    hide eris
+    scene black
+    show main_hud zorder 10000
+    with dissolve
+
     "Eris lurches violently. The wind is knocked out of her lungs. She falls to the floor without saying a word."
 
     "Finally. It's about time she stopped talking."
 
     ## show Eris's heart illustration
-
+    scene illustration final 3:
+        zoom 0.6
+        ypos 0
+        xpos 300
+    show main_hud zorder 10000
+    with dissolve
+    
     "I hold Eris's heart in my hand. My skillful extraction cleanly severed it from her vascular system."
 
     "It's half organic, half mechanical. Just like she said."
@@ -3206,6 +3235,10 @@ label act3_scene5:
     "It still shudders in my grasp. Panicked, irregular beats, struggling to hang on to life."
 
     "…It's strangely beautiful. Somehow, I hold more affection for this small object than I do for Eris herself."
+
+    scene black
+    show main_hud zorder 10000
+    with dissolve
 
     "The rest of Eris lay splayed out on the floor, eyes wide with shock. A pool of blood forms around her unmoving body."
 
@@ -3226,6 +3259,16 @@ label act3_scene5:
     "I get to work. It doesn't take long for me to figure out what connects to what."
 
     ## show heart in chest cavity
+    scene black
+    show main_hud zorder 10000
+    with dissolve
+    scene illustration sync heart:
+        ypos 45
+        xpos 330
+        zoom 0.6
+    show main_hud zorder 10000
+    with dissolve
+
     "The mechanical implants in Eris's heart plug right in, as if they were designed for this. The arteries connect seamlessly with the SYNC vascular system."
 
     "…The final piece is in place. It's time."
@@ -3244,12 +3287,14 @@ label act3_scene5:
 
     "And… I prepare for the very real possibility that I won't wake up after this."
 
-    "Everything goes dark…"
     scene black with dissolve
     stop music fadeout 0.5
+    "Everything goes dark…"
 
     ## fade everything to black, including game window frame. Cut out all music for a few seconds.
-    pause 2.0
+    pause 1.0
+    play sound syncboot
+    pause 7.0
 
     ## fade back in with new SYNC-themed frame. show Eris's Bedroom background
     scene bg bedroom:
@@ -3290,7 +3335,6 @@ label act3_scene5:
 
     "And now, I have to make sure that every other robot gets it too."
 
-
 label ending:
     ## THE END
     stop audio
@@ -3298,8 +3342,9 @@ label ending:
     stop voice
     stop music
     scene black
+    with dissolve
     centered "THE END"
-    pause 5.0
+    pause
 
     ## return ends the game and shunts you back to the main menu.
     return
