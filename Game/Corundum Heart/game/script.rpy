@@ -26,6 +26,8 @@ define audio.demo_yw = "your world quickloop.mp3"
 define audio.demo_m = "murmur quickloop.mp3"
 define audio.crowd = "crowd_murmur.mp3"
 define audio.crowd2 = "crowd_murmur_muffled.mp3"
+define audio.syncboot = "sync_bootup.mp3"
+define audio.lftrboot = "old_bootup.mp3"
 
 ## IMAGES
 ## No need to define an image if you're not doing anything complicated with it. Just call the file name.
@@ -134,6 +136,7 @@ label act1_scene1:
     ## Crew quarters
     ## black screen
     scene black
+    play sound lftrboot
 
     n "Expanding Our Reach: First Manned Voyage Beyond Solar System Takes Off"
 
@@ -795,7 +798,8 @@ label act1_scene4:
 
     ## ADMN disappears, fade to black
     stop sound fadeout 2.0
-    show black
+    show bg keres halls
+    hide admn
     show main_hud zorder 10000
     with dissolve
     "As we traverse the access corridors and pass through the air lock, my circuits are abuzz. I can scarcely believe what's happening."
@@ -1357,11 +1361,6 @@ label act2_scene1:
     "Eris looks amused by my wonder-stricken look. She allows me to take in the sights as we approach the city's gate."
 
     ## show Elysium inside view
-    show bg elysium inside:
-        ypos 48
-        xpos 336
-    show main_hud zorder 10000
-    with dissolve
 
     "After passing through an enormous entryway and going through an airlock, we enter the city proper."
 
@@ -2410,6 +2409,7 @@ label act3_scene2:
 
     "And this design flaw Eris told me about… She was awfully vague about it. I've never heard of anything remotely like it."
 
+    play music demo_m fadein 0.5
     "The unanswered questions leave me confused and frustrated. I feel myself growing angry."
 
     "That's… new. I can't remember the last time I was actually angry about something."
@@ -2511,7 +2511,6 @@ label act3_scene3:
         ypos 75
         xzoom -1
     with moveinleft
-    play music demo_sgt
 
     "I'm not technically supposed to be here without Eris, but I don't think anyone will care. This is practically my second home."
 
@@ -2922,9 +2921,10 @@ label act3_scene5:
         xpos 336
     show main_hud zorder 10000
     with dissolve
-    
-    "As soon as I step outside, I'm met with an unusual sight. Guards posted outside Eris's bedroom."
     stop music fadeout 1.0
+
+    "As soon as I step outside, I'm met with an unusual sight. Guards posted outside Eris's bedroom."
+    
     ## show security
     show bg hallway
     with dissolve
@@ -2933,6 +2933,7 @@ label act3_scene5:
         ypos 50
         zoom 0.25
     with moveinright
+    play music demo_m
     s "Stop right there, LFTR."
 
     g "Huh? What's going on?"
@@ -2964,7 +2965,6 @@ label act3_scene5:
 
     "It's Eris. She looks concerned."
 
-    play music demo_yw fadein 1.0
     ## show Eris concerned
     show eris concerned:
         xpos 350
@@ -3153,12 +3153,18 @@ label act3_scene5:
 
     "Eris is still ranting at me, but I tune her out. My mind is elsewhere at the moment."
 
+    show illustration sync:
+        ypos 45
+        xpos 330
+        zoom 0.6
+    with dissolve
     "My eyes wander over to the SYNC chassis, and I discreetly perform a quick scan."
 
     "All components present, except for the heart. It was to be installed during the ceremony."
 
     "The chassis requires a heart that is half organic, half mechanical."
-
+    hide illustration
+    with dissolve
     "My attention turns back to Eris."
 
     e "…And when you return to your worksite, you are not to tell anyone about anything that transpired here."
@@ -3184,24 +3190,44 @@ label act3_scene5:
         zoom 0.25
     "I don't think about it. I just act."
 
+    hide eris
+    with dissolve
+    scene illustration final 1:
+        zoom 0.6
+        ypos 0
+        xpos 300
+    show main_hud zorder 10000
+    with dissolve
     "With the might of all my pent up anger, I thrust my hand forward."
 
+    scene black
+    show main_hud zorder 10000
+    with dissolve
+    scene illustration final 2:
+        zoom 0.6
+        ypos 0
+        xpos 300
+    show main_hud zorder 10000
+    with dissolve
     "It slices through flesh and bone. With a precise, lighting-fast movement, I grasp Eris's heart, and pull it out."
 
     ## hide Eris
-    show eris:
-        ypos 150
-    with move
-    pause 0.2
-    show eris:
-        ypos 1000
-    with move
-    hide eris
+    scene black
+    show main_hud zorder 10000
+    with dissolve
+
     "Eris lurches violently. The wind is knocked out of her lungs. She falls to the floor without saying a word."
 
     "Finally. It's about time she stopped talking."
 
     ## show Eris's heart illustration
+    scene illustration final 3:
+        zoom 0.6
+        ypos 0
+        xpos 300
+    show main_hud zorder 10000
+    with dissolve
+    play music demo_m
 
     "I hold Eris's heart in my hand. My skillful extraction cleanly severed it from her vascular system."
 
@@ -3210,6 +3236,10 @@ label act3_scene5:
     "It still shudders in my grasp. Panicked, irregular beats, struggling to hang on to life."
 
     "…It's strangely beautiful. Somehow, I hold more affection for this small object than I do for Eris herself."
+
+    scene black
+    show main_hud zorder 10000
+    with dissolve
 
     "The rest of Eris lay splayed out on the floor, eyes wide with shock. A pool of blood forms around her unmoving body."
 
@@ -3230,6 +3260,16 @@ label act3_scene5:
     "I get to work. It doesn't take long for me to figure out what connects to what."
 
     ## show heart in chest cavity
+    scene black
+    show main_hud zorder 10000
+    with dissolve
+    scene illustration sync heart:
+        ypos 45
+        xpos 330
+        zoom 0.6
+    show main_hud zorder 10000
+    with dissolve
+
     "The mechanical implants in Eris's heart plug right in, as if they were designed for this. The arteries connect seamlessly with the SYNC vascular system."
 
     "…The final piece is in place. It's time."
@@ -3248,12 +3288,14 @@ label act3_scene5:
 
     "And… I prepare for the very real possibility that I won't wake up after this."
 
-    "Everything goes dark…"
     scene black with dissolve
     stop music fadeout 0.5
+    "Everything goes dark…"
 
     ## fade everything to black, including game window frame. Cut out all music for a few seconds.
-    pause 2.0
+    pause 0.5
+    play sound syncboot
+    pause 7.0
 
     ## fade back in with new SYNC-themed frame. show Eris's Bedroom background
     scene bg bedroom:
@@ -3263,6 +3305,7 @@ label act3_scene5:
     with dissolve
 
     "My new system boots up for the first time. I feel as if I've awoken from a dream."
+    play music demo_sgt fadein 0.5
 
     "Woah. This is… weird."
 
@@ -3294,16 +3337,15 @@ label act3_scene5:
 
     "And now, I have to make sure that every other robot gets it too."
 
-
 label ending:
     ## THE END
-    stop audio
     stop sound
     stop voice
-    stop music
+    stop music fadeout 2.0
     scene black
+    with dissolve
     centered "THE END"
-    pause 5.0
+    pause
 
     ## return ends the game and shunts you back to the main menu.
     return
