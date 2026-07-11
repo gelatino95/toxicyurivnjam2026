@@ -28,6 +28,7 @@ define audio.crowd = "crowd.mp3"
 define audio.crowd2 = "crowd_muffled.mp3"
 define audio.syncboot = "sync_bootup.mp3"
 define audio.lftrboot = "old_bootup.mp3"
+define audio.scan = "scan.mp3"
 
 ## IMAGES
 ## No need to define an image if you're not doing anything complicated with it. Just call the file name.
@@ -439,6 +440,21 @@ label act1_scene3:
     "I sit her down and begin my inspection of the shoulder joint."
 
     ## show scanning overlay highlighting 1514's shoulder
+    hide 1514
+    show dim_hud
+    show 1514 scan:
+        xpos 350
+        ypos 75
+        zoom 0.25
+    show main_hud zorder 10000
+    show scanline behind main_hud:
+        ypos -50
+    with dissolve
+    play sound scan
+    show scanline:
+        ypos 600
+    with move
+    hide scanline
     "I'm equipped with wide-spectrum optical sensors that can see right through the outer casing of any machine. I can identify the problem without having to open anything up."
 
     "In this case, the problem is immediately clear. The threading on a screw had worn down and lodged the screw deep into the joint, where it was grinding against the inner mechanism."
@@ -446,6 +462,8 @@ label act1_scene3:
     "It's a good thing 1514 came to me when the damage wasn't too bad. If she waited too long, she might have needed a full joint replacement."
 
     ## remove overlay
+    hide dim_hud
+    show 1514 nervous
     f "Is it bad...?"
 
     l "Not at all! Just a faulty screw. I'm sure I can find you a replacement in a jiffy."
@@ -1761,7 +1779,15 @@ label act2_scene3:
 
     ## show scanner overlay highlighting Eris's heart
     show eris scana
+    show dim_hud behind main_hud, eris
+    show scanline behind main_hud:
+        ypos -50
     with dissolve
+    play sound scan
+    show scanline:
+        ypos 600
+    with move
+    hide scanline
     "I adjust my scanner to a frequency that can see through human flesh."
 
     l "Woah... you're right! I can see the implants! They... They're made of gold!"
@@ -1774,6 +1800,7 @@ label act2_scene3:
 
     ## remove overlay
     show eris friendly
+    hide dim_hud
     with dissolve
 
     "My thoughts are interrupted by an electric jolt deep inside my chest that makes me jump in surprise."
@@ -3173,7 +3200,15 @@ label act3_scene5:
 
     ## show scan overlay, highlighting Eris's heart
     show eris scanb
+    show dim_hud behind main_hud, eris
+    show scanline behind main_hud:
+        ypos -50
     with dissolve
+    play sound scan
+    show scanline:
+        ypos 600
+    with move
+    hide scanline
     e "Do you understand me, Galatea?"
 
     e "...Galatea, answer me! Galatea!"
