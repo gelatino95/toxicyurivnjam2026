@@ -57,10 +57,10 @@ define gui.interface_text_color = '#ffffff'
 ## Fonts and Font Sizes ########################################################
 
 ## The font used for in-game text.
-define gui.text_font = "ADLaMDisplay-Regular.ttf"
+define gui.text_font = "04B_03__.ttf"
 
 ## The font used for character names.
-define gui.name_text_font = "ADLaMDisplay-Regular.ttf"
+define gui.name_text_font = "04B_03__.ttf"
 
 ## The font used for out-of-game text.
 define gui.interface_text_font = "ADLaMDisplay-Regular.ttf"
@@ -81,7 +81,7 @@ define gui.label_text_size = 36
 define gui.notify_text_size = 24
 
 ## The size of the game's title.
-define gui.title_text_size = 75
+define gui.title_text_size = 100
 
 
 ## Main and Game Menus #########################################################
@@ -134,7 +134,7 @@ define gui.dialogue_xpos = 115
 define gui.dialogue_ypos = 0
 
 ## The maximum width of dialogue text, in pixels.
-define gui.dialogue_width = 1200
+define gui.dialogue_width = 1180
 
 ## The horizontal alignment of the dialogue text. This can be 0.0 for left-
 ## aligned, 0.5 for centered, and 1.0 for right-aligned.
