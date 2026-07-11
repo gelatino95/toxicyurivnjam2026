@@ -17,6 +17,14 @@ define o = Character("LFTR Co-worker", color="#FFFFFF", what_font="04B_03__.ttf"
 define r = Character("Someone in the crowd", color="#FFFFFF", what_font="04B_03__.ttf", who_font="04B_03__.ttf")
 define p = Character("Pilot", color="#FFFFFF", what_font="ADLaMDisplay-Regular.ttf", who_font="ADLaMDisplay-Regular.ttf")
 define s = Character("Security", who_color="#FF8C49", what_color="#FF8C49", what_font="ADLaMDisplay-Regular.ttf", who_font="ADLaMDisplay-Regular.ttf")
+define splashy = Character("",
+kind=nvl,
+what_size=50,
+what_text_align=0.5,
+what_xalign=0.5,
+what_yalign=0.5,
+what_font="ADLaMDisplay-Regular.ttf"
+)
 
 ## AUDIO
 define audio.demo_sgt = "she's got torque quickloop.mp3"
@@ -32,13 +40,25 @@ define audio.scan = "scan.mp3"
 
 ## IMAGES
 ## No need to define an image if you're not doing anything complicated with it. Just call the file name.
+image gelatino_games = "gelatino_games.png"
 
 ## VARIABLES
 ## Do we even have any of these to set?
+## No. Not really.
 
 
+label splashscreen:
+    show gelatino_games at truecenter
+    with dissolve
+    pause 2.0
+    hide gelatino_games
+    with dissolve
 
+    splashy "{size=-20}This game contains depictions of gore and dubious consent.{w=2.0}{nw}\n\n{/size}"
+    extend "{size=-20}Viewer discretion is advised.{w=4.0}{nw}{/size}"
 
+    nvl clear
+    return
 
 ## Label Start
 label start:

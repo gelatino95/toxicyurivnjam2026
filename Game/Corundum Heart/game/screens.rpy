@@ -356,6 +356,10 @@ screen main_menu():
     tag menu
 
     add gui.main_menu_background
+    add gui.main_menu_title:
+        ypos 100
+        xpos 500
+        zoom 0.60
 
     ## This empty frame darkens the main menu.
     frame:
@@ -364,6 +368,13 @@ screen main_menu():
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
     use navigation
+
+    vbox:
+        style "main_menu_vbox"
+
+        text "Gelatino Games 2026":
+            style "main_menu_title"
+
 
     if gui.show_name:
 
@@ -397,7 +408,7 @@ style main_menu_vbox:
     yoffset -30
 
 style main_menu_text:
-    properties gui.text_properties("main_menu", accent=True)
+    properties gui.text_properties("main_menu")
 
 style main_menu_title:
     properties gui.text_properties("title")

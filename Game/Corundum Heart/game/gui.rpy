@@ -81,7 +81,8 @@ define gui.label_text_size = 36
 define gui.notify_text_size = 24
 
 ## The size of the game's title.
-define gui.title_text_size = 100
+## UMMMMM We actually changed this to say Gelatino games 2026 instead of the title of the game
+define gui.title_text_size = 30
 
 
 ## Main and Game Menus #########################################################
@@ -89,7 +90,7 @@ define gui.title_text_size = 100
 ## The images used for the main and game menus.
 define gui.main_menu_background = "gui/main_menu.png"
 define gui.game_menu_background = "gui/game_menu.png"
-
+define gui.main_menu_title = "gui/main_menu_title.png"
 
 ## Dialogue ####################################################################
 ##
@@ -370,11 +371,11 @@ define gui.nvl_borders = Borders(0, 15, 0, 30)
 
 ## The maximum number of NVL-mode entries Ren'Py will display. When more entries
 ## than this are to be show, the oldest entry will be removed.
-define gui.nvl_list_length = 6
+define gui.nvl_list_length = 1
 
 ## The height of an NVL-mode entry. Set this to None to have the entries
 ## dynamically adjust height.
-define gui.nvl_height = 173
+define gui.nvl_height = None
 
 ## The spacing between NVL-mode entries when gui.nvl_height is None, and between
 ## NVL-mode entries and an NVL-mode menu.
@@ -390,8 +391,8 @@ define gui.nvl_name_xalign = 1.0
 ## The position, width, and alignment of the dialogue text.
 define gui.nvl_text_xpos = 675
 define gui.nvl_text_ypos = 12
-define gui.nvl_text_width = 885
-define gui.nvl_text_xalign = 0.0
+define gui.nvl_text_width = 1000
+define gui.nvl_text_xalign = 0.5
 
 ## The position, width, and alignment of nvl_thought text (the text said by the
 ## nvl_narrator character.)
