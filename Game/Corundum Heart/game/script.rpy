@@ -258,7 +258,7 @@ label act1_scene2:
 
     "My reputation had even spread to the ADMN units, the workplace supervisors who kept everyone in check."
 
-    show 251 angry a
+    show 251 neutral
     "In fact, the audible warble of an anti-grav unit told me that an ADMN unit was approaching at this very moment."
 
     ## show ADMN-04-23
@@ -305,7 +305,7 @@ label act1_scene2:
     with move
     hide admn
     "The ADMN leaves. Despite their professional demeanor, the smug undertones were obvious."
-    show 251 angry a:
+    show 251 rattled:
         xpos 350
     with move
     "I resume my walk to dock 7, trying to not be too rattled by what I just saw."
@@ -384,12 +384,13 @@ label act1_scene2:
     with move
     "She walks away looking a little disappointed. I can hardly blame her. Going a full work shift with a faulty joint isn't easy."
 
-    show 251:
+    show 251 neutral:
         xpos 350
     with move
 
     "But I figure I've pushed my luck enough already. I just hope she can hold out for a little while longer."
 
+    show 251 happy a
     "Alright, no more distractions. Plasma cutting time..."
     show black
     show main_hud zorder 10000
@@ -628,13 +629,14 @@ label act1_scene3_alternate:
     f "That's a huge relief, I was worried that they might decomission me because of this!"
 
     ## 251's expression falls
-    show 1514 happy
+    show 1514 neutral
 
     "I pause for a moment, being reminded of LFTR-06-848."
 
     "I had been doing repairs on 848 too, but despite all my efforts 848 continued to breakdown and was taken to a reclamation facility."
 
     ## 251 returns to a neutral expression
+    show 251 happy a
 
     l "No, don't worry, you still have a long time before you need to worry about something like that, some of the screws they used on your model line had a manufacuring issue and just need to be replaced."
 
@@ -702,7 +704,6 @@ label act1_scene3_alternate:
     l "Now to do my own repairs..."
     show black
     with fade
-    stop music fadeout 2.0
     jump sceneselect
 
 label act1_scene4:
@@ -720,6 +721,8 @@ label act1_scene4:
     with dissolve
     "I finish up at the workshop and finally make my way over to my next shift."
 
+    show 251 neutral
+    stop music fadeout 2.0
     "But something's off. The station is oddly quiet. Worksites that should be buzzing with activity have been left empty."
 
     "That's strange... I take a detour and wander around the station a bit, trying to figure out what's going on."
@@ -735,6 +738,7 @@ label act1_scene4:
 
     r "251! Look up there! Eris Promethea is here! She's here at the shipyard!"
 
+    show 251 shocked
     l "Eris... Promethea...?"
 
     "My words catch in my throat. Eris Promethea? THE Eris Promethea? Here, of all places?"
@@ -746,6 +750,7 @@ label act1_scene4:
     "Could it really be...?"
 
     stop sound fadeout 0.5
+    play music demo_yw
     ## fade to black with grayscale Eris sprite displayed
     show black
     hide main_hud
@@ -775,7 +780,9 @@ label act1_scene4:
     hide illustration_hud
     hide black
     show main_hud
+    show 251 happy a
     with dissolve
+    stop music fadeout 1.0
     play sound crowd volume 0.8 fadein 0.5 loop
 
     ## transition back to Keres Shipyard, show ADMN
@@ -1152,6 +1159,7 @@ label act2_scene1:
     show main_hud zorder 10000
     with dissolve
 
+    play music demo_yw fadein 0.5
     "It's far from my first time boarding a spaceship. But this feels... different."
 
     "My sensors are firing on all cylinders as we step into the luxury cruiser's passenger compartment."
@@ -1160,7 +1168,6 @@ label act2_scene1:
 
     "My nerves must be written plain on my face, because Eris notices and gently takes hold of my hand."
 
-    play music demo_yw fadein 0.5
     ## show Eris
     show eris friendly:
         zoom 0.25
@@ -1187,10 +1194,8 @@ label act2_scene1:
     "It's strange how well she puts me at ease. I can feel my nerves begin to fade away."
 
     play sound crowd2 volume 0.4 fadein 0.5 loop
-    show eris concerned
     e "Oh my, it looks like we've drawn a crowd."
 
-    show eris friendly
     e "You'll want to wave goodbye to your friends, won't you?"
 
     "Eris presses a button and the darkened windows become transparent."
@@ -1396,13 +1401,16 @@ label act2_scene1:
 
     "I could hardly keep myself away from the window, watching the prosperous city pass below us."
 
-    "Soon enough, we arrive at the great, palace-like building that was Daedalus HQ."
-
-    ## fade to black
-    scene black
+    scene bg daedalus outside:
+        ypos 48
+        xpos 336
     show main_hud zorder 10000
     with dissolve
 
+    "Soon enough, we arrive at the great, palace-like building that was Daedalus HQ."
+
+    ## fade to black
+    
     "The ship lands just outside the building's main entrance."
 
     "Eris escorts me off the ship and walks me all the way to the front door."
@@ -1656,6 +1664,8 @@ label act2_scene3:
     hide eris
     with moveoutleft
 
+    stop muisc fadeout 0.5
+    play music demo_yw
     "I feel a shiver run down my frame. So it's finally time..."
 
     "I had been so distracted by the unfamiliar wonders of this place, I had nearly forgotten what we were here to do."
@@ -1898,7 +1908,7 @@ label act2_scene3:
 label act2_scene4:
     ## ACT 2 SCENE 4
     ## Eris's bedroom
-    scene bg bedroom:
+    scene bg bedroom night:
         ypos 48
         xpos 336
     show main_hud zorder 10000
@@ -1999,6 +2009,7 @@ label act2_scene4:
 
     l "Who, me? I'm doing fine! Better than fine!"
 
+    show eris pajamas serious
     e "..."
 
     e "251, let me be straightforward. I want you to open up to me a little more."
@@ -2017,6 +2028,7 @@ label act2_scene4:
 
     l "Not that I even get to talk to humans very often. They usually can't even be bothered to listen to robot workers."
 
+    show eris friendly
     e "I have the utmost respect for you. For all robots, really."
 
     e "Just look around us. This room... this building... this entire city... none of it would be possible without your kind."
@@ -2031,6 +2043,7 @@ label act2_scene4:
 
     e "..."
 
+    show eris pajamas flirty
     e "While we're being open about our feelings... perhaps we should talk about our time in the lab."
 
     l "O-Oh! Yes, of course... heheh..."
@@ -2164,6 +2177,7 @@ label act2_scene4:
     with dissolve
     "I smile as I think about tomorrow."
     stop music fadeout 2.0
+    pause 3.0
 
 label act3_intro:
     ## ACT 3 INTRO
@@ -2260,10 +2274,13 @@ label act3_scene1:
 
     g "Hey, you. Early meeting, huh?"
 
+    stop music fadeout 0.5
+    play music demo_m
     "I wait for her typical breezy response, but... something is wrong."
 
     "She looks tired. Distraught, even. I haven't seen her like this before."
 
+    show eris concerned
     e "...Yes. It was an emergency meeting. It's still going, in fact. We're just on recess."
 
     e "I came over as soon as I had the chance. I thought you should be apprised of the situation."
@@ -2402,6 +2419,7 @@ label act3_scene1:
 
     e "We're still on for lab work at the usual time. I'm looking forward to taking my mind off things."
 
+    show eris flirty
     e "Don't be late~"
 
     ## hide Eris
@@ -2530,7 +2548,7 @@ label act3_scene3:
 
     "Instead of returning to Eris's quarters, I head straight for the lab."
     
-    show 251 angry a:
+    show 251 neutral:
         zoom 0.25
         xpos 350
         ypos 75
@@ -2560,7 +2578,7 @@ label act3_scene3:
     "If the problem is so clear to everyone, then why is nobody doing anything about it?!"
 
     "Maybe... Maybe this whole rebellion wouldn't have happened if..."
-    play music demo_yw fadein 0.5
+    play music demo_yw
     ## show Eris friendly
     hide 251
     with moveoutleft
@@ -2590,6 +2608,7 @@ label act3_scene3:
 
     e "Hush. On the table, please."
 
+    play music demo_m
     "Lab work has become a routine for us. We both looked forward to it, and I was always more than happy to comply with Eris's commands."
 
     "But this time, I'm not feeling enthusiastic at all. In fact, for the first time, I'm dreading it."
@@ -2748,7 +2767,7 @@ label act3_scene3:
 label act3_scene4:
     ## ACT 3 SCENE 4
     ## Eris's Bedroom
-    scene bg bedroom:
+    scene bg bedroom night:
         ypos 48
         xpos 336
     show main_hud zorder 10000
@@ -2851,6 +2870,7 @@ label act3_scene4:
 
     g "I'm... I'm sorry, but I just don't believe that."
 
+    show eris pajamas concerned
     g "I'm not special. I'm not better than any other LFTR. I just... got lucky."
 
     g "But not every LFTR has the luck or the skills that I do. Most of them just get... used up."
@@ -2868,7 +2888,7 @@ label act3_scene4:
     g "I know I don't need to tell you this, but... robots have feelings. We don't want to be treated like we're lesser."
 
     ## show Eris annoyed
-    show eris pajamas angry
+    show eris pajamas serious
     e "What are you implying? That Daedalus doesn't properly care for its workforce?"
 
     g "I... I don't know! Maybe!"
