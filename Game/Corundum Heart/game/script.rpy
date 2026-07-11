@@ -206,9 +206,9 @@ label act1_scene1:
     show 251 happy b
     "My designation is LFTR-03-251, and this is a typical start to my day. There's always something going wrong with this old body."
 
-    "I work at Keres Shipyard, a spaceship maintenance and salvage facility orbiting Enceladus."
+    "I work at Keres Shipyard, a spaceship maintenance and salvage facility. We're in orbit around Enceladus, a cold, icy moon of Saturn."
 
-    "It's far from my first gig, but I enjoy the work. I'm a technician. I work on ships, repair them, restore them, make them good as new."
+    "It's far from my first gig, but I enjoy the work. I'm a salvage technician. I work on broken down ship parts, restore them, make them good as new."
 
     "But more often than not, I end up working on myself instead."
 
@@ -222,7 +222,7 @@ label act1_scene1:
 
     ## show 251 both eyes lit up
     show 251 happy a
-    "All it takes is a firm jiggle of the optical bundle, and connection is reestablished. My vision is fully restored."
+    "All it takes is a firm jiggle of the optical bundle, and connection is reestablished. My vision is fully restored!"
 
     ## show 251 happy
     show 251 happy a
@@ -345,9 +345,9 @@ label act1_scene2:
 
     f "Sorry to bother you, but I heard you do chassis repair, right?"
 
-    "It was LFTR-08-1514, who had just recently been reassigned to the station. We hadn't had the pleasure of meeting yet."
+    "It's LFTR-08-1514, who had just recently been assigned to the station. We hadn't had the pleasure of meeting yet."
 
-    "Though she was a newer model, from the worn finish around her joints I could tell she had already seen a good couple years of service."
+    "Though she's a newer model, from the worn finish around her joints I could tell she had already seen a good couple years of service."
 
     "I turn to her with a warm smile."
 
@@ -381,7 +381,7 @@ label act1_scene2:
     show 1514:
         xpos 1000
     with move
-    "She walks away looking a little disappointed. I can hardly blame her. Going a full work shift with a faulty joint is not easy."
+    "She walks away looking a little disappointed. I can hardly blame her. Going a full work shift with a faulty joint isn't easy."
 
     show 251:
         xpos 350
@@ -456,14 +456,14 @@ label act1_scene3:
 
     ## show 1514 relieved
     show 1514 relief
-    "1514 let out a deep breath that she had been holding. She looked relieved."
+    "1514 lets out a deep breath that she had been holding in."
 
     f "Phew... Thank goodness. I was... I was afraid."
 
     show 1514 neutral
     f "It sounds crazy, but I was really afraid I might be decommissioned over this."
 
-    l "What? A good working model like you? Naw, it's not that serious. You still got a lot of good years ahead of you."
+    l "What? A good working model like you? Naw, it's not that serious. You still got a lot of good years ahead of you!"
 
     "I start to scan through the spare parts I keep around the workshop."
 
@@ -500,8 +500,6 @@ label act1_scene3:
     "I finally find the part I'm looking for: a mechanical joint from a fuel injection system that uses the same size screw as the LFTR model 08 shoulder joint."
 
     "I hurry up and finish the job. I stick my screwdriver in the hole like a wedge and pry out the faulty, worn out screw. Then I seat the new screw in its place."
-
-    "1514 breaks her contemplative silence."
 
     show 1514 nervous
     f "I just... hate feeling like this."
@@ -806,7 +804,7 @@ label act1_scene4:
 
     "I can't help but speculate about the reason for this summons. Of all the robots on this station, why me?"
 
-    "Am... am I being punished? Have all those years of skirting my duties finally caught up with me?"
+    "Am... Am I being punished? Have all those years of skirting my duties finally caught up with me?"
 
     "Or... maybe I'm being decommissioned. Perhaps there's no place in the Daedalus workforce for an old model like me. Am I going to be sent to a reclamation facility...?"
 
@@ -855,9 +853,9 @@ label act1_scene5:
 
     l "I'm... I'm the last? Really?"
 
-    e "It shouldn't come as a big surprise. Even today, the average operating lifetime of LFTR units is {i}only{/i} 5 years."
+    e "It shouldn't come as a big surprise. Even today, the average operating lifetime of LFTR units is {i}only{/i} five years."
 
-    e "But you were manufactured 30 years ago. 30! And still carrying out your duties all these years later, in complete obscurity."
+    e "But you were manufactured thirty years ago. Thirty! And still carrying out your duties all these years later, in complete obscurity."
 
     e "You're a statistical anomaly, 251."
 
@@ -929,7 +927,7 @@ label act1_scene5:
 
     e "We're planning to discontinue the production of LFTR chassis and slowly phase them out of the workforce, in favor of the new, modern alternative."
 
-    "I couldn't help but feel a pang of fear as I processed this news."
+    "I can't help but feel a pang of fear as I process this news."
 
     "As if LFTR units didn't already have enough to worry about, with our difficulties accessing body maintenance..."
 
@@ -937,7 +935,7 @@ label act1_scene5:
 
     ## show Eris friendly
     show eris friendly
-    e "Before you worry too much, 251, I'd like to assauge your fears."
+    e "Before you worry too much, 251, I'd like to assuage your fears."
 
     e "Daedalus has listened to robot rights activists across the solar system. We understand the plight of our older LFTR models."
 
@@ -1061,7 +1059,7 @@ label act1_scene5:
 
     l "Yes! Yes, ma'am, I'll do that."
 
-    e "I thought we had already been over this, you know I hate formality. Just call me Eris."
+    e "Oh, I can't stand stuffy formality. Just call me Eris."
 
     l "Right, of course. Yes... Eris."
 
@@ -1164,9 +1162,9 @@ label act2_scene1:
 
     l "Y-Yes, ma'am. Understood!"
 
-    e "Oh, let's do away with the stuffy formality. Call me Eris."
+    e "Come now, 251, haven't we gone over this already? Call me Eris."
 
-    l "Yes, ma- heh, I mean, Eris."
+    l "Yes, m- heh, I mean, Eris."
 
     "It's strange how well she puts me at ease. I can feel my nerves begin to fade away."
 
@@ -1179,7 +1177,7 @@ label act2_scene1:
 
     "Eris presses a button and the darkened windows become transparent."
 
-    "I can clearly see a gathering of robots on the station hub, all looking up at me. They're waving."
+    "My coworkers are still standing there on the station hub, waiting to see me off. They're waving."
 
     "It's almost enough to make me cry. This might be the last time I see them for a while..."
 
@@ -1199,7 +1197,7 @@ label act2_scene1:
 
     e "No kidding!"
 
-    e "...Heh, I think I just won a 30 year old bet."
+    e "...Heh, I think I just won a thirty year old bet."
 
     l "Pardon?"
 
@@ -1254,7 +1252,7 @@ label act2_scene1:
     show main_hud zorder 10000
     with dissolve
 
-    e "No kidding? 30 years, and you've NEVER been planetside?"
+    e "No kidding? Thirty years, and you've {i}never{/i} been planetside?"
 
     l "No kidding! I've worked on moons, asteroids, frighters, and orbital stations..."
 
@@ -1328,9 +1326,9 @@ label act2_scene1:
 
     p "This is your captain speaking. We're approaching the upper atmosphere of Saturn. Brace for entry."
 
-    "The yellow gas giant loomed large ahead of us, swallowing up the view with its enormity."
+    "The yellow gas giant looms large ahead of us, swallowing up the view with its enormity."
 
-    "This was it! My first visit to a planet! And oh, what a destination..."
+    "This is it! My first visit to a planet! And oh, what a destination..."
 
     "I watch with rapt attention as we enter the planet's atmosphere."
 
@@ -1483,7 +1481,7 @@ label act2_scene2:
 
     e "A bit strange, sleeping at the same place you work, right?"
 
-    "It's... actually not that strange. Not for me. But I get what she meant."
+    "It's... actually not that strange. Not for me. But I get what she means."
 
     e "Well, I just thought it made sense. I spend so much time in my lab, I may as well live nextdoor, right? It saves me a commute."
 
@@ -1512,9 +1510,9 @@ label act2_scene2:
 
     "It's a robot chassis unlike anything I've ever seen before."
 
-    "Sleek. Elegant. Modern. And most strikingly, it possessed what appeared to be... muscle tissue?"
+    "Sleek. Elegant. Modern. And most strikingly, it possesses what appears to be... muscle tissue?"
 
-    "I had trouble taking my eyes away from it. There was something grotesquely beautiful about it."
+    "I have trouble taking my eyes away from it. There's something grotesquely beautiful about it."
 
     e "251, behold: your new chassis."
 
@@ -1584,7 +1582,7 @@ label act2_scene2:
 
     e "I'm glad you agree."
 
-    e "Come now, we've spend enough time chatting. I think it's about time we got to work."
+    e "Come now, we've spent enough time chatting. I think it's about time we got to work."
 
 label act2_scene3:
     ## ACT 2 SCENE 3
@@ -1825,11 +1823,11 @@ label act2_scene3:
     show main_hud zorder 10000
     with dissolve
 
-    "My mind began to drift as the sharp feelings continued to pulse throughout my body."
+    "My mind begins to drift as the sharp feelings continue to pulse throughout my body."
 
-    "Eris continued her work, examining and identifying neural fibers. It was a long and tedious task."
+    "Eris continues her work, examining and identifying neural fibers. It's a long and tedious task."
 
-    "To ease her boredom, Eris continued touching me, caressing my wires, sending jolts through my frame, watching my reactions with amusement."
+    "To ease her boredom, Eris touches me, caresses my wires, sends jolts through my frame, watching my reactions with amusement."
 
     "To some, it might have been unbearable to be splayed out, opened up, subject to electrifying impulses for hours on end."
 
@@ -1891,7 +1889,7 @@ label act2_scene4:
 
     e "Come now, 251. I'm not going to put you in a closet like some common machine. Observe."
 
-    "She showed me a long cable coming out of the wall. At its end was a charging connector... one that was compatible with my chassis."
+    "She shows me a long cable coming out of the wall. At its end is a charging connector... one that's compatible with my chassis."
 
     e "I had it installed just for you."
 
@@ -1938,7 +1936,7 @@ label act2_scene4:
         ypos 50
     with moveinleft
 
-    "Thankfully, before my mind can wander any further into THAT territory, Eris returns."
+    "Thankfully, before my mind can wander any further into {i}that{/i} territory, Eris returns."
 
     l "Oh! That was quick!"
 
@@ -2044,11 +2042,11 @@ label act2_scene4:
 
     l "Heh... Me too!"
 
-    l "This is all very new for me... no one has ever made me feel this way before."
+    l "This is all very new for me... No one has ever made me feel this way before."
 
     e "I'm honored that I could be the first."
 
-    "Eris begins to run her hands affectionately across my chestplate. Her fingers linger on the seams, as if they're about to reach inside."
+    "Eris runs her hands affectionately across my chestplate. Her fingers linger on the seams, as if they're about to reach inside."
 
     "I feel that electric sensation run through my body again, and I shiver."
 
@@ -2086,7 +2084,7 @@ label act2_scene4:
 
     e "You deserve nothing less."
 
-    "Eris's hands wandered all over my upper body. She brought me in for an embrace."
+    "Eris's hands wander all over my upper body. She brings me in for an embrace."
 
     e "My Galatea..."
 
@@ -2114,7 +2112,7 @@ label act2_scene4:
 
     "I'm about to get up and find a suitable corner to enter sleep mode in, when Eris calls out to me."
 
-    e "Don't you dare. Come here, you. There's plenty of room."
+    e "Don't you dare! Come here, you. There's plenty of room."
 
     "I've never been offered the comfort of a bed before. I never even thought I would benefit from it the way a human might."
 
@@ -2245,7 +2243,7 @@ label act3_scene1:
 
     g "What situation? Eris, what's going on?"
 
-    "Eris gave a deep sigh. She walked over to the bed and sat next to me, looking down."
+    "Eris gives a deep sigh. She walks over to the bed and sits next to me, looking down."
 
     e "There's been... a rebellion."
 
@@ -2281,7 +2279,7 @@ label act3_scene1:
 
     "An overwhelming sense of dread comes over me."
 
-    "The workforce of that factory must be massive. And all of them... ALL of them decommissioned? Turned to scrap?"
+    "The workforce of that factory must be massive. And all of them... {i}All{/i} of them decommissioned? Turned to scrap?"
 
     "...Killed?"
 
@@ -2295,11 +2293,11 @@ label act3_scene1:
 
     g "...I don't believe this."
 
-    g "And what about this... flaw? What are you talking about? Do... do I have it too?"
+    g "And what about this... flaw? What are you talking about? Do... Do I have it too?"
 
     e "...Yes. It was found to affect all LFTR models. It's believed to be responsible for the sudden violence that took place."
 
-    "The thought sickened me. Is something... wrong with me? Has something been wrong with me all this time?"
+    "The thought sickens me. Is something... wrong with me? Has something been wrong with me all this time?"
 
     e "Galatea. There's more."
 
@@ -2420,7 +2418,7 @@ label act3_scene2:
 
     "There aren't any freely accessible computer terminals in the parts of the building I've been to."
 
-    "If only I could look up some information. Surely there are news reports circulating... or even internally generated reports..."
+    "If only I could look up some information. Surely there are news reports circulating... Or even internally generated reports..."
 
     "...Wait. An idea occurs to me."
 
@@ -2589,7 +2587,7 @@ label act3_scene3:
 
     "Normally, this kind of procedure would drive me wild. It's like an even more intense version of our first session."
 
-    "But I just can't bring myself to look forward to it. I don't WANT to enjoy it. How can I, with everything that's going on?"
+    "But I just can't bring myself to look forward to it. I don't {i}want{/i} to enjoy it. How can I, with everything that's going on?"
 
     "And what's worse, when I look up at Eris... I no longer feel that same sense of longing and admiration I used to."
 
@@ -2674,7 +2672,7 @@ label act3_scene3:
 
     "Eris puts away her tools and smiles at me."
 
-    e "You look exhausted, dear. You know, it's possible to have TOO much fun."
+    e "You look exhausted, dear. You know, it's possible to have {i}too{/i} much fun."
 
     g "Uh-huh... Right."
 
@@ -2999,7 +2997,7 @@ label act3_scene5:
 
     e "I..."
 
-    "She struggles to find the words. I don't think I've seen Eris like this before."
+    "She struggles to find the words. It's rare to see Eris lacking her usual confidence."
 
     e "I'm afraid I have some bad news. This isn't easy to say."
 
