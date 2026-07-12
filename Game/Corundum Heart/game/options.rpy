@@ -18,12 +18,12 @@ define config.name = _("Heart of Gold")
 ## Determines if the title given above is shown on the main menu screen. Set
 ## this to False to hide the title.
 
-define gui.show_name = True
+define gui.show_name = False
 
 
 ## The version of the game.
 
-define config.version = "0.8"
+define config.version = "0.10"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
@@ -34,9 +34,11 @@ This game was created by Gelatino Games.\n\n
 Director: Audrey Gelatino\n
 Programmers: Zora Morphimus, Marcy Nabors\n
 Writers: Torch, RogueMagpie, Alice (SilentWitch) Souza Pereira, Audrey Gelatino\n
-Artists: JeepersSqueakers, My little Sloany\n
+Artists: JeepersSqueakers, My Little Sloany\n
 Music: Marcy Nabors\n
 Special Thanks: Kidotix, Starbl0t\n
+Image Sources: Wikimedia Commons, NASA\n
+SFX Source: Freesound\n
 """)
 
 
