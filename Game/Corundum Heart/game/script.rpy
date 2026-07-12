@@ -7,23 +7,22 @@
 
 ## CHARACTERS
 define np = Character("Now Playing:", color="#FFFFFF") # this is for the sound test page
-define e = Character("Eris Promethea", who_color="#5cd8f4", what_color="#5cd8f4", what_font="ADLaMDisplay-Regular.ttf", who_font="ADLaMDisplay-Regular.ttf")
-define l = Character("LFTR-03-251", who_color="#41b634", what_color="#41b634", what_font="04B_03__.ttf", who_font="04B_03__.ttf")
-define g = Character("Galatea", who_color="#41b634", what_color="#41b634", what_font="04B_03__.ttf", who_font="04B_03__.ttf")
-define f = Character("LFTR-08-1514", who_color="#B2767E", what_color="#B2767E", what_font="04B_03__.ttf", who_font="04B_03__.ttf")
-define a = Character("ADMN-04-23", who_color="#B5BFCF", what_color="#B5BFCF", what_font="04B_03__.ttf", who_font="04B_03__.ttf")
+define e = Character("Eris Promethea", who_color="#5cd8f4", what_color="#5cd8f4")
+define l = Character("LFTR-03-251", who_color="#41b634", what_color="#41b634")
+define g = Character("Galatea", who_color="#41b634", what_color="#41b634")
+define f = Character("LFTR-08-1514", who_color="#B2767E", what_color="#B2767E")
+define a = Character("ADMN-04-23", who_color="#B5BFCF", what_color="#B5BFCF")
 define n = Character("NEWS UPDATE", color="#FFFFFF")
-define o = Character("LFTR Co-worker", color="#FFFFFF", what_font="04B_03__.ttf", who_font="04B_03__.ttf")
-define r = Character("Someone in the crowd", color="#FFFFFF", what_font="04B_03__.ttf", who_font="04B_03__.ttf")
-define p = Character("Pilot", color="#FFFFFF", what_font="ADLaMDisplay-Regular.ttf", who_font="ADLaMDisplay-Regular.ttf")
-define s = Character("Security", who_color="#FF8C49", what_color="#FF8C49", what_font="ADLaMDisplay-Regular.ttf", who_font="ADLaMDisplay-Regular.ttf")
+define o = Character("LFTR Co-worker", color="#FFFFFF")
+define r = Character("Someone in the crowd", color="#FFFFFF")
+define p = Character("Pilot", color="#FFFFFF")
+define s = Character("Security", who_color="#FF8C49", what_color="#FF8C49")
 define splashy = Character("",
 kind=nvl,
 what_size=50,
 what_text_align=0.5,
 what_xalign=0.5,
 what_yalign=0.5,
-what_font="ADLaMDisplay-Regular.ttf"
 )
 
 ## AUDIO
