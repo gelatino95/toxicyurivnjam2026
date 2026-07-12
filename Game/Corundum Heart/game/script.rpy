@@ -55,7 +55,7 @@ label splashscreen:
     with dissolve
 
     splashy "{size=-20}This game contains depictions of gore and dubious consent.{w=2.0}{nw}\n\n{/size}"
-    extend "{size=-20}Viewer discretion is advised.{w=4.0}{nw}{/size}"
+    extend "{size=-20}Player discretion is advised.{w=4.0}{nw}{/size}"
 
     nvl clear
     return
@@ -340,13 +340,14 @@ label act1_scene2:
     with dissolve
     hide black
     show main_hud zorder 10000
-    show 251 happy
+    show 251 neutral
     with dissolve
 
     "I make it to dock 7, and I can finally begin my work. I could really use the distraction."
 
     "Today, we've got a broken down freighter with a perfectly good coolant pump that needs to be taken out."
 
+    show 251 happy a
     "I'm already looking forward to going at those rivets with a plasma torch. The noise they make when they snap loose is so satisfying!"
 
     "Just before I begin my inspection, I'm approached by another nervous-looking LFTR unit."
@@ -2048,7 +2049,7 @@ label act2_scene4:
 
     l "Not that I even get to talk to humans very often. They usually can't even be bothered to listen to robot workers."
 
-    show eris friendly
+    show eris pajamas friendly
     e "I have the utmost respect for you. For all robots, really."
 
     e "Just look around us. This room... this building... this entire city... none of it would be possible without your kind."
@@ -2295,8 +2296,8 @@ label act3_scene1:
     g "Hey, you. Early meeting, huh?"
 
     stop music fadeout 0.5
-    play music demo_m
     "I wait for her typical breezy response, but... something is wrong."
+    play music demo_m
 
     "She looks tired. Distraught, even. I haven't seen her like this before."
 
@@ -2455,7 +2456,6 @@ label act3_scene1:
     "There's still time before I need to meet Eris at the lab."
 
     "I need a walk."
-    stop music fadeout 2.0
 
 label act3_scene2:
     ## ACT 3 SCENE 2
@@ -2472,7 +2472,6 @@ label act3_scene2:
 
     "And this design flaw Eris told me about... She was awfully vague about it. I've never heard of anything remotely like it."
 
-    play music demo_m fadein 0.5
     "The unanswered questions leave me confused and frustrated. I feel myself growing angry."
 
     "That's... new. I can't remember the last time I was actually angry about something."
@@ -2626,9 +2625,9 @@ label act3_scene3:
 
     g "What about this design flaw? I really feel like I need to know-"
 
+    
     e "Hush. On the table, please."
 
-    play music demo_m
     "Lab work has become a routine for us. We both looked forward to it, and I was always more than happy to comply with Eris's commands."
 
     "But this time, I'm not feeling enthusiastic at all. In fact, for the first time, I'm dreading it."
@@ -2697,8 +2696,10 @@ label act3_scene3:
 
     e "That's what I thought. Don't deny how much you're enjoying this, Galatea. It's written plain on your face."
 
+    stop music fadeout 2.0
     "Something doesn't sit right with me. For the first time, I identify a new feeling that I'm experiencing."
 
+    play music demo_m
     "I feel... violated."
 
     "How can that be? Eris has already done the same thing to me several times over, and I enjoyed it. How is this any different?"
@@ -2986,7 +2987,6 @@ label act3_scene5:
         xpos 336
     show main_hud zorder 10000
     with dissolve
-    stop music fadeout 1.0
 
     "As soon as I step outside, I'm met with an unusual sight. Guards posted outside Eris's bedroom."
     
@@ -2998,7 +2998,6 @@ label act3_scene5:
         ypos 50
         zoom 0.25
     with moveinright
-    play music demo_m
     s "Stop right there, LFTR."
 
     g "Huh? What's going on?"
