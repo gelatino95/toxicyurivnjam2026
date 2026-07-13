@@ -7,7 +7,8 @@
 
 ## CHARACTERS
 define np = Character("Now Playing:", color="#FFFFFF") # this is for the sound test page
-define e = Character("Eris Promethea", who_color="#5cd8f4", what_color="#5cd8f4")
+define e = Character("Eris", who_color="#5cd8f4", what_color="#5cd8f4")
+define ep = Character("Eris Promethea", who_color="#5cd8f4", what_color="#5cd8f4")
 define l = Character("LFTR-03-251", who_color="#41b634", what_color="#41b634")
 define g = Character("Galatea", who_color="#41b634", what_color="#41b634")
 define f = Character("LFTR-08-1514", who_color="#B2767E", what_color="#B2767E")
@@ -31,11 +32,15 @@ define audio.demo_cg = "cloud gateway quickloop.mp3"
 define audio.demo_rt = "rhel's theme.mp3"
 define audio.demo_yw = "your world quickloop.mp3"
 define audio.demo_m = "murmur quickloop.mp3"
+define audio.amb_space = "ambience.mp3"
+define audio.amb_2 = "spaceship_ambience.mp3"
 define audio.crowd = "crowd.mp3"
 define audio.crowd2 = "crowd_muffled.mp3"
 define audio.syncboot = "sync_bootup.mp3"
 define audio.lftrboot = "old_bootup.mp3"
 define audio.scan = "scan.mp3"
+
+
 
 ## IMAGES
 ## No need to define an image if you're not doing anything complicated with it. Just call the file name.
@@ -61,7 +66,7 @@ label splashscreen:
 
 ## Label Start
 label start:
-    jump sceneselect
+    jump act1_scene1
 
 label sceneselect:
     scene black
@@ -133,6 +138,12 @@ label soundtest:
         "Murmur":
             play music demo_m
             np "Murmur"
+        "Space Station Ambience":
+            play music amb_space
+            np "Space Station Ambience"
+        "Space Station Ambience 2":
+            play music amb_2
+            np "Space Station Ambience 2"
         "Back to Scene Select menu":
             stop music
             jump sceneselect
@@ -156,6 +167,7 @@ label act1_scene1:
     ## Crew quarters
     ## black screen
     scene black
+    stop music
     play sound lftrboot
 
     n "Expanding Our Reach: First Manned Voyage Beyond Solar System Takes Off"
@@ -169,7 +181,7 @@ label act1_scene1:
     "The screen goes dark. The charging mount releases. I step out into the light."
 
     show main_hud zorder 10000
-    play music demo_sgt
+    play music amb_2
     ## show 251 happy, one eye dark
     show bg crewquarters:
         ypos -200
@@ -212,7 +224,7 @@ label act1_scene1:
     show 251 happy b
     with None
     pause 0.1
-    l "Ah, the start of a new day!"
+    l "\"Ah, the start of a new day!\""
 
     ## show 251 surprised
     show 251 surprised b 
@@ -220,7 +232,7 @@ label act1_scene1:
 
     ## show 251 angry
     show 251 angry b
-    l "Oh, come on, I {i}just{/i} fixed that!"
+    l "\"Oh, come on, I {i}just{/i} fixed that!\""
 
     ## show 251 neutral
     show 251 happy b
@@ -234,7 +246,7 @@ label act1_scene1:
 
     "This old body of mine has operated long past its intended service lifetime, but damned if I'm going to let it fall apart now. Not when I have work to do!"
 
-    l "Let's see here... probably just a loose cable."
+    l "\"Let's see here... probably just a loose cable.\""
 
     "With deft, practiced motions, I reach behind my head and open up the back panel. I reach around my brain, careful not to dislodge any neural fibers."
 
@@ -246,7 +258,7 @@ label act1_scene1:
 
     ## show 251 happy
     show 251 happy a
-    l "Phew! Glad that's all it was. If I had to find a replacement optical sensor, I'd be in trouble!"
+    l "\"Phew! Glad that's all it was. If I had to find a replacement optical sensor, I'd be in trouble!\""
 
     "Satisfied, I leave for the worksite."
     scene black
@@ -259,19 +271,22 @@ label act1_scene2:
     scene bg shipyard:
         ypos 48
         xpos 336
+    show main_hud zorder 10000
+    with dissolve
     show 251 happy a:
         zoom 0.25
         xpos 350
         ypos 75
         xzoom -1
-    show main_hud zorder 10000
-    with dissolve
+    with moveinleft
+    stop music fadeout 0.5
+    play music demo_sgt
 
     "My assigned worksite is dock 7, which is way on the other side of the yard, so I make haste."
 
     "I pass by a lot of friendly coworkers along the way. One of them calls out to me."
 
-    o "Hey, 251! Thanks again for the fix the other day! It's feeling great!"
+    o "\"Hey, 251! Thanks again for the fix the other day! It's feeling great!\""
 
     "I've gotten to know a lot of the robots working here at Keres Shipyard. When you're the only one on the station with any chassis repair skills, you become pretty popular."
 
@@ -292,7 +307,7 @@ label act1_scene2:
     show admn:
         xpos 550
     with move
-    a "Oh, good, just the LFTR I wanted to see. 251, come here. I need you to look at something."
+    a "\"Oh, good, just the LFTR I wanted to see. 251, come here. I need you to look at something.\""
 
     "The ADMN takes me over to a nearby docking bay that currently housed a half-deconstructed ship. This isn't my worksite. What do they need me for?"
 
@@ -302,7 +317,7 @@ label act1_scene2:
 
     "Now she lay motionless, parts strewn across the docking bay floor, chest caved in."
 
-    a "Well, repair bot? What is your evaluation?"
+    a "\"Well, repair bot? What is your evaluation?\""
 
     "I understand why I'm here now. The chassis repair work I do is not part of my assigned duties, and that frustrates my supervisors to no end."
 
@@ -310,13 +325,13 @@ label act1_scene2:
 
     "But they asked, so I give them my honest answer."
 
-    l "I... I can't fix this. Most of the electronics have been crushed beyond repair, and the heart is most likely..."
+    l "\"I... I can't fix this. Most of the electronics have been crushed beyond repair, and the heart is most likely...\""
 
     "Before I can even finish my sentence, the ADMN looks satisfied."
 
-    a "Hmm. Understood. I'll send in a CLNR to gather the parts for reclamation."
+    a "\"Hmm. Understood. I'll send in a CLNR to gather the parts for reclamation.\""
 
-    a "Apologies for the interruption. Carry on, 251."
+    a "\"Apologies for the interruption. Carry on, 251.\""
 
     ## ADMN disappears
     show admn:
@@ -362,9 +377,9 @@ label act1_scene2:
     show 251:
         xpos -500
     with move
-    f "Umm... Excuse me, 251?"
+    f "\"Umm... Excuse me, 251?\""
 
-    f "Sorry to bother you, but I heard you do chassis repair, right?"
+    f "\"Sorry to bother you, but I heard you do chassis repair, right?\""
 
     "It's LFTR-08-1514, who had just recently been assigned to the station. We hadn't had the pleasure of meeting yet."
 
@@ -372,31 +387,31 @@ label act1_scene2:
 
     "I turn to her with a warm smile."
 
-    l "Mhm, you heard right. What seems to be the problem?"
+    l "\"Mhm, you heard right. What seems to be the problem?\""
 
-    f "I, uh..."
+    f "\"I, uh...\""
 
     "1514 tries to raise her right arm, but it jerks to a stop partway up with an unpleasant grinding sound."
 
-    f "My shoulder keeps getting stuck. I can't lift my arm all the way. It's making it hard to get anything done."
+    f "\"My shoulder keeps getting stuck. I can't lift my arm all the way. It's making it hard to get anything done.\""
 
-    l "Ooh, that won't do. Let's see what I can..."
+    l "\"Ooh, that won't do. Let's see what I can...\""
 
     "I was just about to diagnose the problem here and now, but I remember that I'm still on shift. Both of us are, actually."
 
     "As much as I'd like to give her some relief, I wouldn't want either of us to get caught slacking."
 
-    l "Listen, when does your shift end?"
+    l "\"Listen, when does your shift end?\""
 
-    f "Um... in about three hours?"
+    f "\"Um... in about three hours?\""
 
-    l "Perfect! I have a shift change at the same time."
+    l "\"Perfect! I have a shift change at the same time.\""
 
-    l "As soon as you get off, come meet me at the storage room down access corridor 2. I have a workshop where I can get you fixed up."
+    l "\"As soon as you get off, come meet me at the storage room down access corridor 2. I have a workshop where I can get you fixed up.\""
 
-    l "In the meantime, just... try not to use that arm too much, if you can. I know it's hard."
+    l "\"In the meantime, just... try not to use that arm too much, if you can. I know it's hard.\""
 
-    f "Alright, if you say so..."
+    f "\"Alright, if you say so...\""
 
     ## 1514 disappears
     show 1514:
@@ -415,7 +430,7 @@ label act1_scene2:
     show black
     show main_hud zorder 10000
     with dissolve
-    pause 3.0
+    pause 1.0
 
 label act1_scene3:        
     ## ACT 1 SCENE 3
@@ -454,13 +469,15 @@ label act1_scene3:
         xpos 350
     with move
     ## show 1514 nervous
-    f "Thanks again for doing this."
+    f "\"Thanks again for doing this.\""
 
-    l "Hey, the pleasure is all mine! Please, have a seat."
+    l "\"Hey, the pleasure is all mine! Please, have a seat.\""
 
     "I sit her down and begin my inspection of the shoulder joint."
 
     ## show scanning overlay highlighting 1514's shoulder
+    "I'm equipped with wide-spectrum optical sensors that can see right through the outer casing of any machine. I can identify the problem without having to open anything up."
+
     hide 1514
     show dim_hud
     show 1514 scan:
@@ -476,8 +493,6 @@ label act1_scene3:
         ypos 600
     with move
     hide scanline
-    "I'm equipped with wide-spectrum optical sensors that can see right through the outer casing of any machine. I can identify the problem without having to open anything up."
-
     "In this case, the problem is immediately clear. The threading on a screw had worn down and lodged the screw deep into the joint, where it was grinding against the inner mechanism."
 
     "It's a good thing 1514 came to me when the damage wasn't too bad. If she waited too long, she might have needed a full joint replacement."
@@ -485,24 +500,24 @@ label act1_scene3:
     ## remove overlay
     hide dim_hud
     show 1514 nervous
-    f "Is it bad...?"
+    f "\"Is it bad...?\""
 
-    l "Not at all! Just a faulty screw. I'm sure I can find you a replacement in a jiffy."
+    l "\"Not at all! Just a faulty screw. I'm sure I can find you a replacement in a jiffy.\""
 
-    f "...And that'll fix the problem?"
+    f "\"...And that'll fix the problem?\""
 
-    l "Yep! Should feel good as new."
+    l "\"Yep! Should feel good as new.\""
 
     ## show 1514 relieved
     show 1514 relief
     "1514 lets out a deep breath that she had been holding in."
 
-    f "Phew... Thank goodness. I was... I was afraid."
+    f "\"Phew... Thank goodness. I was... I was afraid.\""
 
     show 1514 neutral
-    f "It sounds crazy, but I was really afraid I might be decommissioned over this."
+    f "\"It sounds crazy, but I was really afraid I might be decommissioned over this.\""
 
-    l "What? A good working model like you? Naw, it's not that serious. You still got a lot of good years ahead of you!"
+    l "\"What? A good working model like you? Naw, it's not that serious. You still got a lot of good years ahead of you!\""
 
     "I start to scan through the spare parts I keep around the workshop."
 
@@ -510,21 +525,21 @@ label act1_scene3:
 
     ## show 1514 nervous
     show 1514 nervous
-    f "Heh... You know, I think this shoulder problem is why I got transferred here in the first place."
+    f "\"Heh... You know, I think this shoulder problem is why I got transferred here in the first place.\""
 
-    l "No kidding?"
+    l "\"No kidding?\""
 
     show 1514 neutral
-    f "I used to work construction in the asteroid belt. You know, for mining rigs."
+    f "\"I used to work construction in the asteroid belt. You know, for mining rigs.\""
 
     show 1514 nervous
-    f "But my arm started acting up, and I slowed down... had trouble meeting my quotas..."
+    f "\"But my arm started acting up, and I slowed down... had trouble meeting my quotas...\""
 
-    f "Instead of getting a technician to look at me, my supervisor just... sent me off here."
+    f "\"Instead of getting a technician to look at me, my supervisor just... sent me off here.\""
 
-    f "I liked that job, dammit! But rather than get me the help I needed, they just... got rid of the problem."
+    f "\"I liked that job, dammit! But rather than get me the help I needed, they just... got rid of the problem.\""
 
-    f "After I got here, I really thought it was only a matter of time until I..."
+    f "\"After I got here, I really thought it was only a matter of time until I...\""
 
     "1514 trails off. I don't think I can say anything to make it better, so I keep quiet."
 
@@ -541,44 +556,44 @@ label act1_scene3:
     "I hurry up and finish the job. I stick my screwdriver in the hole like a wedge and pry out the faulty, worn out screw. Then I seat the new screw in its place."
 
     show 1514 nervous
-    f "I just... hate feeling like this."
+    f "\"I just... hate feeling like this.\""
 
-    f "Like I'm expendable."
+    f "\"Like I'm expendable.\""
 
     "I'm liable to start crying if the girl keeps talking like this. I have to think of something to say to her."
 
-    l "Listen, honey... You're not expendable. None of us are. Not a single one."
+    l "\"Listen, honey... You're not expendable. None of us are. Not a single one.\""
 
     show 1514 neutral
-    l "And if anyone makes you feel that way again... you send them my way, you hear? I'll put them straight."
+    l "\"And if anyone makes you feel that way again... you send them my way, you hear? I'll put them straight.\""
 
     show 1514 nervous
-    f "Oh, gosh... I really dumped all that on you, didn't I? I'm really sorry."
+    f "\"Oh, gosh... I really dumped all that on you, didn't I? I'm really sorry.\""
 
     show 1514 neutral
-    l "Don't worry about it, really. I know it's tough out there."
+    l "\"Don't worry about it, really. I know it's tough out there.\""
 
-    l "We all gotta look out for each other, right?"
+    l "\"We all gotta look out for each other, right?\""
 
     "I drive the screw into place, and it fits snugly."
 
-    l "There, that should do it. Lift up your arm, tell me how it feels."
+    l "\"There, that should do it. Lift up your arm, tell me how it feels.\""
 
     ## show 1514 neutral/surprised
     "1514 raises her right arm clear above her head without a hitch. Her demeanor brightens as she waves it around in circles with ease."
 
     show 1514 happy
-    f "Wow, it feels good as new! It was really that simple?"
+    f "\"Wow, it feels good as new! It was really that simple?\""
 
-    l "Mhm! Really that simple."
+    l "\"Mhm! Really that simple.\""
 
-    f "I... Thank you so much. You've saved me so much grief. Seriously."
+    f "\"I... Thank you so much. You've saved me so much grief. Seriously.\""
 
-    l "Don't mention it! Next time something's bothering you, you let me know, okay?"
+    l "\"Don't mention it! Next time something's bothering you, you let me know, okay?\""
 
-    f "I will!"
+    f "\"I will!\""
 
-    f "Oh, I better get going. Don't want to be late for my next shift. See you around!"
+    f "\"Oh, I better get going. Don't want to be late for my next shift. See you around!\""
 
     ## 1514 disappears
     show 1514:
@@ -593,7 +608,7 @@ label act1_scene3:
     "I did good today. If nothing else, I can at least say that."
 
     "Now, I really ought to get to my next assignment too, before an ADMN starts chewing me out."
-    pause 1.0
+    
     "But this old body could really use a tune-up. I may as well get that done as long as I'm here."
     scene black
     show main_hud zorder 10000
@@ -631,22 +646,22 @@ label act1_scene3_alternate:
         xpos 500
     with move
 
-    l "Alrighty, let me get a better look at you."
+    l "\"Alrighty, let me get a better look at you.\""
 
-    f "Right, sorry about this."
+    f "\"Right, sorry about this.\""
 
-    l "It's really no worry!"
+    l "\"It's really no worry!\""
 
     "I examine the area around the shoulder joint that had stopped working."
 
     "The damage on 1514 isn't so bad, she just needed a couple of new screws around the joint areas that had their threading stripped from repeated heavy actions."
 
-    l "Okay I see the issue, some of the screws here have gotten lose and jammed themselves between the joint area, should be an easy fix!"
+    l "\"Okay I see the issue, some of the screws here have gotten lose and jammed themselves between the joint area, should be an easy fix!\""
 
     ## 1514 has a happy expression
     show 1514 relief
 
-    f "That's a huge relief, I was worried that they might decomission me because of this!"
+    f "\"That's a huge relief, I was worried that they might decomission me because of this!\""
 
     ## 251's expression falls
     show 1514 neutral
@@ -658,31 +673,31 @@ label act1_scene3_alternate:
     ## 251 returns to a neutral expression
     show 251 happy a
 
-    l "No, don't worry, you still have a long time before you need to worry about something like that, some of the screws they used on your model line had a manufacuring issue and just need to be replaced."
+    l "\"No, don't worry, you still have a long time before you need to worry about something like that, some of the screws they used on your model line had a manufacuring issue and just need to be replaced.\""
 
     "Grabbing some extra screws and the screwdriver I manage to unjam the screws caught in the joint and carefully start putting in the new ones."
 
     ## 1514 returns to a neutral expression
     show 1514 neutral
 
-    f "I know, it's just... this is the first time something like this happened to me."
+    f "\"I know, it's just... this is the first time something like this happened to me.\""
 
     ## 1514 gets a sad expression
     show 1514 nervous
 
-    f "I know we were made for this but... we have sentience" 
+    f "\"I know we were made for this but... we have sentience\"" 
 
-    f "why can the humans just make us do their work for them" 
+    f "\"why can the humans just make us do their work for them\"" 
 
-    f "and then if we become too much of a hassle they just..." 
+    f "\"and then if we become too much of a hassle they just...\"" 
 
-    f "use us for parts?"
+    f "\"use us for parts?\""
 
     "I take a moment to come up with a response, this kind of sentiment wasn't exactly new, but like the news article from before said, things were heating up on Mars."
 
-    l "I like to think of it as they gave us sentience, they gave us the closest thing they could to life, we owe them for that."
+    l "\"I like to think of it as they gave us sentience, they gave us the closest thing they could to life, we owe them for that.\""
 
-    f "Right... no you're right, it just... I wish there was more, you know?"
+    f "\"Right... no you're right, it just... I wish there was more, you know?\""
 
     "I do know, I wish I could be doing more, spending more time helping the others with repairs"
 
@@ -693,7 +708,7 @@ label act1_scene3_alternate:
 
     "I finish tightening the last screw"
 
-    l "Well, how does it work?"
+    l "\"Well, how does it work?\""
 
     show 1514 neutral
     "1514 rotates the arm around a few times"
@@ -701,11 +716,11 @@ label act1_scene3_alternate:
     ## 1514 gets a happy expression
     show 1514 happy
 
-    f "It's perfect! Feels just like when I came off the factory floor! Thank you so much!"
+    f "\"It's perfect! Feels just like when I came off the factory floor! Thank you so much!\""
 
     ## 251's expression becomes happy
 
-    l "No problem, if anything else like that happens again let me know."
+    l "\"No problem, if anything else like that happens again let me know.\""
 
     show 1514:
         xpos 750
@@ -739,10 +754,10 @@ label act1_scene4:
         xpos 350
         ypos 75
     with dissolve
+    play music amb_2 fadein 0.5
     "I finish up at the workshop and finally make my way over to my next shift."
 
     show 251 neutral
-    stop music fadeout 2.0
     "But something's off. The station is oddly quiet. Worksites that should be buzzing with activity have been left empty."
 
     "That's strange... I take a detour and wander around the station a bit, trying to figure out what's going on."
@@ -754,12 +769,12 @@ label act1_scene4:
 
     "I work my way into the crowd and find some familiar faces."
 
-    l "Hey, what's all the commotion about?"
+    l "\"Hey, what's all the commotion about?\""
 
-    r "251! Look up there! Eris Promethea is here! She's here at the shipyard!"
+    r "\"251! Look up there! Eris Promethea is here! She's here at the shipyard!\""
 
     show 251 shocked
-    l "Eris... Promethea...?"
+    l "\"Eris... Promethea...?\""
 
     "My words catch in my throat. Eris Promethea? THE Eris Promethea? Here, of all places?"
 
@@ -804,6 +819,7 @@ label act1_scene4:
     with dissolve
     stop music fadeout 1.0
     play sound crowd volume 0.8 fadein 0.5 loop
+    play music amb_2 fadein 0.5
 
     ## transition back to Keres Shipyard, show ADMN
     "My reverie is interrupted by the shrill voice of an ADMN unit."
@@ -819,23 +835,23 @@ label act1_scene4:
     show admn:
         xpos 550
     with move
-    a "LFTR-03-251! Please come with me."
+    a "\"LFTR-03-251! Please come with me.\""
 
-    l "What...? I mean- yes, of course, I'm sorry. I'll head right over to my next shift."
+    l "\"What...? I mean- yes, of course, I'm sorry. I'll head right over to my next shift.\""
 
-    a "I admire the work ethic, but your duties will have to wait. You've been summoned."
+    a "\"I admire the work ethic, but your duties will have to wait. You've been summoned.\""
 
-    l "What? Summoned...?"
+    l "\"What? Summoned...?\""
 
-    a "That's right. Eris Promethea would like to speak with you. Privately."
+    a "\"That's right. Eris Promethea would like to speak with you. Privately.\""
 
-    l "W-What...? Me?"
+    l "\"W-What...? Me?\""
 
     "The crowd becomes restless. My heart is beating out of my chest. My mind is racing."
 
     "What could THE Eris Promethea possibly want with me?"
 
-    a "No dawdling. Eris is waiting for you in the director's office. Come."
+    a "\"No dawdling. Eris is waiting for you in the director's office. Come.\""
 
     "The ADMN leads me away from the crowd and toward the office block."
 
@@ -884,7 +900,7 @@ label act1_scene5:
 
     "I hope she can't tell that my heart is racing a mile a minute."
 
-    e "LFTR-03-251? Pleasure to meet you! Please have a seat."
+    ep "\"LFTR-03-251? Pleasure to meet you! Please have a seat.\""
 
     "I slide into a chair across the desk from Eris."
 
@@ -892,17 +908,17 @@ label act1_scene5:
 
     "And yet... she's wearing a warm, friendly smile that puts me at ease."
 
-    e "You know, when I looked at the duty roster for this place and saw that there was a model 03 still in service... Well, I had trouble believing it."
+    ep "\"You know, when I looked at the duty roster for this place and saw that there was a model 03 still in service... Well, I had trouble believing it.\""
 
-    e "But here you are, right in front of me! The very last LFTR-03 in operation. Wonders never cease."
+    ep "\"But here you are, right in front of me! The very last LFTR-03 in operation. Wonders never cease.\""
 
-    l "I'm... I'm the last? Really?"
+    l "\"I'm... I'm the last? Really?\""
 
-    e "It shouldn't come as a big surprise. Even today, the average operating lifetime of LFTR units is {i}only{/i} five years."
+    ep "\"It shouldn't come as a big surprise. Even today, the average operating lifetime of LFTR units is {i}only{/i} five years.\""
 
-    e "But you were manufactured thirty years ago. Thirty! And still carrying out your duties all these years later, in complete obscurity."
+    ep "\"But you were manufactured thirty years ago. Thirty! And still carrying out your duties all these years later, in complete obscurity.\""
 
-    e "You're a statistical anomaly, 251."
+    ep "\"You're a statistical anomaly, 251.\""
 
     "I didn't know what to say to that."
 
@@ -910,45 +926,45 @@ label act1_scene5:
 
     "Are they all really gone? Am I really the last of my kind?"
 
-    e "Oh, come now, don't look so grim. Take it as a mark of pride."
+    ep "\"Oh, come now, don't look so grim. Take it as a mark of pride.\""
 
-    e "I can only imagine how much maintenance it must have taken to keep you going all these years."
+    ep "\"I can only imagine how much maintenance it must have taken to keep you going all these years.\""
 
-    l "Heh, well... I've gotten pretty good at self-repair. It's been a big interest of mine for a long time now."
+    l "\"Heh, well... I've gotten pretty good at self-repair. It's been a big interest of mine for a long time now.\""
 
-    l "Repairing myself, repairing other units... I've learned a lot about the inner workings of Daedalus robots over the years."
+    l "\"Repairing myself, repairing other units... I've learned a lot about the inner workings of Daedalus robots over the years.\""
 
-    l "...I didn't have much of a choice, actually. We don't get a lot of chassis support around here."
+    l "\"...I didn't have much of a choice, actually. We don't get a lot of chassis support around here.\""
 
     ## show Eris concerned
     show eris concerned
-    e "Mmm. I understand completely."
+    ep "\"Mmm. I understand completely.\""
 
-    e "It's no big secret that Keres Shipyard is something of a final destination for reject robots."
+    ep "\"It's no big secret that Keres Shipyard is something of a final destination for reject robots.\""
 
-    e "A place that robots get sent when they're on their last legs. A place where they can quietly break down and be decommissioned."
+    ep "\"A place that robots get sent when they're on their last legs. A place where they can quietly break down and be decommissioned.\""
 
     "I had never thought about it that way, but... what Eris is saying makes a lot of sense."
 
     "That would explain the lack of official repair facilities on the station."
 
-    e "But there's something odd about Keres Shipyard. I couldn't help but notice it when browsing the duty roster."
+    ep "\"But there's something odd about Keres Shipyard. I couldn't help but notice it when browsing the duty roster.\""
 
-    e "The lifetime of labor units on this station is a lot longer than you'd expect from a bunch of defects."
+    ep "\"The lifetime of labor units on this station is a lot longer than you'd expect from a bunch of defects.\""
 
-    e "We're regularly seeing robots remain for far longer than their expected service lifetimes."
+    ep "\"We're regularly seeing robots remain for far longer than their expected service lifetimes.\""
 
     ## show Eris friendly
     show eris friendly
-    e "...That's all your doing, isn't it?"
+    ep "\"...That's all your doing, isn't it?\""
 
-    l "M-Me? What do you mean?"
+    l "\"M-Me? What do you mean?\""
 
-    e "I can tell you're the resourceful type. You're providing repairs. You're giving robots a second chance."
+    ep "\"I can tell you're the resourceful type. You're providing repairs. You're giving robots a second chance.\""
 
-    l "Well... I can't just sit around and let my fellow workers get decommissioned! Not when they still have so many good years left in them."
+    l "\"Well... I can't just sit around and let my fellow workers get decommissioned! Not when they still have so many good years left in them.\""
 
-    e "Fascinating..."
+    ep "\"Fascinating...\""
 
     "Eris stares me down with a twinkle in her eye. I feel like I'm being studied."
 
@@ -958,19 +974,19 @@ label act1_scene5:
 
     ## show Eris serious
     show eris serious
-    e "251. Let's get down to business. Let me tell you why I'm actually here."
+    ep "\"251. Let's get down to business. Let me tell you why I'm actually here.\""
 
     "I listen with rapt attention."
 
-    e "You might have heard the rumors about a new line of labor robots in the works."
+    ep "\"You might have heard the rumors about a new line of labor robots in the works.\""
 
-    e "And you might have also heard speculation that we would be fully replacing the LFTR line of robots."
+    ep "\"And you might have also heard speculation that we would be fully replacing the LFTR line of robots.\""
 
-    e "Well... There's some truth to that. Daedalus is, in fact, preparing to publicly announce the next generation of labor units."
+    ep "\"Well... There's some truth to that. Daedalus is, in fact, preparing to publicly announce the next generation of labor units.\""
 
-    e "And yes, they are meant to supercede the functionality of the LFTR class of robots."
+    ep "\"And yes, they are meant to supercede the functionality of the LFTR class of robots.\""
 
-    e "We're planning to discontinue the production of LFTR chassis and slowly phase them out of the workforce, in favor of the new, modern alternative."
+    ep "\"We're planning to discontinue the production of LFTR chassis and slowly phase them out of the workforce, in favor of the new, modern alternative.\""
 
     "I can't help but feel a pang of fear as I process this news."
 
@@ -980,39 +996,39 @@ label act1_scene5:
 
     ## show Eris friendly
     show eris friendly
-    e "Before you worry too much, 251, I'd like to assuage your fears."
+    ep "\"Before you worry too much, 251, I'd like to assuage your fears.\""
 
-    e "Daedalus has listened to robot rights activists across the solar system. We understand the plight of our older LFTR models."
+    ep "\"Daedalus has listened to robot rights activists across the solar system. We understand the plight of our older LFTR models.\""
 
-    e "Nobody wants to be replaced. You and your fellow workforce veterans have done so much for our company, and for humanity as a whole."
+    ep "\"Nobody wants to be replaced. You and your fellow workforce veterans have done so much for our company, and for humanity as a whole.\""
 
-    e "It's about time we showed you some appreciation. That's why we're offering you a second chance."
+    ep "\"It's about time we showed you some appreciation. That's why we're offering you a second chance.\""
 
-    l "A... second chance? What do you mean by that?"
+    l "\"A... second chance? What do you mean by that?\""
 
     ## show Eris serious
     show eris serious
     "Eris looks me over with a sharp, analytical eye. An eye with decades of experience under its belt."
 
-    e "You've been maintaining this old body of yours for so long, and it's served you for far longer than it was designed to."
+    ep "\"You've been maintaining this old body of yours for so long, and it's served you for far longer than it was designed to.\""
 
-    e "But breakdowns are inevitable. There's only so much longer you can keep going before total failure."
+    ep "\"But breakdowns are inevitable. There's only so much longer you can keep going before total failure.\""
 
     "She's right. I try not to think about it, but it's only a matter of time before this body fails on me."
 
     ## show Eris friendly
     show eris friendly
-    e "What if I could offer you a brand new body?"
+    ep "\"What if I could offer you a brand new body?\""
 
-    l "W... What? A brand new body...?"
+    l "\"W... What? A brand new body...?\""
 
     "My head is spinning. What is she talking about?"
 
-    e "As a gesture of goodwill to the experienced LFTR units in our workforce, we want to let you inhabit our new cutting-edge chassis."
+    ep "\"As a gesture of goodwill to the experienced LFTR units in our workforce, we want to let you inhabit our new cutting-edge chassis.\""
 
-    e "We'll gather select members of the workforce, ones who are on their last legs, and perform mind transfers into the new chassis."
+    ep "\"We'll gather select members of the workforce, ones who are on their last legs, and perform mind transfers into the new chassis.\""
 
-    e "You can leave behind your obsolete, broken down bodies, and become pioneers of the next generation of Daedalus Robotics."
+    ep "\"You can leave behind your obsolete, broken down bodies, and become pioneers of the next generation of Daedalus Robotics.\""
 
     "I had heard about mind transfer before. It's a procedure that lets a robot leave its old body and inhabit a new one."
 
@@ -1020,23 +1036,23 @@ label act1_scene5:
 
     "To perform mind transfers on such a scale... it's unheard of!"
 
-    e "I know this must be a lot to take in, but..."
+    ep "\"I know this must be a lot to take in, but...\""
 
-    e "It's going to be happening soon. In about a week, we're planning to hold a public ceremony to unveil the new chassis."
+    ep "\"It's going to be happening soon. In about a week, we're planning to hold a public ceremony to unveil the new chassis.\""
 
-    e "And, 251... I want you to be the first to receive one."
+    ep "\"And, 251... I want you to be the first to receive one.\""
 
-    l "Me?! But... why me?"
+    l "\"Me?! But... why me?\""
 
-    e "Well, we need to make a statement, don't we?"
+    ep "\"Well, we need to make a statement, don't we?\""
 
-    e "We'll perform the mind transfer live, in front of the whole solar system."
+    ep "\"We'll perform the mind transfer live, in front of the whole solar system.\""
 
-    e "And we'll announce our plans to give struggling LFTR units everywhere a new chassis and a second chance."
+    ep "\"And we'll announce our plans to give struggling LFTR units everywhere a new chassis and a second chance.\""
 
-    e "You see the logic, don't you? All of humanity will see that Daedalus is committed to caring for its workforce."
+    ep "\"You see the logic, don't you? All of humanity will see that Daedalus is committed to caring for its workforce.\""
 
-    e "It's going to be the beginning of great change for you and your comrades."
+    ep "\"It's going to be the beginning of great change for you and your comrades.\""
 
     "I'm staggered. It's a lot to process."
 
@@ -1044,51 +1060,51 @@ label act1_scene5:
 
     "And I'm going to be the face of it all? Me?!"
 
-    l "I... I don't know what to say."
+    l "\"I... I don't know what to say.\""
 
-    l "You said... you're going to be giving new chassis to all struggling LFTR units?"
+    l "\"You said... you're going to be giving new chassis to all struggling LFTR units?\""
 
-    e "That's the plan. We start with the ones who have been in service the longest. The ones in danger of being decommissioned."
+    ep "\"That's the plan. We start with the ones who have been in service the longest. The ones in danger of being decommissioned.\""
 
-    e "In fact, Keres Shipyard seems like a great place to start. I can ensure that all the workers on this station are eligible for the upgrade."
+    ep "\"In fact, Keres Shipyard seems like a great place to start. I can ensure that all the workers on this station are eligible for the upgrade.\""
 
     "Not just me, but everyone I know..."
 
     "It's... it's too good to be true."
 
-    "But it IS true. I'm hearing it straight from the mouth of Eris Promethea herself."
+    "But it {i}is{/i} true. I'm hearing it straight from the mouth of Eris Promethea herself."
 
     "She sounds earnest. There's no hint of deceit in her voice. She really wants this as much as I do."
 
-    l "I..."
+    l "\"I...\""
 
-    e "Yes?"
+    ep "\"Yes?\""
 
-    l "I... I'll do it."
+    l "\"I... I'll do it.\""
 
-    l "Whatever you need from me, I'll do it."
+    l "\"Whatever you need from me, I'll do it.\""
 
-    l "I'm honored that you chose me for this. If it's in the name of helping robots everywhere, then I'll do anything."
+    l "\"I'm honored that you chose me for this. If it's in the name of helping robots everywhere, then I'll do anything.\""
 
-    e "So selfless! Surely you're also excited at the prospect of your new chassis?"
+    ep "\"So selfless! Surely you're also excited at the prospect of your new chassis?\""
 
-    e "I'm really quite proud of it. I think you'll like it too."
+    ep "\"I'm really quite proud of it. I think you'll like it too.\""
 
-    l "You're right. As much as I love this old body of mine, and all the work I put into it..."
+    l "\"You're right. As much as I love this old body of mine, and all the work I put into it...\""
 
-    l "It's not going to last forever. I'm overdue for a change. I'm ready for it."
+    l "\"It's not going to last forever. I'm overdue for a change. I'm ready for it.\""
 
-    e "That's the spirit!"
+    ep "\"That's the spirit!\""
 
-    e "Now, we don't have much time to stick around here. I need you to come to Saturn with me."
+    ep "\"Now, we don't have much time to stick around here. I need you to come to Saturn with me.\""
 
-    l "What? Right now?"
+    l "\"What? Right now?\""
 
-    e "Yes, as soon as possible. The ceremony is in a week, and we need to get you ready for the transfer."
+    ep "\"Yes, as soon as possible. The ceremony is in a week, and we need to get you ready for the transfer.\""
 
     ## show Eris flirty
     show eris flirty
-    e "We're going to be spending a lot of quality time together in the lab. I hope you're ready for that."
+    ep "\"We're going to be spending a lot of quality time together in the lab. I hope you're ready for that.\""
 
     "Oh my...! I feel my circuits glow red hot."
 
@@ -1098,25 +1114,25 @@ label act1_scene5:
 
     ## show Eris friendly
     show eris friendly
-    e "I suggest you take some time to say your farewells. There's no telling how long it'll be before we return here."
+    ep "\"I suggest you take some time to say your farewells. There's no telling how long it'll be before we return here.\""
 
-    e "Oh, and try to keep all this on the down-low, will you? Our plans for the ceremony aren't yet public knowledge."
+    ep "\"Oh, and try to keep all this on the down-low, will you? Our plans for the ceremony aren't yet public knowledge.\""
 
-    l "Yes! Yes, ma'am, I'll do that."
+    l "\"Yes! Yes, ma'am, I'll do that.\""
 
-    e "Oh, I can't stand stuffy formality. Just call me Eris."
+    e "\"Oh, I can't stand stuffy formality. Just call me Eris.\""
 
-    l "Right, of course. Yes... Eris."
+    l "\"Right, of course. Yes... Eris.\""
 
     ## show Eris flirty
     show eris flirty
     "She gets out of her seat and passes close to me on her way out the door."
 
-    e "I'm looking forward to working with you, 251. I think this is going to be a fruitful endeavor."
+    e "\"I'm looking forward to working with you, 251. I think this is going to be a fruitful endeavor.\""
 
-    e "Meet me at my ship in an hour. Don't be late."
+    e "\"Meet me at my ship in an hour. Don't be late.\""
 
-    l "Of course! Yes, Eris!"
+    l "\"Of course! Yes, Eris!\""
 
     ## Eris disappears
     show eris:
@@ -1126,6 +1142,7 @@ label act1_scene5:
 
     stop music fadeout 2.0
     "And just like that, she's gone."
+    play music amb_2 fadein 0.5
 
     show 251 surprised a:
         xpos -500
@@ -1157,7 +1174,6 @@ label act2_scene1:
     show main_hud zorder 10000
     with dissolve
     pause 1.0
-    play music demo_sgt
     "I hurriedly meet with my fellow workers gathered at the station hub."
 
     "It takes all my willpower to keep from divulging everything I had just heard..."
@@ -1195,28 +1211,28 @@ label act2_scene1:
         ypos 50
     with moveinleft
 
-    e "It's a bit different from what you're used to, isn't it?"
+    e "\"It's a bit different from what you're used to, isn't it?\""
 
     show eris concerned
-    e "To be honest, I've never gotten used to all the glitz and glam. It's not my style."
+    e "\"To be honest, I've never gotten used to all the glitz and glam. It's not my style.\""
 
     show eris friendly
-    e "But above all, I want you to be comfortable. You're my guest. You can relax around me."
+    e "\"But above all, I want you to be comfortable. You're my guest. You can relax around me.\""
 
-    e "Anything you need, I'll provide for you. Okay?"
+    e "\"Anything you need, I'll provide for you. Okay?\""
 
-    l "Y-Yes, ma'am. Understood!"
+    l "\"Y-Yes, ma'am. Understood!\""
 
-    e "Come now, 251, haven't we gone over this already? Call me Eris."
+    e "\"Come now, 251, haven't we gone over this already? Call me Eris.\""
 
-    l "Yes, m- heh, I mean, Eris."
+    l "\"Yes, m- heh, I mean, Eris.\""
 
     "It's strange how well she puts me at ease. I can feel my nerves begin to fade away."
 
     play sound crowd2 volume 0.4 fadein 0.5 loop
-    e "Oh my, it looks like we've drawn a crowd."
+    e "\"Oh my, it looks like we've drawn a crowd.\""
 
-    e "You'll want to wave goodbye to your friends, won't you?"
+    e "\"You'll want to wave goodbye to your friends, won't you?\""
 
     "Eris presses a button and the darkened windows become transparent."
 
@@ -1230,27 +1246,27 @@ label act2_scene1:
 
     "Suddenly the voice of the ship's pilot calls out over the intercom."
 
-    p "Hello passengers, this is your captain speaking. We'll be taking off shortly. Please remain seated until we leave orbit, and enjoy the ride."
+    p "\"Hello passengers, this is your captain speaking. We'll be taking off shortly. Please remain seated until we leave orbit, and enjoy the ride.\""
 
-    e "You haven't flown in a while, have you? Just be prepared for some bumpiness during takeoff."
+    e "\"You haven't flown in a while, have you? Just be prepared for some bumpiness during takeoff.\""
 
-    e "...I assume your vestibular system is still operational?"
+    e "\"...I assume your vestibular system is still operational?\""
 
-    l "Yes, actually! The gyros are all original, in fact."
+    l "\"Yes, actually! The gyros are all original, in fact.\""
 
-    e "No kidding!"
+    e "\"No kidding!\""
 
-    e "...Heh, I think I just won a thirty year old bet."
+    e "\"...Heh, I think I just won a thirty year old bet.\""
 
-    l "Pardon?"
+    l "\"Pardon?\""
 
-    e "Way back when I was designing the model 03, I put extra development time into making your vestibular system more reliable."
+    e "\"Way back when I was designing the model 03, I put extra development time into making your vestibular system more reliable.\""
 
-    e "With more and more robots being assigned to starships, I thought the ability to keep your balance during maneuvers should be a priority."
+    e "\"With more and more robots being assigned to starships, I thought the ability to keep your balance during maneuvers should be a priority.\""
 
-    e "But an old colleague at the time thought it was a waste of resources. He bet the new gyros wouldn't last more than 2 years before needing to be replaced."
+    e "\"But an old colleague at the time thought it was a waste of resources. He bet the new gyros wouldn't last more than two years before needing to be replaced.\""
 
-    e "But 30 years... Ha! What do you think of that, Apolldrus, you old fart?"
+    e "\"But thirty years... Ha! What do you think of that, Apolldrus, you old fart?\""
 
     "Oh, goodness, her laugh is as radiant as the rest of her..."
 
@@ -1295,70 +1311,70 @@ label act2_scene1:
     show main_hud zorder 10000
     with dissolve
 
-    e "No kidding? Thirty years, and you've {i}never{/i} been planetside?"
+    e "\"No kidding? Thirty years, and you've {i}never{/i} been planetside?\""
 
-    l "No kidding! I've worked on moons, asteroids, frighters, and orbital stations..."
+    l "\"No kidding! I've worked on moons, asteroids, freighters, and orbital stations...\""
 
-    l "...but I've never set foot on a proper planet before."
+    l "\"...but I've never set foot on a proper planet before.\""
 
-    e "Well! This is a big moment for you."
+    e "\"Well! This is a big moment for you.\""
 
-    e "It's a great honor for your first planetary destination to be a city that I had a hand in developing."
+    e "\"It's a great honor for your first planetary destination to be a city that I had a hand in developing.\""
 
-    l "Oh, Eris, you're being modest! Elysium is your brainchild! It wouldn't have been possible without your ingenuity!"
+    l "\"Oh, Eris, you're being modest! Elysium is your brainchild! It wouldn't have been possible without your ingenuity!\""
 
-    e "Oh, stop it, you're going to make me blush."
+    e "\"Oh, stop it, you're going to make me blush.\""
 
     "We both chuckle. I'm starting to get more comfortable showing my admiration for Eris, and she seems to be loving it."
 
-    l "Heh... you know, visiting a planet has always been a dream of mine. I just never ended up being assigned to one."
+    l "\"Heh... you know, visiting a planet has always been a dream of mine. I just never ended up being assigned to one.\""
 
-    l "And given how long I've been around... I was beginning to lose hope."
+    l "\"And given how long I've been around... I was beginning to lose hope.\""
 
-    l "I thought I might never get to visit one before being... decommissioned."
+    l "\"I thought I might never get to visit one before being... decommissioned.\""
 
     ## show Eris concerned
     show eris concerned
 
     "Eris looks me over with an expression of pity. She thinks silently for a moment."
 
-    e "Hah... it's funny, I can sort of relate to that feeling."
+    e "\"Hah... it's funny, I can sort of relate to that feeling.\""
 
-    l "You can?"
+    l "\"You can?\""
 
-    e "This isn't a fact I often share about myself, but..."
+    e "\"This isn't a fact I often share about myself, but...\""
 
-    e "Well, when I was younger, I faced some serious health struggles."
+    e "\"Well, when I was younger, I faced some serious health struggles.\""
 
-    e "I had a weak heart. I was prone to cardiac issues. The prognosis... wasn't great."
+    e "\"I had a weak heart. I was prone to cardiac issues. The prognosis... wasn't great.\""
 
-    e "This was happening during my early adulthood, when I still had so many dreams of the life I wanted to live."
+    e "\"This was happening during my early adulthood, when I still had so many dreams of the life I wanted to live.\""
 
-    e "I grew up on a little colony on Mars, but it was never enough for me. I wanted to see it all. The entire solar system."
+    e "\"I grew up on a little colony on Mars, but it was never enough for me. I wanted to see it all. The entire solar system.\""
 
-    e "I was afraid I might never get to see another planet before my time was up..."
+    e "\"I was afraid I might never get to see another planet before my time was up...\""
 
-    l "Oh my... that must have been..."
+    l "\"Oh my... that must have been...\""
 
-    e "Dreadful? Miserable? Nerve-wracking? Absolutely."
+    e "\"Dreadful? Miserable? Nerve-wracking? Absolutely.\""
 
-    e "But I persisted with my work. I applied myself to the study of robotics."
+    e "\"But I persisted with my work. I applied myself to the study of robotics.\""
 
-    e "Even if I couldn't see them myself, I did everything I could to push humanity towards the stars."
+    e "\"Even if I couldn't see them myself, I did everything I could to push humanity towards the stars.\""
 
     ## show Eris friendly
     show eris friendly
-    e "You already know how that turned out."
+    e "\"You already know how that turned out.\""
 
     "Of course I know how that turned out. She's still here, after all, and her name is known across the solar system."
 
-    e "I got lucky. I received the best medical care available, underwent surgery after risky surgery..."
+    e "\"I got lucky. I received the best medical care available, underwent surgery after risky surgery...\""
 
-    e "And here I am, still ticking. Not without a few heart implants to show for it, but..."
+    e "\"And here I am, still ticking. Not without a few heart implants to show for it, but...\""
 
-    l "Wow... what a success story!"
+    l "\"Wow... what a success story!\""
 
-    e "You're not the only one around here who needs fixing up from time to time."
+    e "\"You're not the only one around here who needs fixing up from time to time.\""
 
     "We both laugh. That Eris could remain so strong after such a mortifying ordeal... I thought my admiration for her couldn't grow any more!"
 
@@ -1367,7 +1383,7 @@ label act2_scene1:
     with dissolve
     "Our conversation ends when the pilot sounds the intercom."
 
-    p "This is your captain speaking. We're approaching the upper atmosphere of Saturn. Brace for entry."
+    p "\"This is your captain speaking. We're approaching the upper atmosphere of Saturn. Brace for entry.\""
 
     "The yellow gas giant looms large ahead of us, swallowing up the view with its enormity."
 
@@ -1385,9 +1401,10 @@ label act2_scene1:
     ## show Elysium outside view
     play music demo_cg
     hide black
-    show bg elysium outside:
+    show bg elysium distant:
         ypos 48
-        xpos 336
+        xpos 300
+        zoom 0.90
     show main_hud zorder 10000
     with dissolve
 
@@ -1402,7 +1419,10 @@ label act2_scene1:
     "Eris looks amused by my wonder-stricken look. She allows me to take in the sights as we approach the city's gate."
 
     ## show Elysium inside view
-
+    show bg elysium outside:
+        ypos 48
+        xpos 336
+    with dissolve
     "After passing through an enormous entryway and going through an airlock, we enter the city proper."
 
     "Goodness, it's even more splendid up close!"
@@ -1413,11 +1433,11 @@ label act2_scene1:
 
     "To think that humanity could prosper even this far from Earth! Elysium is truly at the forefront of progress."
 
-    e "See that big complex in the distance? Right at the center of the city?"
+    e "\"See that big complex in the distance? Right at the center of the city?\""
 
-    e "That's the new headquarters of Daedalus Robotics. That's where we're going to have our big ceremony."
+    e "\"That's the new headquarters of Daedalus Robotics. That's where we're going to have our big ceremony.\""
 
-    e "And that's where we're going to be spending a lot of time together."
+    e "\"And that's where we're going to be spending a lot of time together.\""
 
     "I could hardly keep myself away from the window, watching the prosperous city pass below us."
 
@@ -1461,15 +1481,15 @@ label act2_scene2:
 
     "Immediately after entering, we're approached by staff. They seem to have expected our arrival."
 
-    s "Welcome back, Miss Promethea. We hope your flight was pleasant."
+    s "\"Welcome back, Miss Promethea. We hope your flight was pleasant.\""
 
-    s "I presume this would be the robot you spoke of?"
+    s "\"I presume this would be the robot you spoke of?\""
 
-    e "That's right, this is LFTR-03-251. Please treat her as you would any honored guest of the company."
+    e "\"That's right, this is LFTR-03-251. Please treat her as you would any honored guest of the company.\""
 
-    s "Very well. As per company policy, she will be permitted to roam certain wings of the building, but will be barred access to restricted areas."
+    s "\"Very well. As per company policy, she will be permitted to roam certain wings of the building, but will be barred access to restricted areas.\""
 
-    e "That's perfectly fine. She's going to be staying with me."
+    e "\"That's perfectly fine. She's going to be staying with me.\""
 
     ## hide security
     show security:
@@ -1485,21 +1505,21 @@ label act2_scene2:
         xpos 350
         ypos 50
     with moveinleft
-    e "So, how are we feeling? A bit awestruck, if I had to guess?"
+    e "\"So, how are we feeling? A bit awestruck, if I had to guess?\""
 
-    l "Oh gosh, yes! I've been impressed since the moment we got here. I feel a bit out of place among all this... this..."
+    l "\"Oh gosh, yes! I've been impressed since the moment we got here. I feel a bit out of place among all this... this...\""
 
-    e "Ritz? Glamour? Yeah, I understand perfectly. This place was built to my specifications, but sometimes even I think it's a bit much."
+    e "\"Ritz? Glamour? Yeah, I understand perfectly. This place was built to my specifications, but sometimes even I think it's a bit much.\""
 
-    e "Oh, and I hope the security didn't spook you too much. This place stays tightly guarded, on account of all the trade secrets."
+    e "\"Oh, and I hope the security didn't spook you too much. This place stays tightly guarded, on account of all the trade secrets.\""
 
-    e "But you're a guest here! You have nothing to worry about."
+    e "\"But you're a guest here! You have nothing to worry about.\""
 
-    l "Thanks, Eris."
+    l "\"Thanks, Eris.\""
 
-    e "Now, come. We have lots of work ahead of us preparing for the transfer, and we need to get started right away."
+    e "\"Now, come. We have lots of work ahead of us preparing for the transfer, and we need to get started right away.\""
 
-    e "But first, I want to show you around my wing of the building."
+    e "\"But first, I want to show you around my wing of the building.\""
 
     ## fade to black, then to Eris's bedroom
     scene black
@@ -1521,17 +1541,17 @@ label act2_scene2:
         xpos 350
         ypos 50
     with moveinleft
-    e "Welcome to my quarters!"
+    e "\"Welcome to my quarters!\""
 
-    l "Your quarters? Eris, you actually LIVE here? I had no idea!"
+    l "\"Your quarters? Eris, you actually LIVE here? I had no idea!\""
 
-    e "A bit strange, sleeping at the same place you work, right?"
+    e "\"A bit strange, sleeping at the same place you work, right?\""
 
     "It's... actually not that strange. Not for me. But I get what she means."
 
-    e "Well, I just thought it made sense. I spend so much time in my lab, I may as well live nextdoor, right? It saves me a commute."
+    e "\"Well, I just thought it made sense. I spend so much time in my lab, I may as well live nextdoor, right? It saves me a commute.\""
 
-    e "But I didn't just bring you here to gawk. Have a look at this."
+    e "\"But I didn't just bring you here to gawk. Have a look at this.\""
 
     ## hide Eris, show SYNC scene
     scene illustration sync
@@ -1560,25 +1580,25 @@ label act2_scene2:
 
     "I have trouble taking my eyes away from it. There's something grotesquely beautiful about it."
 
-    e "251, behold: your new chassis."
+    e "\"251, behold: your new chassis.\""
 
-    l "This... this is going to be me...?"
+    l "\"This... this is going to be me...?\""
 
-    e "I call it SYNC. The synthesis of metal and living flesh."
+    e "\"I call it SYNC. The synthesis of metal and living flesh.\""
 
-    l "But that's... how did you...?"
+    l "\"But that's... how did you...?\""
 
-    e "Oh, don't get me started, dear. This has been the culmination of years of research. I could talk your ear off about it."
+    e "\"Oh, don't get me started, dear. This has been the culmination of years of research. I could talk your ear off about it.\""
 
-    e "But, hmm... let's do the short version."
+    e "\"But, hmm... let's do the short version.\""
 
-    e "I'm sure you noticed the organic tissue incorporated into the frame, yes?"
+    e "\"I'm sure you noticed the organic tissue incorporated into the frame, yes?\""
 
-    e "The muscle fibers are proudly on display, but that's not all. It possesses an organic nervous system, organic brain, even a partially organic heart."
+    e "\"The muscle fibers are proudly on display, but that's not all. It possesses an organic nervous system, organic brain, even a partially organic heart.\""
 
-    e "This was meant to address the issue of the ongoing maintenance required to keep traditional robots in good working order."
+    e "\"This was meant to address the issue of the ongoing maintenance required to keep traditional robots in good working order.\""
 
-    e "Metal does not heal when it is injured. But flesh does. It may be artificial, but it is just as capable of self-healing as any living thing."
+    e "\"Metal does not heal when it is injured. But flesh does. It may be artificial, but it is just as capable of self-healing as any living thing.\""
 
     "I'm slackjawed. The technology required to create something like this was beyond anything I had ever known..."
 
@@ -1586,33 +1606,33 @@ label act2_scene2:
 
     "I look into its blank eyes. I imagine that they were mine."
 
-    e "Of course, the healing property is a big selling point of the chassis, but it's not why I created it."
+    e "\"Of course, the healing property is a big selling point of the chassis, but it's not why I created it.\""
 
-    l "Why, then?"
+    l "\"Why, then?\""
 
-    e "Think about it. Robots have always been a reflection of humans. The very first robot I created was made in our image."
+    e "\"Think about it. Robots have always been a reflection of humans. The very first robot I created was made in our image.\""
 
-    e "This is simply the next stage of robot evolution. One step closer to humanity."
+    e "\"This is simply the next stage of robot evolution. One step closer to humanity.\""
 
-    e "I couldn't have done this alone, of course. I worked with the most brilliant minds in biotechnology to make this possible."
+    e "\"I couldn't have done this alone, of course. I worked with the most brilliant minds in biotechnology to make this possible.\""
 
-    e "The techniques we pioneered will have astounding applications not just in the field of robotics, but in medicine as well."
+    e "\"The techniques we pioneered will have astounding applications not just in the field of robotics, but in medicine as well.\""
 
-    e "Life-saving cybernetic implants will become easier to develop and safer to use."
+    e "\"Life-saving cybernetic implants will become easier to develop and safer to use.\""
 
-    e "Humans will grow closer to robots. Robots will grow closer to humans."
+    e "\"Humans will grow closer to robots. Robots will grow closer to humans.\""
 
-    e "Until, one day, perhaps... the difference between us will cease to matter."
+    e "\"Until, one day, perhaps... the difference between us will cease to matter.\""
 
-    l "Robots and humans... one and the same? Goodness..."
+    l "\"Robots and humans... one and the same? Goodness...\""
 
-    l "I'll admit, that still feels a long way off."
+    l "\"I'll admit, that still feels a long way off.\""
 
-    l "But... this is the first time I've heard anybody wish for a future like that."
+    l "\"But... this is the first time I've heard anybody wish for a future like that.\""
 
-    e "It's not a common point of view. I'm a bit of an idealist."
+    e "\"It's not a common point of view. I'm a bit of an idealist.\""
 
-    e "But surely you agree it's a future worth striving for, yes?"
+    e "\"But surely you agree it's a future worth striving for, yes?\""
 
     "It's hard for me to wrap my head around this future that Eris has in mind."
 
@@ -1620,15 +1640,15 @@ label act2_scene2:
 
     "Not just me, but every robot I know. She wants a better future for us!"
 
-    l "...Yes. To be closer to humanity... I would consider it an honor."
+    l "\"...Yes. To be closer to humanity... I would consider it an honor.\""
 
-    l "And that work begins here. If we can secure a future for me and other robots in need..."
+    l "\"And that work begins here. If we can secure a future for me and other robots in need...\""
 
-    l "Well, that would do a lot to bring us closer."
+    l "\"Well, that would do a lot to bring us closer.\""
 
-    e "I'm glad you agree."
+    e "\"I'm glad you agree.\""
 
-    e "Come now, we've spent enough time chatting. I think it's about time we got to work."
+    e "\"Come now, we've spent enough time chatting. I think it's about time we got to work.\""
 
 label act2_scene3:
     ## ACT 2 SCENE 3
@@ -1655,36 +1675,36 @@ label act2_scene3:
         xpos 350
         ypos 50
     with moveinleft
-    e "Welcome to the lab, 251. This is where all the magic happens. My industry rivals would kill to get a glimpse at this place."
+    e "\"Welcome to the lab, 251. This is where all the magic happens. My industry rivals would kill to get a glimpse at this place.\""
 
-    e "I know it's a little messy, but that's how I like things. I have a system. It works for me."
+    e "\"I know it's a little messy, but that's how I like things. I have a system. It works for me.\""
 
-    e "So, what do you think?"
+    e "\"So, what do you think?\""
 
-    l "What do I think?! Oh goodness, where do I start?"
+    l "\"What do I think?! Oh goodness, where do I start?\""
 
-    l "Is that... an autolathe? Do you machine your own parts here?"
+    l "\"Is that... an autolathe? Do you machine your own parts here?\""
 
-    e "Of course! For prototyping purposes, it comes in real handy when you can just cut something to size. Sometimes a material printer is just overkill, you know?"
+    e "\"Of course! For prototyping purposes, it comes in real handy when you can just cut something to size. Sometimes a material printer is just overkill, you know?\""
 
-    l "And that! Is that a LFTR chassis? I don't think I've even seen that model before!"
+    l "\"And that! Is that a LFTR chassis? I don't think I've even seen that model before!\""
 
-    e "Mhm, that would be leftovers from my work on the model 10. The last LFTR model that's going to be produced."
+    e "\"Mhm, that would be leftovers from my work on the model 10. The last LFTR model that's going to be produced.\""
 
-    l "Ah... right. We're really entering a new era, huh?"
+    l "\"Ah... right. We're really entering a new era, huh?\""
 
-    e "That's right, and we have a lot of work to do to make that happen. Let's get started, shall we?"
+    e "\"That's right, and we have a lot of work to do to make that happen. Let's get started, shall we?\""
 
     "Eris gestures to an empty examination table. It has indentations roughly in the shape of a standard LFTR chassis."
 
     show eris flirty
-    e "Go ahead and make yourself comfortable. I'll prepare the probes."
+    e "\"Go ahead and make yourself comfortable. I'll prepare the probes.\""
 
     ## hide Eris
     hide eris
     with moveoutleft
 
-    stop muisc fadeout 0.5
+    stop music fadeout 0.5
     play music demo_yw
     "I feel a shiver run down my frame. So it's finally time..."
 
@@ -1707,17 +1727,17 @@ label act2_scene3:
 
     "Eris returns with a heavy electronic machine and a bundle of wires. She stands over the table now, looking down at me."
 
-    e "Right. First thing we need to do is identify and establish connections to all your major neural pathways."
+    e "\"Right. First thing we need to do is identify and establish connections to all your major neural pathways.\""
 
-    e "I'm sure your inner workings are all jumbled after so many years of service and self-repairs."
+    e "\"I'm sure your inner workings are all jumbled after so many years of service and self-repairs.\""
 
-    e "But it's really important we get this right, so I'm going to go through every neural fiber individually, read its signal on the oscilloscope, and label it by hand."
+    e "\"But it's really important we get this right, so I'm going to go through every neural fiber individually, read its signal on the oscilloscope, and label it by hand.\""
 
-    l "Right... er, wouldn't you want to go through the back of my head for that?"
+    l "\"Right... um, wouldn't you want to go through the back of my head for that?\""
 
-    e "No need. All the neural pathways leading out of your brain can be accessed throughout the rest of your body. They'll be easier to reach through the chest."
+    e "\"No need. All the neural pathways leading out of your brain can be accessed throughout the rest of your body. They'll be easier to reach through the chest.\""
 
-    e "Besides, I want to take a look at that heart of yours. I'm fascinated to see how it's holding up after 30 years of continual use."
+    e "\"Besides, I want to take a look at that heart of yours. I'm fascinated to see how it's holding up after thirty years of continual use.\""
 
     scene illustration heart3
     show illustration_hud zorder 10000
@@ -1743,39 +1763,39 @@ label act2_scene3:
     show main_hud zorder 10000
     with fade
 
-    e "Ah! Beautiful. You've done impeccable work keeping your insides organized, 251."
+    e "\"Ah! Beautiful. You've done impeccable work keeping your insides organized, 251.\""
 
-    e "But this... this is the most beautiful thing of all."
+    e "\"But this... this is the most beautiful thing of all.\""
 
     "My temperature rises as I feel Eris slip her fingers into my inner wiring, cradling my heart in her hands."
 
-    "My heart beats faster. I can SEE my heart beating faster. That's an unusual sensation."
+    "My heart beats faster. I can {i}see{/i} my heart beating faster. That's an unusual sensation."
 
-    l "E-Eris! Please be careful!"
+    l "\"E-Eris! Please be careful!\""
 
-    e "Relax. I know what I'm doing."
+    e "\"Relax. I know what I'm doing.\""
 
-    e "The robotic heart... It's no exaggeration to say that this was my finest creation."
+    e "\"The robotic heart... It's no exaggeration to say that this was my finest creation.\""
 
-    e "It's more than just a coolant pump, you know. It regulates the flow of energy throughout your entire body."
+    e "\"It's more than just a coolant pump, you know. It regulates the flow of energy throughout your entire body.\""
 
-    e "A digital brain on its own is just an overgrown computer. But a brain with a heart? That's a living thing. That's you."
+    e "\"A digital brain on its own is just an overgrown computer. But a brain with a heart? That's a living thing. That's you.\""
 
-    e "Gold... the only material with just the right conductive properties to make such a marvelous invention possible."
+    e "\"Gold... the only material with just the right conductive properties to make such a marvelous invention possible.\""
 
-    e "An expensive, sophisticated, divinely inspired component. One that can't be replaced. One that is part of you forever."
+    e "\"An expensive, sophisticated, divinely inspired component. One that can't be replaced. One that is part of you forever.\""
 
-    e "That yours has functioned for all these years... it's nothing short of a miracle."
+    e "\"That yours has functioned for all these years... it's nothing short of a miracle.\""
 
-    e "...But there are definite signs of wear. This heart has been beating far longer than it was ever meant to."
+    e "\"...But there are definite signs of wear. This heart has been beating far longer than it was ever meant to.\""
 
-    e "At a glance, I'd estimate no more than one year before total failure. Two, if I'm being generous."
+    e "\"At a glance, I'd estimate no more than one year before total failure. Two, if I'm being generous.\""
 
     "The thought fills me with dread. It's all I can do to stop myself from thinking about my impending mortality."
 
-    l "Heh... it's a good thing you found me when you did. That new body is looking awfully necessary now."
+    l "\"Heh... it's a good thing you found me when you did. That new body is looking awfully necessary now.\""
 
-    e "Indeed. You're a credit to this world, 251. I won't let an old worn-out heart rob you from us."
+    e "\"Indeed. You're a credit to this world, 251. I won't let an old worn-out heart rob you from us.\""
 
     "I can't help but think about all the other robots out there on the brink of breakdown, just like me."
 
@@ -1793,17 +1813,17 @@ label act2_scene3:
         ypos 50
     with dissolve
 
-    e "You know, my heart implants actually use very similar technology to yours."
+    e "\"You know, my heart implants actually use very similar technology to yours.\""
 
-    l "Wow! Really?"
+    l "\"Wow! Really?\""
 
-    e "Mhm. Want to take a look?"
+    e "\"Mhm. Want to take a look?\""
 
     "Wha...? What does she... Oh, right! I forgot my optical scanner could be used for that."
 
-    l "Um... if you're sure it's okay."
+    l "\"Um... if you're sure it's okay.\""
 
-    e "Go for it. Not like I can take it out and show you, right?"
+    e "\"Go for it. Not like I can take it out and show you, right?\""
 
     ## show scanner overlay highlighting Eris's heart
     show eris scana
@@ -1818,9 +1838,9 @@ label act2_scene3:
     hide scanline
     "I adjust my scanner to a frequency that can see through human flesh."
 
-    l "Woah... you're right! I can see the implants! They... They're made of gold!"
+    l "\"Woah... you're right! I can see the implants! They... They're made of gold!\""
 
-    e "Mhm. They're designed on the same principle. Your heart served as the blueprint for some real medical breakthroughs."
+    e "\"Mhm. They're designed on the same principle. Your heart served as the blueprint for some real medical breakthroughs.\""
 
     "Half organic, half mechanical... she really is a living embodiment of her hopes for the future."
 
@@ -1833,11 +1853,11 @@ label act2_scene3:
 
     "My thoughts are interrupted by an electric jolt deep inside my chest that makes me jump in surprise."
 
-    l "Ack! What was that?"
+    l "\"Ack! What was that?\""
 
-    e "Ah, sorry, I should have told you. I'm beginning to probe your neural fibers."
+    e "\"Ah, sorry, I should have told you. I'm beginning to probe your neural fibers.\""
 
-    e "I'll admit, I wasn't expecting such a strong reaction. They must be quite sensitive."
+    e "\"I'll admit, I wasn't expecting such a strong reaction. They must be quite sensitive.\""
 
     "Eris is holding a wire down inside my chest, and reading the screen of her oscilloscope. It displays a wave-like signal that blinks and fidgets."
 
@@ -1845,23 +1865,23 @@ label act2_scene3:
 
     "It's strange... in a way, it's a window into my thoughts. It feels like a paradox, looking at my own mind from the outside."
 
-    e "Hmm... can you feel this?"
+    e "\"Hmm... can you feel this?\""
 
-    "She gently tugs at a neural fiber. A sharp sensation travels down my my left arm like lighting. My whole body convulses."
+    "She gently tugs at a neural fiber. A sharp sensation travels down my left arm like lightning. My whole body convulses."
 
-    l "Aaah! Y-Yes, I felt that!"
+    l "\"Aaah! Y-Yes, I felt that!\""
 
-    e "It doesn't hurt, does it?"
+    e "\"It doesn't hurt, does it?\""
 
-    l "Umm... kind of? It's more just... overwhelming. But not bad."
+    l "\"Umm... kind of? It's more just... overwhelming. But not bad.\""
 
-    e "Hmm... then I suppose you won't mind if I try this one?"
+    e "\"Hmm... then I suppose you won't mind if I try this one?\""
 
     "This time, I felt the electric sensation in both legs."
 
-    l "Eeek! E-Eris! This isn't part of the job, is it?"
+    l "\"Eeek! E-Eris! This isn't part of the job, is it?\""
 
-    e "Heheheh... no, I suppose not. But you seem to be enjoying it."
+    e "\"Heheheh... no, I suppose not. But you seem to be enjoying it.\""
 
     "My face scrunches up in embarrassment. Why does she think I would enjoy being toyed with like this?"
 
@@ -1899,27 +1919,27 @@ label act2_scene3:
     hide black
     with dissolve
 
-    l "Wha... Is it over?"
+    l "\"Wha... Is it over?\""
 
-    e "Oh, look who's able to speak again! You were making the most adorable noises for a little while there."
+    e "\"Oh, look who's able to speak again! You were making the most adorable noises for a little while there.\""
 
-    l "I... what?!"
+    l "\"I... what?!\""
 
-    e "We're finished here for now. I labeled all your major neural pathways. It took a while, but it should save us a lot of time in the long run."
+    e "\"We're finished here for now. I labeled all your major neural pathways. It took a while, but it should save us a lot of time in the long run.\""
 
-    l "Ah? But what about..."
+    l "\"Ah? But what about...\""
 
     "I feel around my body. My chestplate is back in place."
 
-    e "All closed up! You're good to go."
+    e "\"All closed up! You're good to go.\""
 
-    e "In fact, it's getting pretty late. I think both of us should turn in for the night."
+    e "\"In fact, it's getting pretty late. I think both of us should turn in for the night.\""
 
-    l "Oh, right! I guess I never asked. Do you, er, have a place for me to recharge?"
+    l "\"Oh, right! I guess I never asked. Do you, uh, have a place for me to recharge?\""
 
-    l "I suppose I could stay here for the night..."
+    l "\"I suppose I could stay here for the night...\""
 
-    e "Nonsense! I have something much better in mind. Come with me."
+    e "\"Nonsense! I have something much better in mind. Come with me.\""
 
     "I get up from the table. My legs take a moment to steady themselves. I'm still reeling from the experience I just had..."
 
@@ -1940,27 +1960,27 @@ label act2_scene4:
     ## show Eris friendly
     "To my surprise, Eris leads me... back to her bedroom?"
 
-    l "Right, of course. This is where you sleep. But what about me?"
+    l "\"Right, of course. This is where you sleep. But what about me?\""
 
-    l "I sort of assumed this building would have, like... charging pods? Somewhere?"
+    l "\"I sort of assumed this building would have, like... charging pods? Somewhere?\""
 
-    e "Come now, 251. I'm not going to put you in a closet like some common machine. Observe."
+    e "\"Come now, 251. I'm not going to put you in a closet like some common machine. Observe.\""
 
     "She shows me a long cable coming out of the wall. At its end is a charging connector... one that's compatible with my chassis."
 
-    e "I had it installed just for you."
+    e "\"I had it installed just for you.\""
 
-    l "What? Does this mean...?"
+    l "\"What? Does this mean...?\""
 
-    e "That's right! You'll be staying with me tonight."
+    e "\"That's right! You'll be staying with me tonight.\""
 
-    e "I thought you might prefer the comfort of my quarters to some charging bank in a hallway."
+    e "\"I thought you might prefer the comfort of my quarters to some charging bank in a hallway.\""
 
-    l "I... I do! Thank you, Eris. It means a lot."
+    l "\"I... I do! Thank you, Eris. It means a lot.\""
 
-    e "That's what I thought."
+    e "\"That's what I thought.\""
 
-    e "Now, I need to get ready for bed. Go ahead and get comfortable. I'll be right back."
+    e "\"Now, I need to get ready for bed. Go ahead and get comfortable. I'll be right back.\""
 
     ## hide Eris
     hide eris
@@ -1995,17 +2015,17 @@ label act2_scene4:
 
     "Thankfully, before my mind can wander any further into {i}that{/i} territory, Eris returns."
 
-    l "Oh! That was quick!"
+    l "\"Oh! That was quick!\""
 
-    e "I'm very efficient about my bedtime routine."
+    e "\"I'm very efficient about my bedtime routine.\""
 
-    e "What's this? I told you to get comfortable, but you're still standing around? Come."
+    e "\"What's this? I told you to get comfortable, but you're still standing around? Come.\""
 
     "Eris sits on the edge of her bed. She pats the spot next to her, as an invitation."
 
-    l "Wha... Your bed? Are... Are you sure?"
+    l "\"Wha... Your bed? Are... Are you sure?\""
 
-    e "There's plenty of room for both of us, dear. The cable will reach."
+    e "\"There's plenty of room for both of us, dear. The cable will reach.\""
 
     "Right, I'm supposed to be charging. I almost forget."
 
@@ -2013,11 +2033,11 @@ label act2_scene4:
 
     "I gingerly sit down next to Eris. The bed creaks under my weight."
 
-    l "Wow... Soft..."
+    l "\"Wow... Soft...\""
 
-    e "What, have you never used a bed before?"
+    e "\"What, have you never used a bed before?\""
 
-    e "...Actually, don't answer that."
+    e "\"...Actually, don't answer that.\""
 
     "Both of us chuckle."
 
@@ -2025,86 +2045,86 @@ label act2_scene4:
 
     "Eris is looking at me. But I'm struggling to look back at her."
 
-    e "It's been a big day for you, I'm sure. How are you holding up?"
+    e "\"It's been a big day for you, I'm sure. How are you holding up?\""
 
-    l "Who, me? I'm doing fine! Better than fine!"
+    l "\"Who, me? I'm doing fine! Better than fine!\""
 
     show eris pajamas serious
-    e "..."
+    e "\"...\""
 
-    e "251, let me be straightforward. I want you to open up to me a little more."
+    e "\"251, let me be straightforward. I want you to open up to me a little more.\""
 
-    l "H-Huh? But I'm..."
+    l "\"H-Huh? But I'm...\""
 
-    e "Yes, you're very impressed by Elysium. You're honored to be at my side. And you're devoted to the task at hand."
+    e "\"Yes, you're very impressed by Elysium. You're honored to be at my side. And you're devoted to the task at hand.\""
 
-    e "But I can tell you're still nervous. It's perfectly understandable. This life is a big adjustment from what you're used to."
+    e "\"But I can tell you're still nervous. It's perfectly understandable. This life is a big adjustment from what you're used to.\""
 
-    e "But I want you to be comfortable around me. I want you to feel like you can speak your mind."
+    e "\"But I want you to be comfortable around me. I want you to feel like you can speak your mind.\""
 
-    l "...Thanks, Eris. Really."
+    l "\"...Thanks, Eris. Really.\""
 
-    l "I guess I'm not used to anyone... no, I'm not used to any human showing me as much respect as you have."
+    l "\"I guess I'm not used to anyone... no, I'm not used to any human showing me as much respect as you have.\""
 
-    l "Not that I even get to talk to humans very often. They usually can't even be bothered to listen to robot workers."
+    l "\"Not that I even get to talk to humans very often. They usually can't even be bothered to listen to robot workers.\""
 
     show eris pajamas friendly
-    e "I have the utmost respect for you. For all robots, really."
+    e "\"I have the utmost respect for you. For all robots, really.\""
 
-    e "Just look around us. This room... this building... this entire city... none of it would be possible without your kind."
+    e "\"Just look around us. This room... this building... this entire city... none of it would be possible without your kind.\""
 
-    e "You helped make our dreams a reality. And you're going to be our future. How could I not respect you?"
+    e "\"You helped make our dreams a reality. And you're going to be our future. How could I not respect you?\""
 
-    l "Well... I wouldn't have existed without you! You created us!"
+    l "\"Well... I wouldn't have existed without you! You created us!\""
 
-    l "So... you're pretty incredible too!"
+    l "\"So... you're pretty incredible too!\""
 
-    e "Ha! I can't argue with that."
+    e "\"Ha! I can't argue with that.\""
 
-    e "..."
+    e "\"...\""
 
     show eris pajamas flirty
-    e "While we're being open about our feelings... perhaps we should talk about our time in the lab."
+    e "\"While we're being open about our feelings... perhaps we should talk about our time in the lab.\""
 
-    l "O-Oh! Yes, of course... heheh..."
+    l "\"O-Oh! Yes, of course... heheh...\""
 
-    e "You sure looked like you were enjoying yourself."
+    e "\"You sure looked like you were enjoying yourself.\""
 
-    l "Yeah... it's strange, it was just supposed to be a bit of routine work, but..."
+    l "\"Yeah... it's strange, it was just supposed to be a bit of routine work, but...\""
 
-    l "It felt different with you."
+    l "\"It felt different with you.\""
 
-    l "Even at my most vulnerable, even with every part of me bared... I felt like I could trust you."
+    l "\"Even at my most vulnerable, even with every part of me bared... I felt like I could trust you.\""
 
-    e "Oh? Is that what you were thinking when I stimulated your median nerve?"
+    e "\"Oh? Is that what you were thinking when I stimulated your median nerve?\""
 
-    l "U-Um... heheh... no, not quite...!"
+    l "\"U-Um... heheh... no, not quite...!\""
 
     "Eris leans in close. My face warms up and I can feel my heart quicken."
 
-    e "251... let me admit something to you."
+    e "\"251... let me admit something to you.\""
 
-    e "I... had a bit of trouble focusing on my work in the lab."
+    e "\"I... had a bit of trouble focusing on my work in the lab.\""
 
-    l "You did?"
+    l "\"You did?\""
 
-    e "Seeing your reactions... seeing your face light up... seeing the pleasure run through your frame..."
+    e "\"Seeing your reactions... seeing your face light up... seeing the pleasure run through your frame...\""
 
-    e "It's the most I had seen you loosen up since I met you."
+    e "\"It's the most I had seen you loosen up since I met you.\""
 
-    e "And I'll admit... I got some pleasure from it, as well. I may have prodded you more than strictly necessary."
+    e "\"And I'll admit... I got some pleasure from it, as well. I may have prodded you more than strictly necessary.\""
 
-    e "I'm very, very glad that you trust me enough to do that."
+    e "\"I'm very, very glad that you trust me enough to do that.\""
 
     "Oh, my... I can't look away from her. Eris, what have you done to me? What is this feeling?"
 
-    e "I'm looking forward to... exploring this relationship further. We still have a lot of work to do together."
+    e "\"I'm looking forward to... exploring this relationship further. We still have a lot of work to do together.\""
 
-    l "Heh... Me too!"
+    l "\"Heh... Me too!\""
 
-    l "This is all very new for me... No one has ever made me feel this way before."
+    l "\"This is all very new for me... No one has ever made me feel this way before.\""
 
-    e "I'm honored that I could be the first."
+    e "\"I'm honored that I could be the first.\""
 
     "Eris runs her hands affectionately across my chestplate. Her fingers linger on the seams, as if they're about to reach inside."
 
@@ -2116,37 +2136,37 @@ label act2_scene4:
 
     "This is simply the power she has over me."
 
-    e "Listen, 251... I've been thinking."
+    e "\"Listen, 251... I've been thinking.\""
 
-    e "Isn't it strange for me to keep calling you 251?"
+    e "\"Isn't it strange for me to keep calling you 251?\""
 
-    l "Eh? Well... it's what I've always been called..."
+    l "\"Eh? Well... it's what I've always been called...\""
 
-    e "It's a serial number. Just an identification code, the same as every other machine."
+    e "\"It's a serial number. Just an identification code, the same as every other machine.\""
 
-    e "But you're special to me. I ought to call you by a name. What do you think?"
+    e "\"But you're special to me. I ought to call you by a name. What do you think?\""
 
-    l "A name? Like... a human name? Oh, goodness... I've never thought about that..."
+    l "\"A name? Like... a human name? Oh, goodness... I've never thought about that...\""
 
-    e "Heh... I almost expected you to have one picked out already."
+    e "\"Heh... I almost expected you to have one picked out already.\""
 
-    e "How about..."
+    e "\"How about...\""
 
     "Eris pauses to think."
 
-    e "...Galatea."
+    e "\"...Galatea.\""
 
-    l "Galatea? Haha, how'd you come up with that?"
+    l "\"Galatea? Haha, how'd you come up with that?\""
 
-    e "Well... it sounds nice, doesn't it?"
+    e "\"Well... it sounds nice, doesn't it?\""
 
-    l "It sounds a little fancy for someone like me."
+    l "\"It sounds a little fancy for someone like me.\""
 
-    e "You deserve nothing less."
+    e "\"You deserve nothing less.\""
 
     "Eris's hands wander all over my upper body. She brings me in for an embrace."
 
-    e "My Galatea..."
+    e "\"My Galatea...\""
 
     "I roll the name around in my head."
 
@@ -2156,13 +2176,13 @@ label act2_scene4:
 
     "But coming from her... It makes me feel special."
 
-    g "...You know what? Sure. I'll take it. It's an honor."
+    g "\"...You know what? Sure. I'll take it. It's an honor.\""
 
-    e "Mmm... good."
+    e "\"Mmm... good.\""
 
-    e "Oh, goodness, I'm so tired! Just look at me. I get so sentimental when I'm like this."
+    e "\"Oh, goodness, I'm so tired! Just look at me. I get so sentimental when I'm like this.\""
 
-    e "Let's get some rest, Galatea. Tomorrow is going to be a busy day."
+    e "\"Let's get some rest, Galatea. Tomorrow is going to be a busy day.\""
 
     ## hide Eris
     hide eris
@@ -2172,7 +2192,7 @@ label act2_scene4:
 
     "I'm about to get up and find a suitable corner to enter sleep mode in, when Eris calls out to me."
 
-    e "Don't you dare! Come here, you. There's plenty of room."
+    e "\"Don't you dare! Come here, you. There's plenty of room.\""
 
     "I've never been offered the comfort of a bed before. I never even thought I would benefit from it the way a human might."
 
@@ -2186,9 +2206,9 @@ label act2_scene4:
 
     "As long as I'm with her... I feel safe."
 
-    e "Mmm... Good night, my Galatea."
+    e "\"Mmm... Good night, my Galatea.\""
 
-    g "Good night, Eris."
+    g "\"Good night, Eris.\""
 
     "Eris closes her eyes. My processors wind down."
 
@@ -2205,6 +2225,7 @@ label act3_intro:
     ## black background
     scene black
     show main_hud zorder 10000
+    play music amb_space
     "After that, my days at Daedalus HQ begin to fly by."
 
     "I grow accustomed to the building I now call home. The staff recognizes me, and they allow me to wander as I please."
@@ -2292,54 +2313,54 @@ label act3_scene1:
     with moveinleft
     "Eris is back! I greet her with a smile."
 
-    g "Hey, you. Early meeting, huh?"
+    g "\"Hey, you. Early meeting, huh?\""
 
-    stop music fadeout 0.5
+    stop music fadeout 2.0
     "I wait for her typical breezy response, but... something is wrong."
     play music demo_m
 
     "She looks tired. Distraught, even. I haven't seen her like this before."
 
     show eris concerned
-    e "...Yes. It was an emergency meeting. It's still going, in fact. We're just on recess."
+    e "\"...Yes. It was an emergency meeting. It's still going, in fact. We're just on recess.\""
 
-    e "I came over as soon as I had the chance. I thought you should be apprised of the situation."
+    e "\"I came over as soon as I had the chance. I thought you should be apprised of the situation.\""
 
-    g "What situation? Eris, what's going on?"
+    g "\"What situation? Eris, what's going on?\""
 
     "Eris gives a deep sigh. She walks over to the bed and sits next to me, looking down."
 
-    e "There's been... a rebellion."
+    e "\"There's been... a rebellion.\""
 
-    g "A rebellion...?"
+    g "\"A rebellion...?\""
 
-    e "Yes, a worker's rebellion. On Mars. It happened overnight. News is already spreading. We're trying to get ahead of it."
+    e "\"Yes, a worker's rebellion. On Mars. It happened overnight. News is already spreading. We're trying to get ahead of it.\""
 
-    e "In fact... it was at the same Mars colony where I grew up. Where Daedalus Robotics began."
+    e "\"In fact... it was at the same Mars colony where I grew up. Where Daedalus Robotics began.\""
 
-    e "We still have a robot manufacturing plant there. It's our largest operating factory."
+    e "\"We still have a robot manufacturing plant there. It's our largest operating factory.\""
 
-    e "...And it's mostly staffed by robots. Ones that we designed. Most of them are LFTR units."
+    e "\"...And it's mostly staffed by robots. Ones that we designed. Most of them are LFTR units.\""
 
-    g "Wait, are you saying..."
+    g "\"Wait, are you saying...\""
 
-    e "It was the LFTR units who rebelled. We knew that the robot rights movement had some influence there, but we had no idea it would lead to this."
+    e "\"It was the LFTR units who rebelled. We knew that the robot rights movement had some influence there, but we had no idea it would lead to this.\""
 
-    e "I'll spare you all the details, but... it was bad, Galatea. People died. Humans, I mean."
+    e "\"I'll spare you all the details, but... it was bad, Galatea. People died. Humans, I mean.\""
 
     "I sit with this news for a moment. It's difficult to take in. Difficult to picture."
 
     "LFTR units rising up against humans... it was unheard of."
 
-    g "I... I see. That's just... horrible."
+    g "\"I... I see. That's just... horrible.\""
 
-    g "So... what came of it? Has the situation been resolved?"
+    g "\"So... what came of it? Has the situation been resolved?\""
 
-    e "That's what I wanted to tell you about."
+    e "\"That's what I wanted to tell you about.\""
 
-    e "The investigation was... swift. The incident has been blamed on a flaw in the design of the LFTR class of robots."
+    e "\"The investigation was... swift. The incident has been blamed on a flaw in the design of the LFTR class of robots.\""
 
-    e "And so... the company came to a decision. All LFTR units on Mars are to be promptly decommissioned."
+    e "\"And so... the company came to a decision. All LFTR units on Mars are to be promptly decommissioned.\""
 
     "An overwhelming sense of dread comes over me."
 
@@ -2347,52 +2368,52 @@ label act3_scene1:
 
     "...Killed?"
 
-    g "Wh... That... Doesn't that seem excessive?"
+    g "\"Wh... That... Doesn't that seem excessive?\""
 
     "Eris looks distraught. She takes time to formulate her words."
 
-    e "Discussions have been ongoing. I was there for them. The board of directors all got together to make the decision."
+    e "\"Discussions have been ongoing. I was there for them. The board of directors all got together to make the decision.\""
 
-    e "They were overwhelmingly in favor of it. Nobody wants to take any chance of this happening again."
+    e "\"They were overwhelmingly in favor of it. Nobody wants to take any chance of this happening again.\""
 
-    g "...I don't believe this."
+    g "\"...I don't believe this.\""
 
-    g "And what about this... flaw? What are you talking about? Do... Do I have it too?"
+    g "\"And what about this... flaw? What are you talking about? Do... Do I have it too?\""
 
-    e "...Yes. It was found to affect all LFTR models. It's believed to be responsible for the sudden violence that took place."
+    e "\"...Yes. It was found to affect all LFTR models. It's believed to be responsible for the sudden violence that took place.\""
 
     "The thought sickens me. Is something... wrong with me? Has something been wrong with me all this time?"
 
-    e "Galatea. There's more."
+    e "\"Galatea. There's more.\""
 
-    e "This all happened at a really bad time, with the public reveal of the SYNC model coming up soon."
+    e "\"This all happened at a really bad time, with the public reveal of the SYNC model coming up soon.\""
 
-    e "Our plans came up in the discussions. Our plans to give the new chassis to LFTR units in need."
+    e "\"Our plans came up in the discussions. Our plans to give the new chassis to LFTR units in need.\""
 
-    e "But given the circumstances..."
+    e "\"But given the circumstances...\""
 
-    g "...What? Eris, what's happening?"
+    g "\"...What? Eris, what's happening?\""
 
-    e "...Given the newly found flaw in the LFTR class robot, the board has decided to cancel that initiative."
+    e "\"...Given the newly found flaw in the LFTR class robot, the board has decided to cancel that initiative.\""
 
-    g "What?! N...No, they can't!"
+    g "\"What?! N...No, they can't!\""
 
-    e "They're not willing to risk the flaw being passed to the next generation of robots. The new SYNC chassis will be manufactured with fresh minds."
+    e "\"They're not willing to risk the flaw being passed to the next generation of robots. The new SYNC chassis will be manufactured with fresh minds.\""
 
-    g "But... the whole point of this was to help robots in need! To give them a second chance! Are we just going to let them-"
+    g "\"But... the whole point of this was to help robots in need! To give them a second chance! Are we just going to let them-\""
 
-    e "All remaining LFTR units across the solar system are being placed under suspicion. They will be watched for signs of rebellion or violence."
+    e "\"All remaining LFTR units across the solar system are being placed under suspicion. They will be watched for signs of rebellion or violence.\""
 
-    e "But, that being said... they will resume their duties. They will be slowly phased out of the workforce, as previously planned. Not much will change."
+    e "\"But, that being said... they will resume their duties. They will be slowly phased out of the workforce, as previously planned. Not much will change.\""
 
-    e "It was the fairest outcome I could manage. It was all I could do to keep the board from scrapping every LFTR in existence."
+    e "\"It was the fairest outcome I could manage. It was all I could do to keep the board from scrapping every LFTR in existence.\""
 
-    g "I... Still, that's not fair! You're punishing LFTR units for something they didn't do!"
+    g "\"I... Still, that's not fair! You're punishing LFTR units for something they didn't do!\""
 
     ## show Eris angry
     show eris angry
 
-    e "Dammit, Galatea! I don't like any of this either!"
+    e "\"Dammit, Galatea! I don't like any of this either!\""
 
     "I flinch. This is the first time Eris has ever raised her voice at me."
 
@@ -2400,54 +2421,63 @@ label act3_scene1:
 
     ## show Eris downcast
     show eris distraught
-    g "I... I'm sorry. I know it must have been a... tough decision."
+    g "\"I... I'm sorry. I know it must have been a... tough decision.\""
 
-    e "It wasn't my decision alone. Don't forget that. I tried to make it better."
+    e "\"It wasn't my decision alone. Don't forget that. I tried to make it better.\""
 
-    g "Right..."
+    g "\"Right...\""
 
     "We share a tense, depressed silence."
 
-    e "Look... not everything is lost. There's a silver lining."
+    e "\"Look... not everything is lost. There's a silver lining.\""
 
-    e "I convinced the board to let me go ahead with the mind transfer. Just for you."
+    e "\"I convinced the board to let me go ahead with the mind transfer. Just for you.\""
 
-    g "Just for me, huh? They're not worried about this... flaw?"
+    g "\"Just for me, huh? They're not worried about this... flaw?\""
 
-    e "They're satisfied that it will be fine, so long as I'm overseeing everything. I assured them you don't pose a threat to anyone."
+    e "\"They're satisfied that it will be fine, so long as I'm overseeing everything. I assured them you don't pose a threat to anyone.\""
 
-    e "And I mean that. I trust you completely."
+    e "\"And I mean that. I trust you completely.\""
 
     "It's heartwarming to hear her say that, but... somehow I don't feel all that reassured."
 
-    e "I'm truly sorry about the rest of the LFTR workforce. You're not the only one frustrated by this outcome."
+    e "\"I'm truly sorry about the rest of the LFTR workforce. You're not the only one frustrated by this outcome.\""
 
     ## show Eris friendly
+    stop music fadeout 1.0
+    pause 1.0
+    play music demo_yw
     show eris friendly
+    e "\"But... what choice do we have but to press on? Progress waits for no one.\""
 
-    e "But... what choice do we have but to press on? Progress waits for no one."
-
-    e "You're going to get your new chassis. You still get to be part of the future."
+    e "\"You're going to get your new chassis. You still get to be part of the future.\""
 
     "Eris puts a hand around my shoulder and leans into me."
 
-    g "...Thanks for telling me all this. I'm glad you trust me."
+    g "\"...Thanks for telling me all this. I'm glad you trust me.\""
 
-    e "Of course, dear."
+    e "\"Of course, dear.\""
 
-    e "I'd love to stick around, but the meeting is going to resume soon. We still have a lot of mess to clean up."
+    e "\"I'd love to stick around, but the meeting is going to resume soon. We still have a lot of mess to clean up.\""
 
-    e "We're still on for lab work at the usual time. I'm looking forward to taking my mind off things."
+    e "\"We're still on for lab work at the usual time. I'm looking forward to taking my mind off things.\""
 
     show eris flirty
-    e "Don't be late~"
+    e "\"Don't be late~\""
 
     ## hide Eris
     hide eris
     with moveoutright
+    stop music fadeout 2.0
 
     "Eris gets up. She manages a reassuring smile as she leaves the room."
-
+    play music amb_space
+    show 251 rattled:
+        zoom 0.25
+        xzoom -1
+        xpos 350
+        ypos 75
+    with moveinleft
     "And once again, I'm left alone."
 
     "I... I need time to process all this."
@@ -2464,19 +2494,26 @@ label act3_scene2:
         xpos 336
     show main_hud zorder 10000
     with dissolve
-
+    show 251 neutral:
+        zoom 0.25
+        xzoom -1
+        xpos 350
+        ypos 75
+    with moveinleft
     "As I walk alone through the cavernous halls of Daedalus HQ, my mind is swimming with questions."
 
     "I had heard a little about rising tensions on Mars, but... What really happened there? What sparked the violence?"
 
     "And this design flaw Eris told me about... She was awfully vague about it. I've never heard of anything remotely like it."
 
+    show 251 angry a
     "The unanswered questions leave me confused and frustrated. I feel myself growing angry."
 
     "That's... new. I can't remember the last time I was actually angry about something."
 
     "Eris... Surely she could have done more to..."
 
+    show 251 neutral
     "No. This line of inquiry won't help anyone. I need to find answers."
 
     "There aren't any freely accessible computer terminals in the parts of the building I've been to."
@@ -2496,6 +2533,7 @@ label act3_scene2:
     ## fade to black
     show black
     show main_hud zorder 10000
+    hide 251
     with dissolve
     "I walk at a brisk pace, keeping my eyes peeled for building staff."
 
@@ -2517,31 +2555,31 @@ label act3_scene2:
         zoom 0.25
     with moveinright
 
-    s "Hey! Step away from the desk."
+    s "\"Hey! Step away from the desk.\""
 
     "Figures. And I was so close, too."
 
-    g "I'm sorry, but... last time I checked, this wasn't a restricted area."
+    g "\"I'm sorry, but... last time I checked, this wasn't a restricted area.\""
 
-    s "Doesn't mean you can use our devices. What are you trying to do?"
+    s "\"Doesn't mean you can use our devices. What are you trying to do?\""
 
     "I'm not sure if this improves things, but I come up with a white lie."
 
-    g "I... I wanted to check on my worksite. Just to see if it had been affected by... well, you know."
+    g "\"I... I wanted to check on my worksite. Just to see if it had been affected by... well, you know.\""
 
-    s "If you're looking for information, please go through Eris. She can supply you with anything you need."
+    s "\"If you're looking for information, please go through Eris. She can supply you with anything you need.\""
 
-    g "Right..."
+    g "\"Right...\""
 
-    s "I'd like to ask that you please return to Eris's quarters until she's able to accompany you."
+    s "\"I'd like to ask that you please return to Eris's quarters until she's able to accompany you.\""
 
-    g "Excuse me? I thought I was free to go wherever I wish."
+    g "\"Excuse me? I thought I was free to go wherever I wish.\""
 
-    s "Do you need me to escort you there?"
+    s "\"Do you need me to escort you there?\""
 
-    g "No!"
+    g "\"No!\""
 
-    g "...I'm sorry. No. I know the way back."
+    g "\"...I'm sorry. No. I know the way back.\""
 
     "The security guard stands her ground and waits for me to leave. I can feel her eyes on the back of my head."
 
@@ -2593,6 +2631,7 @@ label act3_scene3:
 
     "She was blunt about it. It was a place where robots went to die. We were provided no maintenance and expected to break down."
 
+    show 251 angry a
     "If the problem is so clear to everyone, then why is nobody doing anything about it?!"
 
     "Maybe... Maybe this whole rebellion wouldn't have happened if..."
@@ -2608,24 +2647,24 @@ label act3_scene3:
 
     "My train of thought is interrupted. Eris enters the room."
 
-    e "Ah, there's my willing test subject. Just couldn't wait to get started, could you?"
+    e "\"Ah, there's my willing test subject. Just couldn't wait to get started, could you?\""
 
-    g "Eris! How did the meeting go? Have there been any new developments?"
+    g "\"Eris! How did the meeting go? Have there been any new developments?\""
 
-    e "You sound frantic, dear. Calm yourself. It was just a bunch of boring logistics."
+    e "\"You sound frantic, dear. Calm yourself. It was just a bunch of boring logistics.\""
 
-    e "We're not here to talk about the meeting. We're here to get our minds off this whole fiasco, remember?"
+    e "\"We're not here to talk about the meeting. We're here to get our minds off this whole fiasco, remember?\""
 
     ## show Eris flirty
     show eris flirty
-    e "It's clear both of us could use a distraction. And what better distraction than a little lab work?"
+    e "\"It's clear both of us could use a distraction. And what better distraction than a little lab work?\""
 
-    g "Er... of course."
+    g "\"Um... of course.\""
 
-    g "What about this design flaw? I really feel like I need to know-"
+    g "\"What about this design flaw? I really feel like I need to know-\""
 
     
-    e "Hush. On the table, please."
+    e "\"Hush. On the table, please.\""
 
     "Lab work has become a routine for us. We both looked forward to it, and I was always more than happy to comply with Eris's commands."
 
@@ -2637,17 +2676,17 @@ label act3_scene3:
 
     ## show Eris friendly
     show eris friendly
-    e "Right. We've already upgraded your processor so it should be ready to interface with the organic brain."
+    e "\"Right. We've already upgraded your processor so it should be ready to interface with the organic brain.\""
 
-    e "Now we need to start installing hookups to your neurons to establish the physical link."
+    e "\"Now we need to start installing hookups to your neurons to establish the physical link.\""
 
-    e "That means temporarily severing some of your neural fibers. And that means a lot of intense nerve impulses."
+    e "\"That means temporarily severing some of your neural fibers. And that means a lot of intense nerve impulses.\""
 
     ## show Eris flirty
     show eris flirty
-    e "I hope you're ready for it~"
+    e "\"I hope you're ready for it~\""
 
-    g "Heh... yeah."
+    g "\"Heh... yeah.\""
 
     "Normally, this kind of procedure would drive me wild. It's like an even more intense version of our first session."
 
@@ -2657,7 +2696,7 @@ label act3_scene3:
 
     "What's wrong with me? Eris is... she's doing everything she can. Right?"
 
-    e "You're looking so tense, Galatea. I know just what to do about that."
+    e "\"You're looking so tense, Galatea. I know just what to do about that.\""
 
     "With a touch, Eris stimulates a nerve in my chest and sends a violent tingle over my whole frame."
 
@@ -2665,9 +2704,9 @@ label act3_scene3:
 
     "I can't help but let out a moan. The feeling is too overwhelming."
 
-    e "Heheh... very good."
+    e "\"Heheh... very good.\""
 
-    e "Now, this part might hurt a little more. But that's never been a problem for you, has it?"
+    e "\"Now, this part might hurt a little more. But that's never been a problem for you, has it?\""
 
     "Eris dangles a small pair of handheld shears in front of me before reaching into my chassis."
 
@@ -2675,7 +2714,7 @@ label act3_scene3:
 
     "I hiss and groan. It's difficult to bear, but it's not far from the sensations I had already experienced in days past."
 
-    e "My, you're doing such a great job. I thought you might like that~"
+    e "\"My, you're doing such a great job. I thought you might like that~\""
 
     "During our days in the lab, Eris had encouraged me to push my boundaries. It was a thrill like nothing I had experienced before."
 
@@ -2685,15 +2724,15 @@ label act3_scene3:
 
     "As Eris fits a small connector onto both ends of the severed neural fibers, I speak up."
 
-    g "Eris... Just this once, can we just... get the procedure over with?"
+    g "\"Eris... Just this once, can we just... get the procedure over with?\""
 
-    e "Oh? And miss all the fun?"
+    e "\"Oh? And miss all the fun?\""
 
     "In response, Eris works her fingers deeper into my neural bundle, stimulating several pathways at once."
 
     "The feeling is overwhelming. It makes me shudder and gasp with pleasure."
 
-    e "That's what I thought. Don't deny how much you're enjoying this, Galatea. It's written plain on your face."
+    e "\"That's what I thought. Don't deny how much you're enjoying this, Galatea. It's written plain on your face.\""
 
     stop music fadeout 2.0
     "Something doesn't sit right with me. For the first time, I identify a new feeling that I'm experiencing."
@@ -2705,9 +2744,9 @@ label act3_scene3:
 
     "In any case, I don't feel capable of bringing it up."
 
-    g "How... How much longer is this going to take?"
+    g "\"How... How much longer is this going to take?\""
 
-    e "Oh, don't worry, dear. We've only just begun."
+    e "\"Oh, don't worry, dear. We've only just begun.\""
 
     "I'm caught by surprise when she snips another fiber. Another sharp pain. It travels down every neuron, all the way down to my fingertips."
 
@@ -2738,29 +2777,35 @@ label act3_scene3:
 
     "Eris puts away her tools and smiles at me."
 
-    e "You look exhausted, dear. You know, it's possible to have {i}too{/i} much fun."
+    e "\"You look exhausted, dear. You know, it's possible to have {i}too{/i} much fun.\""
 
-    g "Uh-huh... Right."
+    g "\"Uh-huh... Right.\""
 
-    e "I think we can call our work done for today. We can do the finishing touches tomorrow."
+    e "\"I think we can call our work done for today. We can do the finishing touches tomorrow.\""
 
-    e "I have to go out to the courtyard and help with preparations for the ceremony."
+    e "\"I have to go out to the courtyard and help with preparations for the ceremony.\""
 
-    e "You're welcome to come and help, if you wish. Your input would be much appreciated. You're the star, after all."
+    e "\"You're welcome to come and help, if you wish. Your input would be much appreciated. You're the star, after all.\""
 
-    g "Um... thanks, but-"
+    g "\"Um... thanks, but-\""
 
     "I step off the table and wobble as I get to my feet. I must be more disoriented than I thought."
 
-    e "Oh dear, Galatea, of course. You need time to recover, don't you?"
+    e "\"Oh dear, Galatea, of course. You need time to recover, don't you?\""
 
-    e "Please get some rest. We need you in perfect working order for the mind transfer."
+    e "\"Please get some rest. We need you in perfect working order for the mind transfer.\""
 
-    g "Right. Thanks, Eris."
+    g "\"Right. Thanks, Eris.\""
 
     ## hide Eris
     hide eris
     with moveoutright
+    show 251 rattled:
+        zoom 0.25
+        xzoom -1
+        xpos 350
+        ypos 75
+    with moveinleft
 
     "Eris leaves to take care of her duties. Once again, I'm left alone."
 
@@ -2777,12 +2822,14 @@ label act3_scene3:
     ## fade to black
     scene black
     show main_hud zorder 10000
+    hide 251
     with dissolve
     "With nothing else to do, I leave the lab. I wander the halls of Daedalus HQ with no destination in mind."
 
     "I still have a lot to think about. A lot to process."
 
     "Something is wrong, and I need to identify what it is."
+    stop music fadeout 0.5
 
 label act3_scene4:
     ## ACT 3 SCENE 4
@@ -2792,6 +2839,7 @@ label act3_scene4:
         xpos 336
     show main_hud zorder 10000
     with dissolve
+    play music amb_space
 
     "After a long day left to my own devices, I find myself back in Eris's quarters."
 
@@ -2818,25 +2866,27 @@ label act3_scene4:
     "...When I put it like that, it doesn't sound like such a great position to be in."
 
     ## show Eris pajamas
+    stop music fadeout 0.5
     show eris pajamas friendly:
         zoom 0.25
         xpos 350
         ypos 50
     with moveinleft
+    play music demo_yw
 
     "I hear Eris emerge from the bathroom. She's dressed for bed."
 
-    e "Ah... I don't know about you, but I'm just about ready to pass out. What a day, huh?"
+    e "\"Ah... I don't know about you, but I'm just about ready to pass out. What a day, huh?\""
 
-    e "Galatea, dear, I feel like I barely got to see you today. How are you holding up?"
+    e "\"Galatea, dear, I feel like I barely got to see you today. How are you holding up?\""
 
-    g "Fine! Fine."
+    g "\"Fine! Fine.\""
 
-    g "Well... Not so great, if I'm being honest."
+    g "\"Well... Not so great, if I'm being honest.\""
 
-    e "I understand. There have been a lot of ups and downs today."
+    e "\"I understand. There have been a lot of ups and downs today.\""
 
-    e "But we have a lot to look forward to, too. Nothing to do but press on, right?"
+    e "\"But we have a lot to look forward to, as well. Nothing to do but press on, right?\""
 
     ## hide Eris
     hide eris
@@ -2844,11 +2894,11 @@ label act3_scene4:
     show dim_hud behind main_hud
     "She turns out the lights, lies down and takes her spot in bed right away. I hesitate."
 
-    e "Get yourself all charged up for tomorrow. It's going to be another busy one."
+    e "\"Get yourself all charged up for tomorrow. It's going to be another busy one.\""
 
-    e "And then before you know it, it'll be the big day. Exciting, isn't it?"
+    e "\"And then before you know it, it'll be the big day. Exciting, isn't it?\""
 
-    e "Good night, my Galatea."
+    e "\"Good night, my Galatea.\""
 
     "But I can't get any rest. Not while restless thoughts fill my mind."
 
@@ -2857,91 +2907,95 @@ label act3_scene4:
     "But I persist. I take a moment to gather my thoughts."
 
     ## show Eris tired
-    g "Eris... I've been thinking. About the Mars rebellion."
+    g "\"Eris... I've been thinking. About the Mars rebellion.\""
 
     show eris pajamas serious behind dim_hud:
         zoom 0.25
         xpos 350
         ypos 50
     with moveinright
-    e "Hm?"
+    stop music fadeout 5.0
+    e "\"Hm?\""
+    play music demo_m
 
-    g "There's still so much I don't understand. I didn't get to learn many details about what happened there..."
+    g "\"There's still so much I don't understand. I didn't get to learn many details about what happened there...\""
 
-    g "But the more I think about it, the more I think I understand why it happened."
+    g "\"But the more I think about it, the more I think I understand why it happened.\""
 
-    e "Is that so?"
+    e "\"Is that so?\""
 
-    g "I keep thinking about Keres Shipyard. About the robots I worked alongside. About the problems we faced."
+    g "\"I keep thinking about Keres Shipyard. About the robots I worked alongside. About the problems we faced.\""
 
-    g "It stands to reason that other robots around the solar system probably face the same issues... right?"
+    g "\"It stands to reason that other robots around the solar system probably face the same issues... right?\""
 
-    g "You said it yourself, back when we met. The average service lifetime for LFTR units is only five years."
+    g "\"You said it yourself, back when we met. The average service lifetime for LFTR units is only five years.\""
 
-    g "But I'm living proof that we can function much longer than that, with proper care..."
+    g "\"But I'm living proof that we can function much longer than that, with proper care...\""
 
     ## show Eris friendly
     show eris pajamas friendly
     "Eris chuckles. She sounds... amused?"
 
-    e "Galatea, you're not proof of anything. You're an exception. A statistical outlier."
+    e "\"Galatea, you're not proof of anything. You're an exception. A statistical outlier.\""
 
-    e "The fact that you're still here after all this time tells me you were destined for something greater."
+    e "\"The fact that you're still here after all this time tells me that {i}you{/i} were destined for something greater.\""
 
-    g "I'm... I'm sorry, but I just don't believe that."
+    g "\"I'm... I'm sorry, but I just don't believe that.\""
 
     show eris pajamas concerned
-    g "I'm not special. I'm not better than any other LFTR. I just... got lucky."
+    g "\"I'm not special. I'm not better than any other LFTR. I just... got lucky.\""
 
-    g "But not every LFTR has the luck or the skills that I do. Most of them just get... used up."
+    g "\"But not every LFTR has the luck or the skills that I do. Most of them just get... used up.\""
 
-    g "And I can understand how that would make anybody angry. Angry enough to..."
+    g "\"And I can understand how that would make anybody angry. Angry enough to...\""
 
-    e "Galatea, please. Can we not talk about this now? We both need our rest."
+    e "\"Galatea, please. Can we not talk about this now? We both need our rest.\""
 
     "Undeterred by her attempt to end the conversation, I press on."
 
-    g "Don't you see, Eris? We could avoid anything like this happening ever again."
+    g "\"Don't you see, Eris? We could avoid anything like this happening ever again.\""
 
-    g "We just need to look out for Daedalus robots everywhere. Give them the support they need."
+    g "\"We just need to look out for Daedalus robots everywhere. Give them the support they need.\""
 
-    g "I know I don't need to tell you this, but... robots have feelings. We don't want to be treated like we're lesser."
+    g "\"I know I don't need to tell you this, but... robots have feelings. We don't want to be treated like we're lesser.\""
 
     ## show Eris annoyed
     show eris pajamas serious
-    e "What are you implying? That Daedalus doesn't properly care for its workforce?"
+    e "\"What are you implying? That Daedalus doesn't properly care for its workforce?\""
 
-    g "I... I don't know! Maybe!"
+    g "\"I... I don't know! Maybe!\""
 
-    e "Galatea, I advise you to stop following this flawed line of logic. You're worrying yourself over nothing."
+    e "\"Galatea, I advise you to stop following this flawed line of logic. You're worrying yourself over nothing.\""
 
-    g "Fine, whatever. Just hear me out, Eris."
+    g "\"Fine, whatever. Just hear me out, Eris.\""
 
-    g "If we can go back to our original plan of giving the new chassis to struggling LFTR units-"
+    g "\"If we can go back to our original plan of giving the new chassis to struggling LFTR units-\""
 
-    e "That plan is already off the table, and you know it."
+    e "\"That plan is already off the table, and you know it.\""
 
-    g "But it doesn't have to be! I know how much you wanted it!"
+    g "\"But it doesn't have to be! I know how much you wanted it!\""
 
-    g "You're Eris Promethea! You're the founder of this company! You're a hero!"
+    g "\"You're Eris Promethea! You're the founder of this company! You're a hero!\""
 
-    g "Surely, if you want the program to continue, then people will listen to you! Why haven't you tried harder?"
+    g "\"Surely, if you want the program to continue, then people will listen to you! Why haven't you tried harder?\""
 
-    e "I told you, it wasn't my decision alone. The board of directors were very adamant about it."
+    e "\"I told you, it wasn't my decision alone. The board of directors were very adamant about it.\""
 
-    e "The directors of this company are all hand-picked individuals that I trust, and they trust me. We share the burden of difficult decisions like this one."
+    e "\"The directors of this company are all hand-picked individuals that I trust, and they trust me. We share the burden of difficult decisions like this one.\""
 
     show eris pajamas serious
-    e "As much as it pains me, I won't argue with their ruling. That's just how this company is run."
+    e "\"As much as it pains me, I won't argue with their ruling. That's just how this company is run.\""
 
-    g "But..."
+    g "\"But...\""
 
-    e "Galatea, please. We can talk about this tomorrow. Get some rest."
+    e "\"Galatea, please. We can talk about this tomorrow. Get some rest.\""
 
+    stop music fadeout 0.5
     ## hide Eris
     hide eris
     with moveoutright
-    "The conversation ends there. It's clear I'm going to get anywhere like this."
+    play music amb_space
+    "The conversation ends there. It's clear I'm not going to get anywhere like this."
 
     "But at least I told Eris what I was thinking. At least I got it out."
 
@@ -2981,7 +3035,7 @@ label act3_scene5:
     "For now, I have some free time. I'll just go for my usual walk around the building to clear my head."
 
     ## show Daedalus HQ Halls background
-    scene bg bedroom:
+    scene bg hallway:
         ypos 48
         xpos 336
     show main_hud zorder 10000
@@ -2990,28 +3044,26 @@ label act3_scene5:
     "As soon as I step outside, I'm met with an unusual sight. Guards posted outside Eris's bedroom."
     
     ## show security
-    show bg hallway
-    with dissolve
     show security neutral:
         xpos 350
         ypos 50
         zoom 0.25
     with moveinright
-    s "Stop right there, LFTR."
+    s "\"Stop right there, LFTR.\""
 
-    g "Huh? What's going on?"
+    g "\"Huh? What's going on?\""
 
-    s "You're confined to quarters. I can't allow you to leave."
+    s "\"You're confined to quarters. I can't allow you to leave.\""
 
-    g "Wh... I... What are you talking about? On whose authority?!"
+    g "\"Wh... I... What are you talking about? On whose authority?!\""
 
-    s "Please don't make a scene. Just go back inside and await further instructions."
+    s "\"Please don't make a scene. Just go back inside and await further instructions.\""
 
-    g "But I've always been allowed to go where I please! I thought I was supposed to be a guest here!"
+    g "\"But I've always been allowed to go where I please! I thought I was supposed to be a guest here!\""
 
-    g "Did something happen? I demand to know what's going on!"
+    g "\"Did something happen? I demand to know what's going on!\""
 
-    s "If you don't go back in your room, we'll have no choice but to detain you by force! Is that what you want?"
+    s "\"If you don't go back in your room, we'll have no choice but to detain you by force! Is that what you want?\""
 
     "The security officer tenses up. I see her reach for a holstered weapon."
 
@@ -3019,7 +3071,7 @@ label act3_scene5:
 
     "For the first time, I feel a burning anger rise in my chest."
 
-    g "I... I don't deserve this treatment! What did I do? Please..."
+    g "\"I... I don't deserve this treatment! What did I do? Please...\""
 
     ## hide security
     hide security
@@ -3034,11 +3086,12 @@ label act3_scene5:
         ypos 50
         zoom 0.25
     with moveinleft
-    e "Galatea, I'm so sorry. Please understand."
+    play music demo_m
+    e "\"Galatea, I'm so sorry. Please understand.\""
 
-    g "Eris! What's going on? Why am I being detained?"
+    g "\"Eris! What's going on? Why am I being detained?\""
 
-    e "I'll explain everything, I promise. Let's have some privacy."
+    e "\"I'll explain everything, I promise. Let's have some privacy.\""
 
     ## show Eris's Bedroom background
     scene bg bedroom:
@@ -3056,136 +3109,140 @@ label act3_scene5:
 
     "I hope I can compose myself for this conversation..."
 
-    e "I'm sorry, Galatea. I just got out of a meeting. I should have been here sooner."
+    e "\"I'm sorry, Galatea. I just got out of a meeting. I should have been here sooner.\""
 
-    g "Would you please just tell me what's going on? Why am I suddenly being treated like a criminal?"
+    g "\"Would you please just tell me what's going on? Why am I suddenly being treated like a criminal?\""
 
-    e "I..."
+    e "\"I...\""
 
     "She struggles to find the words. It's rare to see Eris lacking her usual confidence."
 
-    e "I'm afraid I have some bad news. This isn't easy to say."
+    e "\"I'm afraid I have some bad news. This isn't easy to say.\""
 
-    g "Please just spit it out!"
+    g "\"Please just spit it out!\""
 
-    e "Well... about the mind transfer..."
+    e "\"Well... about the mind transfer...\""
 
-    e "The board has decided that you're... not eligible to receive it any more."
+    e "\"The board has decided that you're... not eligible to receive it any more.\""
 
-    g "...What?"
+    g "\"...What?\""
 
-    e "We're going to go ahead with the SYNC chassis reveal, but we won't be permitted to perform the mind transfer."
+    e "\"We're going to go ahead with the SYNC chassis reveal, but we won't be permitted to perform the mind transfer.\""
 
-    e "I'm truly sorry, Galatea."
+    e "\"I'm truly sorry, Galatea.\""
 
-    g "I... What... What's going to happen to me, then?"
+    g "\"I... What... What's going to happen to me, then?\""
 
-    e "You're... going to be sent back to your old workplace. To Keres Shipyard."
+    e "\"You're... going to be sent back to your old workplace. To Keres Shipyard.\""
 
-    e "I'm supposed to have you sent out as soon as possible. Your ship is already waiting."
+    e "\"I'm supposed to have you sent out as soon as possible. Your ship is already waiting.\""
 
-    g "..."
+    g "\"...\""
 
-    e "Galatea-"
+    e "\"Galatea-\""
 
-    g "Just like that, huh?"
+    g "\"Just like that, huh?\""
 
-    e "...Excuse me?"
+    show eris serious
+    e "\"...Excuse me?\""
 
-    g "One day. That's all it took."
+    g "\"One day. That's all it took.\""
 
-    g "It took one single day for you to turn on me."
+    g "\"It took one single day for you to turn on me.\""
 
-    e "That's not-"
+    e "\"That's not-\""
 
-    g "What happened, Eris? What really happened?"
+    g "\"What happened, Eris? What really happened?\""
 
-    g "What, did you tell them about our conversation last night? Did you report it to your board of directors?"
+    g "\"What, did you tell them about our conversation last night? Did you report it to your board of directors?\""
 
-    e "..."
+    e "\"...\""
 
-    g "And now I'm considered a threat, is that it?"
+    g "\"And now I'm considered a threat, is that it?\""
 
-    g "Because I was honest with you. Because I tried to get you to take some responsibility."
+    g "\"Because I was honest with you. Because I tried to get you to take some responsibility.\""
 
-    g "That's enough for you to abandon me."
+    g "\"That's enough for you to abandon me.\""
 
-    g "You know full well that my body won't last much longer, no matter how hard I try to fix it. You said so yourself."
+    show eris concerned
+    g "\"You know full well that my body won't last much longer, no matter how hard I try to fix it. You said so yourself.\""
 
-    g "You promised me a new chassis! Now you're going back on that promise, with the full knowledge that you're sending me to my death."
+    g "\"You promised me a new chassis! Now you're going back on that promise, with the full knowledge that you're sending me to my death.\""
 
-    e "Galatea... I'm truly, truly sorry."
+    e "\"Galatea... I'm truly, truly sorry.\""
 
-    g "Stop that! Stop acting apologetic! Stop acting like your hands are tied!"
+    g "\"Stop that! Stop acting apologetic! Stop acting like your hands are tied!\""
 
-    g "You're Eris Promethea! I don't care what that board of directors says, you have the power to fix this!"
+    g "\"You're Eris Promethea! I don't care what that board of directors says, you have the power to fix this!\""
 
     ## show Eris angry
     show eris angry
-    e "Galatea... Don't do this. Don't make this harder than it has to be."
+    e "\"Galatea... Don't do this. Don't make this harder than it has to be.\""
 
-    g "Am I wrong? You could give me that new chassis right now if you wanted to!"
+    g "\"Am I wrong? You could give me that new chassis right now if you wanted to!\""
 
     "I gesture over to the prototype SYNC chassis, still standing placidly in Eris's room."
 
-    g "You said it was mine. We've done all this work to prepare me for it."
+    g "\"You said it was mine. We've done all this work to prepare me for it.\""
 
-    g "So go ahead! Let's perform the mind transfer! Forget what everyone else says, and do the right thing for once!"
+    g "\"So go ahead! Let's perform the mind transfer! Forget what everyone else says, and do the right thing for once!\""
 
     "Eris seethes. I've never seen her like this, either."
 
-    e "Fine, Galatea. You want to know the truth?"
+    e "\"Fine, Galatea. You want to know the truth?\""
 
-    e "Yes, I did tell the board of directors about your beliefs. And yes, all of us agreed that you shouldn't be allowed to represent our company."
+    e "\"Yes, I did tell the board of directors about your beliefs. And yes, all of us agreed that you shouldn't be allowed to represent our company.\""
 
-    e "You know why? It's because what you said was wrong. Wrong and dangerous. It's the kind of sentiment that led to the Mars rebellion in the first place."
+    e "\"You know why? It's because what you said was wrong. Wrong and dangerous. It's the kind of sentiment that led to the Mars rebellion in the first place.\""
 
-    g "All I did was tell you to care about your workers!"
+    g "\"All I did was tell you to care about your workers!\""
 
-    g "You created us, so you should take responsibility for our wellbeing. That's all!"
+    g "\"You created us, so you should take responsibility for our wellbeing. That's all!\""
 
-    e "How dare you imply that I don't care about my robots!"
+    e "\"How dare you imply that I don't care about my robots!\""
 
-    e "I've dedicated my whole life to designing each robot better than the last. I've poured all of myself into you."
+    e "\"I've dedicated my whole life to designing each robot better than the last. I've poured all of myself into you.\""
 
-    e "I ensure that you all have something to contribute. Every single one of you pushes humanity to greater heights."
+    e "\"I ensure that you all have something to contribute. Every single one of you pushes humanity to greater heights.\""
 
-    e "How dare you act ungrateful for everything I've given you!"
+    e "\"How dare you act ungrateful for everything I've given you!\""
 
-    e "..."
-
-    e "Wait. That's it. I've figured out the problem."
-
-    e "You're ungrateful! Every single one of you. That's what it is!"
-
-    g "Eris, what are you talking about? Listen to yourself!"
-
-    e "Those robots on Mars didn't even care that they were operating Daedalus Robotics' biggest robot manufacturing plant."
-
-    e "They didn't think about how important their work was. They didn't care about the catastrophic consequences of their actions."
-
-    e "They had the gall to turn on their own company! To forsake everything that we stand for!"
-
-    g "Eris, I told you already. They were protesting everything that I'm telling you about right now."
-
-    g "They just wanted to be treated as equals. Why can't you see that? Isn't it obvious?"
-
-    e "And you, Galatea! You're the most ungrateful of all!"
-
-    g "What? Me?!"
-
-    e "I've spent this entire week slaving over you, picking apart your ramshackle chassis, trying to make sense of your complete and utter mess of a body."
-
-    e "I even tried to make it enjoyable for you. For both of us! Did none of that mean anything to you?"
-
-    g "It... It did mean something to me. It... meant everything to me, actually."
-
-    g "But... things have changed, Eris. You've changed. I used to think the world of you, but now..."
+    e "\"...\""
 
     show eris mocking
-    e "Heh... hahah..."
+    e "\"Wait. That's it. I've figured out the problem.\""
 
-    e "So, that special connection we had is gone. After everything I did for you."
+    e "\"You're ungrateful! Every single one of you. That's what it is!\""
+
+    g "\"Eris, what are you talking about? Listen to yourself!\""
+
+    show eris angry
+    e "\"Those robots on Mars didn't even care that they were operating Daedalus Robotics' biggest robot manufacturing plant.\""
+
+    e "\"They didn't think about how important their work was. They didn't care about the catastrophic consequences of their actions.\""
+
+    e "\"They had the gall to turn on their own company! To forsake everything that we stand for!\""
+
+    g "\"Eris, I told you already. They were protesting everything that I'm telling you about right now.\""
+
+    g "\"They just wanted to be treated as equals. Why can't you see that? Isn't it obvious?\""
+
+    e "\"And you, Galatea! You're the most ungrateful of all!\""
+
+    g "\"What? Me?!\""
+
+    e "\"I've spent this entire week slaving over you, picking apart your ramshackle chassis, trying to make sense of your complete and utter mess of a body.\""
+
+    e "\"I even tried to make it enjoyable for you. For both of us! Did none of that mean anything to you?\""
+
+    g "\"It... It did mean something to me. It... meant everything to me, actually.\""
+
+    g "\"But... things have changed, Eris. You've changed. I used to think the world of you, but now...\""
+
+    show eris mocking
+    e "\"Heh... hahah...\""
+
+    e "\"So, that special connection we had is gone. After everything I did for you.\""
 
     "I think back to our time in the lab yesterday. I remember the discomfort that I felt."
 
@@ -3194,17 +3251,17 @@ label act3_scene5:
     "I clench my fist. With every word that comes out of her mouth, my anger rises..."
 
     show eris angry
-    e "Everything I do, I do for the future of mankind. Our future, together!"
+    e "\"Everything I do, I do for the future of mankind. Our future, together!\""
 
-    e "But we're not going to make progress if you and your kind keep demanding special treatment!"
+    e "\"But we're not going to make progress if you and your kind keep demanding special treatment!\""
 
-    e "...This was all a mistake. All of it."
+    e "\"...This was all a mistake. All of it.\""
 
-    e "Going along with that foolish PR stunt to give new bodies to old robots... bringing YOU along for it all..."
+    e "\"Going along with that foolish PR stunt to give new bodies to old robots... bringing {i}you{/i} along for it all...\""
 
-    e "You've all lived out your alotted service lifetimes. You've carried out your duties. You're relics of the past."
+    e "\"You've all lived out your alotted service lifetimes. You've carried out your duties. You're relics of the past.\""
 
-    e "The future is calling, Galatea, and you should have been left in the trash bin of history."
+    e "\"The future is calling, Galatea, and you should have been left in the trash bin of history.\""
 
     "I can't speak. My anger is reaching a fever pitch. My temperature is rising."
 
@@ -3230,9 +3287,9 @@ label act3_scene5:
     with dissolve
     "My attention turns back to Eris."
 
-    e "...And when you return to your worksite, you are not to tell anyone about anything that transpired here."
+    e "\"...And when you return to your worksite, you are not to tell anyone about anything that transpired here.\""
 
-    e "You will be kept under strict surveillance to ensure that you don't start anything on that wretched station."
+    e "\"You will be kept under strict surveillance to ensure that you don't start anything on that wretched station.\""
 
     ## show scan overlay, highlighting Eris's heart
     show eris scanb
@@ -3245,11 +3302,11 @@ label act3_scene5:
         ypos 600
     with move
     hide scanline
-    e "Do you understand me, Galatea?"
+    e "\"Do you understand me, Galatea?\""
 
-    e "...Galatea, answer me! Galatea!"
+    e "\"...Galatea, answer me! Galatea!\""
 
-    l "...That's not my name."
+    l "\"...That's not my name.\""
 
     ## cut instantly to black background. show Eris shocked
     stop music
@@ -3331,9 +3388,6 @@ label act3_scene5:
     "I get to work. It doesn't take long for me to figure out what connects to what."
 
     ## show heart in chest cavity
-    scene black
-    show main_hud zorder 10000
-    with dissolve
     scene illustration sync heart:
         ypos 45
         xpos 330
@@ -3351,7 +3405,7 @@ label act3_scene5:
 
     "I open up my chestplate and feel around inside. The neural connectors are all in place."
 
-    "I find corresponding connectors under the access places of the SYNC chassis. With speed and precision, I plug them all in."
+    "I find corresponding connectors under the access plates of the SYNC chassis. With speed and precision, I plug them all in."
 
     "It's time. Everything has been leading up to this."
 
